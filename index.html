@@ -233,8 +233,12 @@ body.nav-open{overflow:hidden;}
 .work{padding:7rem 0;}
 .work-grid{display:grid;grid-template-columns:1fr;gap:2rem;}
 .work-card{border-radius:24px;overflow:hidden;}
-.work-thumb{aspect-ratio:4/3;border-radius:20px;margin-bottom:1.25rem;background-size:200% 200%;transition:transform var(--dur-slow) var(--ease),border-radius var(--dur-slow) var(--ease);}
+.work-thumb{position:relative;aspect-ratio:4/3;border-radius:20px;margin-bottom:1.25rem;background-size:200% 200%;overflow:hidden;transition:transform var(--dur-slow) var(--ease),border-radius var(--dur-slow) var(--ease);}
 .work-card:hover .work-thumb{transform:scale(1.03);border-radius:14px;}
+.work-thumb::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.16) 1.5px,transparent 1.5px);background-size:22px 22px;opacity:.5;}
+.work-thumb-icon{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);transition:transform var(--dur-slow) var(--ease),color var(--dur-slow) var(--ease);}
+.work-thumb-icon svg{width:34%;height:34%;}
+.work-card:hover .work-thumb-icon{color:rgba(255,255,255,.6);transform:scale(1.08);}
 .work-thumb-1{background-image:linear-gradient(135deg,var(--m),var(--t));}
 .work-thumb-2{background-image:linear-gradient(135deg,var(--m3),var(--m2));}
 .work-thumb-3{background-image:linear-gradient(135deg,var(--t3),var(--m));}
@@ -630,37 +634,37 @@ body.nav-open{overflow:hidden;}
       </div>
       <div class="work-grid">
         <article class="work-card reveal" style="--d:0s">
-          <div class="work-thumb work-thumb-1"></div>
+          <div class="work-thumb work-thumb-1"><span class="work-thumb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></span></div>
           <p class="work-tag">Social Media</p>
           <h3>Barber Labs — Brand Transformation</h3>
           <p>A full content strategy and community build that drove a 40% jump in VIP bookings in 90 days.</p>
         </article>
         <article class="work-card reveal" style="--d:.06s">
-          <div class="work-thumb work-thumb-2"></div>
+          <div class="work-thumb work-thumb-2"><span class="work-thumb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></span></div>
           <p class="work-tag">Brand Identity</p>
           <h3>IsleAura &amp; Co — Product Launch</h3>
           <p>Studio-quality photography, a brand video, and a full social strategy delivered in two weeks.</p>
         </article>
         <article class="work-card reveal" style="--d:.12s">
-          <div class="work-thumb work-thumb-3"></div>
+          <div class="work-thumb work-thumb-3"><span class="work-thumb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg></span></div>
           <p class="work-tag">Video Production</p>
           <h3>Belle Group — Campaign Video</h3>
           <p>A cinematic campaign film produced for the Belle Group of Companies across T&amp;T.</p>
         </article>
         <article class="work-card reveal" style="--d:.18s">
-          <div class="work-thumb work-thumb-4"></div>
+          <div class="work-thumb work-thumb-4"><span class="work-thumb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span></div>
           <p class="work-tag">Paid Ads</p>
           <h3>Local Restaurant — Meta Ads Campaign</h3>
           <p>A targeted Meta Ads campaign that turned local foot traffic into a steady stream of new customers.</p>
         </article>
         <article class="work-card reveal" style="--d:.24s">
-          <div class="work-thumb work-thumb-5"></div>
+          <div class="work-thumb work-thumb-5"><span class="work-thumb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></span></div>
           <p class="work-tag">AI Marketing</p>
           <h3>Gemini-Powered Content Strategy</h3>
           <p>An AI-assisted content engine using Google Gemini to scale captions, ad copy, and reporting.</p>
         </article>
         <article class="work-card reveal" style="--d:.3s">
-          <div class="work-thumb work-thumb-6"></div>
+          <div class="work-thumb work-thumb-6"><span class="work-thumb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span></div>
           <p class="work-tag">Get in touch</p>
           <h3>Your brand could be next</h3>
           <p>We have openings for new clients this quarter — let's talk about what growth looks like for you.</p>
