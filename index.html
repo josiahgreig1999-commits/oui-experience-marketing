@@ -1,17 +1,796 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OUI Experience Marketing | Global Strategy · Production · Growth</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
-  <style>
-    /* Full CSS from workspace */
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="OUI is a global experience marketing agency. We plan the strategy, design the moment, and produce brand experiences anywhere in the world.">
+<title>OUI Experience Marketing | Global Strategy · Production · Growth</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231B2428'/%3E%3Ctext x='50' y='67' font-family='Georgia,serif' font-size='50' fill='%23FDF8F3' text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+/* Reset */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+img,svg{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;}
+ul,ol{list-style:none;}
+input{font:inherit;color:inherit;}
+
+/* Tokens */
+:root{
+  --m:#A0166A;--m2:#7D0F53;--m3:#C91E84;
+  --t:#1BA8B0;--t2:#14808A;--t3:#5ECDD4;
+  --cream:#FDF8F3;--charcoal:#1B2428;--slate:#3A4A4F;
+  --soft:#EAE5E0;--white:#FFFFFF;
+  --shadow:0 4px 24px rgba(0,0,0,0.07);--shadow2:0 16px 48px rgba(0,0,0,0.12);
+  --font-serif:'Cormorant Garamond',serif;
+  --font-sans:'DM Sans',sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --dur-fast:180ms;--dur-base:320ms;--dur-slow:650ms;
+  --header-h:84px;
+  --maxw:1240px;
+}
+[data-theme="dark"]{
+  --cream:#1B2428;--charcoal:#EAE5E0;--slate:#A8B3B8;
+  --soft:#2C3F45;--white:#11181C;
+  --shadow:0 4px 24px rgba(0,0,0,0.4);--shadow2:0 16px 48px rgba(0,0,0,0.6);
+}
+
+/* Base */
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:var(--font-sans);background:var(--cream);color:var(--charcoal);line-height:1.6;overflow-x:hidden;transition:background var(--dur-slow) var(--ease),color var(--dur-slow) var(--ease);}
+.serif{font-family:var(--font-serif);}
+h1,h2,h3,h4{font-family:var(--font-serif);font-weight:600;line-height:1.1;letter-spacing:-.01em;}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+section{position:relative;}
+::selection{background:var(--m);color:var(--white);}
+
+/* Accessibility */
+.skip-link{position:absolute;left:-999px;top:0;background:var(--charcoal);color:var(--cream);padding:.75rem 1.25rem;z-index:1000;border-radius:0 0 8px 0;}
+.skip-link:focus{left:0;}
+:focus-visible{outline:2px solid var(--t);outline-offset:3px;border-radius:2px;}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.7rem;border-radius:999px;font-size:.95rem;font-weight:600;cursor:pointer;transition:transform var(--dur-fast) var(--ease),box-shadow var(--dur-base) var(--ease),background var(--dur-base) var(--ease),color var(--dur-base) var(--ease);white-space:nowrap;}
+.btn:hover{transform:translateY(-2px);}
+.btn:active{transform:translateY(0);}
+.btn-primary{background:var(--m);color:#fff;box-shadow:var(--shadow);}
+.btn-primary:hover{background:var(--m3);box-shadow:var(--shadow2);}
+.btn-ghost{background:transparent;color:var(--charcoal);border:1.5px solid currentColor;}
+.btn-ghost:hover{background:var(--charcoal);color:var(--cream);}
+.btn-sm{padding:.6rem 1.25rem;font-size:.85rem;}
+.btn-lg{padding:1.1rem 2.2rem;font-size:1.05rem;}
+.btn-block{width:100%;justify-content:center;}
+
+/* Scroll progress */
+.scroll-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--m),var(--t));z-index:1000;transition:width 80ms linear;}
+
+/* Header */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:900;padding:22px 0;transition:padding var(--dur-base) var(--ease),background var(--dur-base) var(--ease),box-shadow var(--dur-base) var(--ease);}
+.site-header.is-scrolled{padding:12px 0;background:color-mix(in srgb, var(--cream) 88%, transparent);backdrop-filter:blur(14px);box-shadow:var(--shadow);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;}
+.logo{font-family:var(--font-serif);font-size:1.6rem;font-weight:700;letter-spacing:.02em;}
+.logo-dot{color:var(--m);}
+.nav{display:none;}
+.nav ul{display:flex;gap:2rem;}
+.nav a{position:relative;font-size:.92rem;font-weight:500;color:var(--slate);padding:.35rem 0;transition:color var(--dur-fast) var(--ease);}
+.nav a::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--m);transition:width var(--dur-base) var(--ease);}
+.nav a:hover,.nav a.is-active{color:var(--charcoal);}
+.nav a:hover::after,.nav a.is-active::after{width:100%;}
+.header-actions{display:flex;align-items:center;gap:.75rem;}
+.theme-toggle{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;color:var(--charcoal);transition:background var(--dur-fast) var(--ease),transform var(--dur-fast) var(--ease);}
+.theme-toggle:hover{background:var(--soft);transform:rotate(12deg);}
+.theme-toggle svg{width:20px;height:20px;}
+.icon-moon{display:none;}
+[data-theme="dark"] .icon-sun{display:none;}
+[data-theme="dark"] .icon-moon{display:block;}
+.header-actions .btn-primary{display:none;}
+.menu-toggle{display:flex;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;}
+.menu-toggle span{display:block;width:22px;height:2px;background:var(--charcoal);border-radius:2px;transition:transform var(--dur-base) var(--ease),opacity var(--dur-base) var(--ease);margin:0 auto;}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* Mobile nav */
+.mobile-nav{position:fixed;inset:0;z-index:850;background:var(--cream);display:flex;flex-direction:column;justify-content:center;gap:2.5rem;padding:0 28px;opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity var(--dur-base) var(--ease),transform var(--dur-base) var(--ease),visibility var(--dur-base);}
+.mobile-nav[data-state="open"]{opacity:1;visibility:visible;transform:translateY(0);}
+.mobile-nav ul{display:flex;flex-direction:column;gap:1.5rem;}
+.mobile-nav a{font-family:var(--font-serif);font-size:2.2rem;font-weight:600;}
+body.nav-open{overflow:hidden;}
+
+@media (min-width:1024px){
+  .nav{display:block;}
+  .header-actions .btn-primary{display:inline-flex;}
+  .menu-toggle{display:none;}
+  .mobile-nav{display:none;}
+}
+
+/* Reveal-on-scroll */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s);}
+.reveal.is-visible{opacity:1;transform:translateY(0);}
+
+/* Eyebrow / section head */
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--m);margin-bottom:.85rem;}
+.section-head{max-width:640px;margin:0 auto 3.5rem;text-align:center;}
+.section-head h2{font-size:clamp(1.9rem,3.2vw,2.75rem);}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:calc(var(--header-h) + 2rem) 0 6rem;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;}
+.orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:0;animation:orbIn 1.4s var(--ease) forwards;transition:transform .7s var(--ease);will-change:transform;}
+.orb-m{width:46vw;height:46vw;max-width:640px;max-height:640px;background:radial-gradient(circle,var(--m3),var(--m) 70%);top:-12%;right:-8%;animation-delay:.1s;}
+.orb-t{width:34vw;height:34vw;max-width:480px;max-height:480px;background:radial-gradient(circle,var(--t3),var(--t) 70%);bottom:-14%;left:-6%;animation-delay:.3s;}
+@keyframes orbIn{from{opacity:0;transform:scale(.8);}to{opacity:.55;transform:scale(1);}}
+[data-theme="dark"] .orb{opacity:.35;}
+.hero-inner{position:relative;z-index:1;max-width:880px;}
+.hero-title{font-size:clamp(2.5rem,4.6vw + 1rem,5.25rem);margin-bottom:1.5rem;}
+.hero-title .serif-em{font-style:italic;color:var(--m);}
+.hero-sub{font-size:clamp(1.05rem,1.3vw,1.25rem);color:var(--slate);max-width:600px;margin-bottom:2.25rem;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:1rem;}
+.scroll-cue{position:absolute;left:50%;bottom:2.5rem;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--slate);z-index:1;}
+.scroll-cue-line{width:1px;height:38px;background:linear-gradient(to bottom,transparent,var(--slate));}
+.scroll-cue svg{width:18px;height:18px;animation:cueBounce 1.4s ease-in-out 1s 3;}
+@keyframes cueBounce{0%,100%{transform:translateY(0);opacity:.6;}50%{transform:translateY(6px);opacity:1;}}
+
+/* Capabilities strip */
+.capabilities-strip{padding:2.75rem 0;border-top:1px solid var(--soft);border-bottom:1px solid var(--soft);}
+.tag-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.85rem;}
+.tag{font-size:.92rem;font-weight:600;color:var(--slate);}
+.tag-dot{color:var(--m);}
+
+/* Services */
+.services{padding:7rem 0;}
+.service-grid{display:grid;grid-template-columns:1fr;gap:1.75rem;}
+.service-card{background:var(--soft);border-radius:24px;padding:2.25rem;transition:transform var(--dur-base) var(--ease),box-shadow var(--dur-base) var(--ease),background var(--dur-base) var(--ease);}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow2);background:var(--white);}
+.service-icon{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:16px;background:var(--cream);color:var(--m);margin-bottom:1.5rem;transition:background var(--dur-base) var(--ease),color var(--dur-base) var(--ease),transform var(--dur-base) var(--ease);}
+.service-icon svg{width:26px;height:26px;}
+.service-card:hover .service-icon{background:var(--m);color:#fff;transform:scale(1.08) rotate(-4deg);}
+.service-card h3{font-size:1.35rem;margin-bottom:.65rem;}
+.service-card p{color:var(--slate);font-size:.97rem;}
+
+/* Stats */
+.stats{background:var(--charcoal);color:var(--cream);padding:5rem 0;transition:background var(--dur-slow) var(--ease),color var(--dur-slow) var(--ease);}
+.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;text-align:center;}
+.stat-number{font-family:var(--font-serif);font-size:clamp(2.5rem,5vw,3.75rem);font-weight:700;color:var(--t3);}
+.stat-label{font-size:.9rem;color:color-mix(in srgb, var(--cream) 70%, transparent);margin-top:.35rem;}
+
+@media (min-width:640px){
+  .service-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (min-width:1024px){
+  .service-grid{grid-template-columns:repeat(4,1fr);}
+  .stats-grid{grid-template-columns:repeat(4,1fr);}
+}
+
+/* Approach / Timeline */
+.approach{padding:7rem 0;}
+.timeline{max-width:720px;margin:0 auto;}
+.timeline-step{display:flex;gap:1.75rem;opacity:0;transform:translateX(-18px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+.timeline-step.is-visible{opacity:1;transform:translateX(0);}
+.timeline-marker{display:flex;flex-direction:column;align-items:center;flex-shrink:0;}
+.timeline-num{display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:var(--m);color:#fff;font-family:var(--font-serif);font-weight:700;font-size:1.05rem;}
+.timeline-line{width:2px;flex:1;background:var(--soft);margin:.5rem 0;transform:scaleY(0);transform-origin:top;transition:transform .8s var(--ease) .15s;}
+.timeline-step.is-visible .timeline-line{transform:scaleY(1);}
+.timeline-body{padding-bottom:3rem;}
+.timeline-body h3{font-size:1.4rem;margin-bottom:.5rem;}
+.timeline-body p{color:var(--slate);max-width:480px;}
+.timeline-step:last-child .timeline-body{padding-bottom:0;}
+
+/* Work */
+.work{padding:7rem 0;}
+.work-grid{display:grid;grid-template-columns:1fr;gap:2rem;}
+.work-card{border-radius:24px;overflow:hidden;}
+.work-thumb{aspect-ratio:4/3;border-radius:20px;margin-bottom:1.25rem;background-size:200% 200%;transition:transform var(--dur-slow) var(--ease),border-radius var(--dur-slow) var(--ease);}
+.work-card:hover .work-thumb{transform:scale(1.03);border-radius:14px;}
+.work-thumb-1{background-image:linear-gradient(135deg,var(--m),var(--t));}
+.work-thumb-2{background-image:linear-gradient(135deg,var(--m3),var(--m2));}
+.work-thumb-3{background-image:linear-gradient(135deg,var(--t3),var(--m));}
+.work-thumb-4{background-image:linear-gradient(135deg,var(--t2),var(--t3));}
+.work-thumb-5{background-image:linear-gradient(135deg,var(--m2),var(--t2));}
+.work-thumb-6{background-image:linear-gradient(135deg,var(--t),var(--m3));}
+.work-tag{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--t2);margin-bottom:.4rem;}
+.work-card h3{font-size:1.3rem;margin-bottom:.5rem;}
+.work-card p{color:var(--slate);font-size:.95rem;}
+
+/* Testimonials */
+.testimonials{padding:7rem 0;}
+.testimonial-carousel{max-width:720px;margin:0 auto;text-align:center;}
+.testimonial-slides{position:relative;min-height:11rem;}
+.testimonial-slide{position:absolute;inset:0;opacity:0;transform:translateY(10px);transition:opacity .5s var(--ease),transform .5s var(--ease);pointer-events:none;}
+.testimonial-slide.is-active{opacity:1;transform:translateY(0);position:relative;pointer-events:auto;}
+.testimonial-slide p{font-family:var(--font-serif);font-size:clamp(1.3rem,2.2vw,1.75rem);line-height:1.4;margin-bottom:1.25rem;}
+.testimonial-slide footer{color:var(--slate);font-size:.92rem;}
+.testimonial-dots{display:flex;justify-content:center;gap:.6rem;margin-top:2rem;}
+.testimonial-dot{width:9px;height:9px;border-radius:50%;background:var(--soft);transition:background var(--dur-base) var(--ease),transform var(--dur-base) var(--ease);}
+.testimonial-dot[aria-current="true"]{background:var(--m);transform:scale(1.3);}
+
+/* CTA banner */
+.cta-banner{padding:6rem 0;background:linear-gradient(135deg,var(--soft),var(--cream));}
+.cta-inner{max-width:680px;margin:0 auto;text-align:center;}
+.cta-inner h2{font-size:clamp(2rem,3.4vw,2.85rem);margin-bottom:1rem;}
+.cta-inner p{color:var(--slate);margin-bottom:2rem;font-size:1.05rem;}
+
+/* Footer */
+.site-footer{background:var(--charcoal);color:var(--cream);padding:5rem 0 0;transition:background var(--dur-slow) var(--ease),color var(--dur-slow) var(--ease);}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;padding-bottom:3.5rem;border-bottom:1px solid color-mix(in srgb, var(--cream) 14%, transparent);}
+.footer-grid>*{min-width:0;}
+.footer-brand .logo{color:var(--cream);}
+.footer-brand p{color:color-mix(in srgb, var(--cream) 65%, transparent);max-width:280px;margin:1rem 0 1.5rem;font-size:.95rem;}
+.footer-social{display:flex;gap:.75rem;}
+.footer-social a{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:color-mix(in srgb, var(--cream) 12%, transparent);transition:background var(--dur-fast) var(--ease),transform var(--dur-fast) var(--ease);}
+.footer-social a:hover{background:var(--m);transform:translateY(-2px);}
+.footer-social svg{width:17px;height:17px;}
+.footer-nav h4,.footer-contact h4{font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:color-mix(in srgb, var(--cream) 55%, transparent);margin-bottom:1.1rem;}
+.footer-nav ul{display:flex;flex-direction:column;gap:.65rem;}
+.footer-nav a{color:color-mix(in srgb, var(--cream) 85%, transparent);font-size:.95rem;transition:color var(--dur-fast) var(--ease);}
+.footer-nav a:hover{color:var(--t3);}
+.footer-contact p{font-size:.95rem;margin-bottom:.5rem;color:color-mix(in srgb, var(--cream) 85%, transparent);}
+.footer-contact a{transition:color var(--dur-fast) var(--ease);}
+.footer-contact a:hover{color:var(--t3);}
+.newsletter-form{margin-top:1.25rem;}
+.newsletter-form label{display:block;font-size:.85rem;margin-bottom:.6rem;color:color-mix(in srgb, var(--cream) 85%, transparent);}
+.newsletter-row{display:flex;gap:.5rem;}
+.newsletter-row input{flex:1;min-width:0;padding:.75rem 1rem;border-radius:999px;border:1px solid color-mix(in srgb, var(--cream) 25%, transparent);background:color-mix(in srgb, var(--cream) 8%, transparent);color:var(--cream);}
+.newsletter-row input::placeholder{color:color-mix(in srgb, var(--cream) 45%, transparent);}
+.newsletter-row input:focus-visible{outline:2px solid var(--t3);}
+.form-note{font-size:.85rem;color:var(--t3);margin-top:.6rem;min-height:1.2em;}
+.footer-bottom{display:flex;flex-direction:column;gap:.75rem;padding:1.75rem 0 2.25rem;font-size:.85rem;color:color-mix(in srgb, var(--cream) 55%, transparent);}
+
+@media (min-width:640px){
+  .footer-bottom{flex-direction:row;justify-content:space-between;}
+}
+@media (min-width:768px){
+  .work-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (min-width:1024px){
+  .footer-grid{grid-template-columns:2fr 1fr 1fr 1.4fr;}
+}
+
+/* Back to top */
+.back-to-top{position:fixed;right:1.5rem;bottom:1.5rem;width:46px;height:46px;border-radius:50%;background:var(--charcoal);color:var(--cream);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow2);opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity var(--dur-base) var(--ease),transform var(--dur-base) var(--ease),visibility var(--dur-base);z-index:500;}
+.back-to-top.is-visible{opacity:1;visibility:visible;transform:translateY(0);}
+.back-to-top svg{width:20px;height:20px;}
+.back-to-top:hover{transform:translateY(-3px);}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+  .reveal,.timeline-step{opacity:1;transform:none;}
+  .orb{animation:none;opacity:.45;}
+}
+</style>
 </head>
 <body>
-  <!-- Full website content -->
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#top" class="logo" aria-label="OUI Experience Marketing — home">OUI<span class="logo-dot">.</span></a>
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="#capabilities" data-nav>Capabilities</a></li>
+        <li><a href="#approach" data-nav>Approach</a></li>
+        <li><a href="#work" data-nav>Work</a></li>
+        <li><a href="#insights" data-nav>Insights</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+      <a href="#contact" class="btn btn-primary btn-sm">Start a project</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" data-state="closed">
+  <nav aria-label="Mobile">
+    <ul>
+      <li><a href="#capabilities" data-nav>Capabilities</a></li>
+      <li><a href="#approach" data-nav>Approach</a></li>
+      <li><a href="#work" data-nav>Work</a></li>
+      <li><a href="#insights" data-nav>Insights</a></li>
+      <li><a href="#contact" data-nav>Contact</a></li>
+    </ul>
+  </nav>
+  <a href="#contact" class="btn btn-primary btn-block">Start a project</a>
+</div>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="hero-bg" id="heroBg" aria-hidden="true">
+      <span class="orb orb-m"></span>
+      <span class="orb orb-t"></span>
+    </div>
+    <div class="container hero-inner">
+      <p class="eyebrow reveal">Global Experience Marketing</p>
+      <h1 class="hero-title reveal" style="--d:.08s">We turn brand moments into <em class="serif-em">lasting growth.</em></h1>
+      <p class="hero-sub reveal" style="--d:.16s">OUI is a global experience marketing agency — we plan the strategy, design the moment, and produce it everywhere it needs to happen, so every activation moves the business forward.</p>
+      <div class="hero-actions reveal" style="--d:.24s">
+        <a href="#contact" class="btn btn-primary btn-lg">Start a project</a>
+        <a href="#work" class="btn btn-ghost btn-lg">View our work</a>
+      </div>
+    </div>
+    <a href="#capabilities" class="scroll-cue" aria-label="Scroll to learn more">
+      <span class="scroll-cue-line"></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </a>
+  </section>
+
+  <section class="capabilities-strip" aria-label="Capabilities overview">
+    <div class="container tag-row">
+      <span class="tag reveal" style="--d:0s">Brand Activations</span>
+      <span class="tag-dot" aria-hidden="true">·</span>
+      <span class="tag reveal" style="--d:.05s">Pop-Ups &amp; Retail</span>
+      <span class="tag-dot" aria-hidden="true">·</span>
+      <span class="tag reveal" style="--d:.1s">Live Events</span>
+      <span class="tag-dot" aria-hidden="true">·</span>
+      <span class="tag reveal" style="--d:.15s">Digital Experiences</span>
+      <span class="tag-dot" aria-hidden="true">·</span>
+      <span class="tag reveal" style="--d:.2s">Sponsorship Strategy</span>
+      <span class="tag-dot" aria-hidden="true">·</span>
+      <span class="tag reveal" style="--d:.25s">Content &amp; Production</span>
+    </div>
+  </section>
+
+  <section class="services" id="capabilities">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">What We Do</p>
+        <h2>Four disciplines. One connected team.</h2>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal" style="--d:0s">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+          </span>
+          <h3>Strategy</h3>
+          <p>We start with the business problem, not the event brief. Audience insight, positioning, and measurement frameworks make every experience accountable to growth.</p>
+        </article>
+        <article class="service-card reveal" style="--d:.08s">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          </span>
+          <h3>Experience Design</h3>
+          <p>Concepts, spatial design, and storytelling that turn a brand idea into something people want to walk into, share, and remember.</p>
+        </article>
+        <article class="service-card reveal" style="--d:.16s">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3l2-3h6l2 3h3a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+          </span>
+          <h3>Production</h3>
+          <p>End-to-end production across builds, vendors, travel, and logistics — in any market, at any scale, without the usual scramble.</p>
+        </article>
+        <article class="service-card reveal" style="--d:.24s">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+          </span>
+          <h3>Growth &amp; Measurement</h3>
+          <p>Post-event isn't the end. We track engagement, sentiment, and pipeline impact, then feed it back into the next activation.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" id="impact">
+    <div class="container stats-grid">
+      <div class="stat reveal" style="--d:0s">
+        <p class="stat-number"><span data-count="180" data-suffix="+">0</span></p>
+        <p class="stat-label">Experiences produced</p>
+      </div>
+      <div class="stat reveal" style="--d:.08s">
+        <p class="stat-number"><span data-count="42">0</span></p>
+        <p class="stat-label">Markets activated</p>
+      </div>
+      <div class="stat reveal" style="--d:.16s">
+        <p class="stat-number"><span data-count="96" data-suffix="%">0</span></p>
+        <p class="stat-label">Client return rate</p>
+      </div>
+      <div class="stat reveal" style="--d:.24s">
+        <p class="stat-number"><span data-count="11">0</span></p>
+        <p class="stat-label">Years of craft</p>
+      </div>
+    </div>
+  </section>
+  <section class="approach" id="approach">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">How We Work</p>
+        <h2>A simple process for complex experiences.</h2>
+      </div>
+      <ol class="timeline">
+        <li class="timeline-step">
+          <span class="timeline-marker"><span class="timeline-num">01</span><span class="timeline-line"></span></span>
+          <div class="timeline-body"><h3>Discover</h3><p>We immerse ourselves in your brand, audience, and goals before a single idea hits the page.</p></div>
+        </li>
+        <li class="timeline-step">
+          <span class="timeline-marker"><span class="timeline-num">02</span><span class="timeline-line"></span></span>
+          <div class="timeline-body"><h3>Design</h3><p>Concepting, spatial planning, and storytelling come together into a single experience blueprint.</p></div>
+        </li>
+        <li class="timeline-step">
+          <span class="timeline-marker"><span class="timeline-num">03</span><span class="timeline-line"></span></span>
+          <div class="timeline-body"><h3>Produce</h3><p>Our production teams turn the blueprint into reality — on time, on brand, anywhere in the world.</p></div>
+        </li>
+        <li class="timeline-step">
+          <span class="timeline-marker"><span class="timeline-num">04</span></span>
+          <div class="timeline-body"><h3>Measure &amp; Grow</h3><p>We close the loop with data and learnings, and a clear plan for what comes next.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="work" id="work">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Selected Work</p>
+        <h2>Experiences that moved the needle.</h2>
+      </div>
+      <div class="work-grid">
+        <article class="work-card reveal" style="--d:0s">
+          <div class="work-thumb work-thumb-1"></div>
+          <p class="work-tag">Consumer Tech</p>
+          <h3>Flagship Product Launch</h3>
+          <p>A multi-city launch tour built to turn first impressions into pre-orders.</p>
+        </article>
+        <article class="work-card reveal" style="--d:.06s">
+          <div class="work-thumb work-thumb-2"></div>
+          <p class="work-tag">Beauty &amp; Cosmetics</p>
+          <h3>Global Retail Activation</h3>
+          <p>An in-store experience platform rolled out across 14 markets in nine weeks.</p>
+        </article>
+        <article class="work-card reveal" style="--d:.12s">
+          <div class="work-thumb work-thumb-3"></div>
+          <p class="work-tag">Lifestyle</p>
+          <h3>Festival Sponsorship Experience</h3>
+          <p>An on-site brand world designed to convert festival attention into community.</p>
+        </article>
+        <article class="work-card reveal" style="--d:.18s">
+          <div class="work-thumb work-thumb-4"></div>
+          <p class="work-tag">Fashion</p>
+          <h3>Pop-Up Concept Store</h3>
+          <p>A travelling retail concept that reinvented itself in every city it visited.</p>
+        </article>
+        <article class="work-card reveal" style="--d:.24s">
+          <div class="work-thumb work-thumb-5"></div>
+          <p class="work-tag">B2B Technology</p>
+          <h3>Experiential Trade Show Pavilion</h3>
+          <p>A hosted pavilion experience that turned trade-show foot traffic into qualified pipeline.</p>
+        </article>
+        <article class="work-card reveal" style="--d:.3s">
+          <div class="work-thumb work-thumb-6"></div>
+          <p class="work-tag">Finance</p>
+          <h3>Hybrid Brand Summit</h3>
+          <p>A connected in-person and digital summit reaching audiences across three continents.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="insights">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">What Partners Say</p>
+        <h2>Trusted by teams who need it done right.</h2>
+      </div>
+      <div class="testimonial-carousel reveal" id="testimonialCarousel">
+        <div class="testimonial-slides">
+          <blockquote class="testimonial-slide is-active">
+            <p>"OUI is the rare partner who can think in spreadsheets and stagecraft. They protected our brand and our budget."</p>
+            <footer><span class="serif">VP Marketing</span> · Consumer Electronics</footer>
+          </blockquote>
+          <blockquote class="testimonial-slide">
+            <p>"We've run global tours with three agencies. OUI was the first one that made every market feel consistent."</p>
+            <footer><span class="serif">Global Brand Director</span> · Beauty</footer>
+          </blockquote>
+          <blockquote class="testimonial-slide">
+            <p>"They didn't just build the activation — they built the case for why it mattered to the business."</p>
+            <footer><span class="serif">CMO</span> · Financial Services</footer>
+          </blockquote>
+        </div>
+        <div class="testimonial-dots" role="tablist" aria-label="Testimonials">
+          <button class="testimonial-dot" type="button" aria-current="true" aria-label="Testimonial 1"></button>
+          <button class="testimonial-dot" type="button" aria-current="false" aria-label="Testimonial 2"></button>
+          <button class="testimonial-dot" type="button" aria-current="false" aria-label="Testimonial 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container cta-inner reveal">
+      <h2>Let's create your next unforgettable experience.</h2>
+      <p>Tell us about your brand, your audience, and what you're trying to move. We'll bring the strategy, the design, and the production team to make it real.</p>
+      <a href="#contact" class="btn btn-primary btn-lg">Start a project</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#top" class="logo">OUI<span class="logo-dot">.</span></a>
+      <p>Global strategy, design, and production for brand experiences that grow the business.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="OUI on LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+        <a href="#" aria-label="OUI on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg></a>
+      </div>
+    </div>
+    <nav class="footer-nav" aria-label="Company">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#insights">Insights</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-nav" aria-label="Capabilities">
+      <h4>Capabilities</h4>
+      <ul>
+        <li><a href="#capabilities">Strategy</a></li>
+        <li><a href="#capabilities">Experience Design</a></li>
+        <li><a href="#capabilities">Production</a></li>
+        <li><a href="#capabilities">Growth &amp; Measurement</a></li>
+      </ul>
+    </nav>
+    <div class="footer-contact">
+      <h4>Get in touch</h4>
+      <p><a href="mailto:hello@ouiexperience.com">hello@ouiexperience.com</a></p>
+      <p>New York · London · Singapore</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <label for="newsletterEmail">Stay in the loop</label>
+        <div class="newsletter-row">
+          <input type="email" id="newsletterEmail" name="email" placeholder="you@company.com" required>
+          <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+        </div>
+        <p class="form-note" role="status"></p>
+      </form>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> OUI Experience Marketing. All rights reserved.</p>
+    <p class="footer-legal">Privacy Policy · Terms of Service</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+</button>
+
+<script>
+(function () {
+  'use strict';
+  var root = document.documentElement;
+  var header = document.getElementById('siteHeader');
+  var menuToggle = document.getElementById('menuToggle');
+  var mobileNav = document.getElementById('mobileNav');
+  var themeToggle = document.getElementById('themeToggle');
+  var scrollProgress = document.getElementById('scrollProgress');
+  var reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  var THEME_KEY = 'oui-theme';
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      root.setAttribute('data-theme', 'dark');
+      themeToggle.setAttribute('aria-pressed', 'true');
+      themeToggle.setAttribute('aria-label', 'Switch to light theme');
+    } else {
+      root.removeAttribute('data-theme');
+      themeToggle.setAttribute('aria-pressed', 'false');
+      themeToggle.setAttribute('aria-label', 'Switch to dark theme');
+    }
+  }
+  var storedTheme = localStorage.getItem(THEME_KEY);
+  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(storedTheme || (prefersDark ? 'dark' : 'light'));
+  themeToggle.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem(THEME_KEY, next);
+  });
+
+  function setMenu(open) {
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    mobileNav.dataset.state = open ? 'open' : 'closed';
+    document.body.classList.toggle('nav-open', open);
+  }
+  menuToggle.addEventListener('click', function () {
+    setMenu(mobileNav.dataset.state !== 'open');
+  });
+  Array.prototype.forEach.call(mobileNav.querySelectorAll('a'), function (link) {
+    link.addEventListener('click', function () { setMenu(false); });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && mobileNav.dataset.state === 'open') setMenu(false);
+  });
+
+  var scheduled = false;
+  function onScroll() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(function () {
+      header.classList.toggle('is-scrolled', window.scrollY > 24);
+      var doc = document.documentElement;
+      var max = doc.scrollHeight - doc.clientHeight;
+      var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      scrollProgress.style.width = pct + '%';
+      scheduled = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  window.OUI_REDUCE_MOTION = reduceMotionQuery.matches;
+
+  // Reveal-on-scroll (+ timeline draw-in)
+  var revealTargets = document.querySelectorAll('.reveal, .timeline-step');
+  if ('IntersectionObserver' in window) {
+    var revealObserver = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    Array.prototype.forEach.call(revealTargets, function (el) { revealObserver.observe(el); });
+  } else {
+    Array.prototype.forEach.call(revealTargets, function (el) { el.classList.add('is-visible'); });
+  }
+
+  // Count-up stats
+  var statNumbers = document.querySelectorAll('[data-count]');
+  function animateCount(el) {
+    var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+    var suffix = el.getAttribute('data-suffix') || '';
+    if (window.OUI_REDUCE_MOTION) {
+      el.textContent = target + suffix;
+      return;
+    }
+    var start = null;
+    var duration = 1600;
+    function step(timestamp) {
+      if (start === null) start = timestamp;
+      var progress = Math.min((timestamp - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var statsSection = document.getElementById('impact');
+  if (statsSection && statNumbers.length) {
+    if ('IntersectionObserver' in window) {
+      var statsObserver = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            Array.prototype.forEach.call(statNumbers, animateCount);
+            obs.disconnect();
+          }
+        });
+      }, { threshold: 0.4 });
+      statsObserver.observe(statsSection);
+    } else {
+      Array.prototype.forEach.call(statNumbers, animateCount);
+    }
+  }
+
+  // Scrollspy
+  var navLinks = document.querySelectorAll('[data-nav]');
+  var navSections = Array.prototype.map.call(navLinks, function (link) {
+    return document.querySelector(link.getAttribute('href'));
+  }).filter(Boolean);
+  function setActiveNav(id) {
+    Array.prototype.forEach.call(navLinks, function (link) {
+      link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+    });
+  }
+  if ('IntersectionObserver' in window && navSections.length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) setActiveNav(entry.target.id);
+      });
+    }, { rootMargin: '-45% 0px -45% 0px' });
+    navSections.forEach(function (sec) { spy.observe(sec); });
+  }
+
+  // Testimonial carousel
+  var carousel = document.getElementById('testimonialCarousel');
+  if (carousel) {
+    var slides = carousel.querySelectorAll('.testimonial-slide');
+    var dots = carousel.querySelectorAll('.testimonial-dot');
+    var current = 0;
+    var autoplayTimer = null;
+    function goToSlide(index) {
+      current = (index + slides.length) % slides.length;
+      Array.prototype.forEach.call(slides, function (slide, i) {
+        slide.classList.toggle('is-active', i === current);
+      });
+      Array.prototype.forEach.call(dots, function (dot, i) {
+        dot.setAttribute('aria-current', String(i === current));
+      });
+    }
+    function stopAutoplay() {
+      if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
+    }
+    function startAutoplay() {
+      if (window.OUI_REDUCE_MOTION) return;
+      stopAutoplay();
+      autoplayTimer = setInterval(function () { goToSlide(current + 1); }, 6000);
+    }
+    Array.prototype.forEach.call(dots, function (dot, i) {
+      dot.addEventListener('click', function () { goToSlide(i); startAutoplay(); });
+    });
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+    carousel.addEventListener('focusin', stopAutoplay);
+    carousel.addEventListener('focusout', startAutoplay);
+    startAutoplay();
+  }
+
+  // Hero parallax (pointer-driven, not autonomous)
+  var heroSection = document.querySelector('.hero');
+  var heroBg = document.getElementById('heroBg');
+  if (heroSection && heroBg && window.matchMedia('(pointer: fine)').matches) {
+    var orbs = heroBg.querySelectorAll('.orb');
+    var parallaxScheduled = false;
+    var px = 0, py = 0;
+    heroSection.addEventListener('mousemove', function (e) {
+      if (window.OUI_REDUCE_MOTION) return;
+      var rect = heroSection.getBoundingClientRect();
+      px = (e.clientX - rect.left) / rect.width - 0.5;
+      py = (e.clientY - rect.top) / rect.height - 0.5;
+      if (parallaxScheduled) return;
+      parallaxScheduled = true;
+      requestAnimationFrame(function () {
+        Array.prototype.forEach.call(orbs, function (orb, i) {
+          var depth = i === 0 ? 18 : 28;
+          orb.style.transform = 'translate(' + (px * depth) + 'px,' + (py * depth) + 'px)';
+        });
+        parallaxScheduled = false;
+      });
+    });
+    heroSection.addEventListener('mouseleave', function () {
+      Array.prototype.forEach.call(orbs, function (orb) { orb.style.transform = ''; });
+    });
+  }
+
+  // Back to top
+  var backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    window.addEventListener('scroll', function () {
+      backToTop.classList.toggle('is-visible', window.scrollY > 600);
+    }, { passive: true });
+    backToTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: window.OUI_REDUCE_MOTION ? 'auto' : 'smooth' });
+    });
+  }
+
+  // Newsletter form (client-side only confirmation)
+  var newsletterForm = document.getElementById('newsletterForm');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var note = newsletterForm.querySelector('.form-note');
+      if (note) note.textContent = "Thanks — you're on the list.";
+      newsletterForm.reset();
+    });
+  }
+
+  // Footer year
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+})();
+</script>
 </body>
 </html>
