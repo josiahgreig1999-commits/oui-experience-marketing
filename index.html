@@ -3,8 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="OUI is a global experience marketing agency. We plan the strategy, design the moment, and produce brand experiences anywhere in the world.">
-<title>OUI Experience Marketing | Global Strategy · Production · Growth</title>
+<meta name="description" content="OUI Experience Marketing — Trinidad &amp; Tobago's premier digital marketing agency. Social media, brand strategy, AI marketing, paid ads &amp; content production. From $1,000 TTD/mo.">
+<title>OUI Experience Marketing | Trinidad &amp; Tobago's Premier Digital Agency</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="OUI Experience Marketing | T&amp;T's Premier Digital Agency">
+<meta property="og:description" content="Transform your Caribbean brand with social media, content, AI marketing & paid ads. Starting $1,000 TTD/mo. Based in T&T, serving globally.">
+<meta property="og:locale" content="en_TT">
+<meta property="og:site_name" content="OUI Experience Marketing">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="OUI Experience Marketing">
+<meta name="twitter:description" content="T&T's premier digital marketing agency.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MarketingAgency","name":"OUI Experience Marketing",
+ "description":"Trinidad & Tobago's premier digital marketing agency.",
+ "telephone":"+1-868-331-6558","email":"builtbyoui@gmail.com",
+ "address":{"@type":"PostalAddress","addressCountry":"TT"},
+ "priceRange":"$1,000-$3,000 TTD/month",
+ "areaServed":["Trinidad and Tobago","Caribbean"]}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231B2428'/%3E%3Ctext x='50' y='67' font-family='Georgia,serif' font-size='50' fill='%23FDF8F3' text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -148,6 +164,8 @@ body.nav-open{overflow:hidden;}
 .service-icon{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:16px;background:var(--cream);color:var(--m);margin-bottom:1.5rem;transition:background var(--dur-base) var(--ease),color var(--dur-base) var(--ease),transform var(--dur-base) var(--ease);}
 .service-icon svg{width:26px;height:26px;}
 .service-card:hover .service-icon{background:var(--m);color:#fff;transform:scale(1.08) rotate(-4deg);}
+.service-icon.t{color:var(--t);}
+.service-card:hover .service-icon.t{background:var(--t);}
 .service-card h3{font-size:1.35rem;margin-bottom:.65rem;}
 .service-card p{color:var(--slate);font-size:.97rem;}
 
@@ -163,6 +181,38 @@ body.nav-open{overflow:hidden;}
 @media (min-width:1024px){
   .service-grid{grid-template-columns:repeat(4,1fr);}
   .stats-grid{grid-template-columns:repeat(4,1fr);}
+}
+
+/* Packages */
+.packages{padding:7rem 0;}
+.packages-grid{display:grid;grid-template-columns:1fr;gap:1.75rem;}
+.package-card{position:relative;background:var(--soft);border-radius:24px;padding:2.25rem 2rem;display:flex;flex-direction:column;transition:transform var(--dur-base) var(--ease),box-shadow var(--dur-base) var(--ease);}
+.package-card:hover{transform:translateY(-6px);box-shadow:var(--shadow2);}
+.package-card.featured{background:var(--charcoal);color:var(--cream);}
+.package-badge{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--m);background:color-mix(in srgb, var(--m) 12%, transparent);padding:.4rem .9rem;border-radius:999px;margin-bottom:1.25rem;align-self:flex-start;}
+.package-card.featured .package-badge{color:var(--t3);background:color-mix(in srgb, var(--t3) 18%, transparent);}
+.package-posts{font-size:.85rem;color:var(--slate);margin-bottom:.4rem;}
+.package-card.featured .package-posts{color:color-mix(in srgb, var(--cream) 70%, transparent);}
+.package-price{font-family:var(--font-serif);font-size:2.1rem;font-weight:700;margin-bottom:.6rem;}
+.package-period{font-size:.95rem;font-weight:400;color:var(--slate);}
+.package-card.featured .package-period{color:color-mix(in srgb, var(--cream) 60%, transparent);}
+.package-desc{font-size:.92rem;color:var(--slate);margin-bottom:1.5rem;}
+.package-card.featured .package-desc{color:color-mix(in srgb, var(--cream) 75%, transparent);}
+.package-features{display:flex;flex-direction:column;gap:.7rem;margin-bottom:2rem;flex:1;}
+.package-features li{display:flex;align-items:flex-start;gap:.6rem;font-size:.9rem;}
+.package-features svg{flex-shrink:0;width:16px;height:16px;margin-top:.15rem;color:var(--t);}
+.package-card.featured .package-features svg{color:var(--t3);}
+.addon-strip{margin-top:3.5rem;text-align:center;}
+.addon-strip h3{font-size:1.1rem;margin-bottom:.4rem;}
+.addon-strip p{color:var(--slate);font-size:.9rem;}
+.addon-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-top:1.5rem;}
+.addon-chip{display:flex;align-items:center;gap:.5rem;background:var(--soft);border-radius:999px;padding:.55rem 1.1rem;font-size:.85rem;}
+.addon-chip strong{color:var(--m);font-weight:700;}
+@media (min-width:640px){
+  .packages-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (min-width:1024px){
+  .packages-grid{grid-template-columns:repeat(4,1fr);}
 }
 
 /* Approach / Timeline */
@@ -272,8 +322,8 @@ body.nav-open{overflow:hidden;}
     <a href="#top" class="logo" aria-label="OUI Experience Marketing — home">OUI<span class="logo-dot">.</span></a>
     <nav class="nav" aria-label="Primary">
       <ul>
-        <li><a href="#capabilities" data-nav>Capabilities</a></li>
-        <li><a href="#approach" data-nav>Approach</a></li>
+        <li><a href="#capabilities" data-nav>Services</a></li>
+        <li><a href="#packages" data-nav>Packages</a></li>
         <li><a href="#work" data-nav>Work</a></li>
         <li><a href="#insights" data-nav>Insights</a></li>
         <li><a href="#contact" data-nav>Contact</a></li>
@@ -295,8 +345,8 @@ body.nav-open{overflow:hidden;}
 <div class="mobile-nav" id="mobileNav" data-state="closed">
   <nav aria-label="Mobile">
     <ul>
-      <li><a href="#capabilities" data-nav>Capabilities</a></li>
-      <li><a href="#approach" data-nav>Approach</a></li>
+      <li><a href="#capabilities" data-nav>Services</a></li>
+      <li><a href="#packages" data-nav>Packages</a></li>
       <li><a href="#work" data-nav>Work</a></li>
       <li><a href="#insights" data-nav>Insights</a></li>
       <li><a href="#contact" data-nav>Contact</a></li>
@@ -312,12 +362,12 @@ body.nav-open{overflow:hidden;}
       <span class="orb orb-t"></span>
     </div>
     <div class="container hero-inner">
-      <p class="eyebrow reveal">Global Experience Marketing</p>
-      <h1 class="hero-title reveal" style="--d:.08s">We turn brand moments into <em class="serif-em">lasting growth.</em></h1>
-      <p class="hero-sub reveal" style="--d:.16s">OUI is a global experience marketing agency — we plan the strategy, design the moment, and produce it everywhere it needs to happen, so every activation moves the business forward.</p>
+      <p class="eyebrow reveal">Trinidad &amp; Tobago · Digital Marketing Agency</p>
+      <h1 class="hero-title reveal" style="--d:.08s">Fuel your brand with <em class="serif-em">experience that converts.</em></h1>
+      <p class="hero-sub reveal" style="--d:.16s">We help small and medium businesses grow their brand, engage customers, and achieve measurable results — from strategy and production to full-scale digital growth.</p>
       <div class="hero-actions reveal" style="--d:.24s">
-        <a href="#contact" class="btn btn-primary btn-lg">Start a project</a>
-        <a href="#work" class="btn btn-ghost btn-lg">View our work</a>
+        <a href="#packages" class="btn btn-primary btn-lg">Explore packages</a>
+        <a href="#work" class="btn btn-ghost btn-lg">View case studies</a>
       </div>
     </div>
     <a href="#capabilities" class="scroll-cue" aria-label="Scroll to learn more">
@@ -328,17 +378,17 @@ body.nav-open{overflow:hidden;}
 
   <section class="capabilities-strip" aria-label="Capabilities overview">
     <div class="container tag-row">
-      <span class="tag reveal" style="--d:0s">Brand Activations</span>
+      <span class="tag reveal" style="--d:0s">Social Media Management</span>
       <span class="tag-dot" aria-hidden="true">·</span>
-      <span class="tag reveal" style="--d:.05s">Pop-Ups &amp; Retail</span>
+      <span class="tag reveal" style="--d:.05s">Brand Strategy</span>
       <span class="tag-dot" aria-hidden="true">·</span>
-      <span class="tag reveal" style="--d:.1s">Live Events</span>
+      <span class="tag reveal" style="--d:.1s">Content Production</span>
       <span class="tag-dot" aria-hidden="true">·</span>
-      <span class="tag reveal" style="--d:.15s">Digital Experiences</span>
+      <span class="tag reveal" style="--d:.15s">Paid Media &amp; Ads</span>
       <span class="tag-dot" aria-hidden="true">·</span>
-      <span class="tag reveal" style="--d:.2s">Sponsorship Strategy</span>
+      <span class="tag reveal" style="--d:.2s">AI-Powered Marketing</span>
       <span class="tag-dot" aria-hidden="true">·</span>
-      <span class="tag reveal" style="--d:.25s">Content &amp; Production</span>
+      <span class="tag reveal" style="--d:.25s">Website Design</span>
     </div>
   </section>
 
@@ -346,37 +396,181 @@ body.nav-open{overflow:hidden;}
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">What We Do</p>
-        <h2>Four disciplines. One connected team.</h2>
+        <h2>Comprehensive marketing solutions for every stage of growth.</h2>
       </div>
       <div class="service-grid">
         <article class="service-card reveal" style="--d:0s">
-          <span class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+          <span class="service-icon t">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
           </span>
-          <h3>Strategy</h3>
-          <p>We start with the business problem, not the event brief. Audience insight, positioning, and measurement frameworks make every experience accountable to growth.</p>
+          <h3>Social Media Management</h3>
+          <p>Full-cycle social management across Instagram, Facebook, TikTok, and LinkedIn. We craft, schedule, and optimise content that drives genuine engagement and community growth.</p>
+        </article>
+        <article class="service-card reveal" style="--d:.04s">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          </span>
+          <h3>Brand Strategy &amp; Identity</h3>
+          <p>From brand audits and competitive analysis to visual identity systems and messaging frameworks — we build brands that are culturally resonant and commercially powerful.</p>
         </article>
         <article class="service-card reveal" style="--d:.08s">
-          <span class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          <span class="service-icon t">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
           </span>
-          <h3>Experience Design</h3>
-          <p>Concepts, spatial design, and storytelling that turn a brand idea into something people want to walk into, share, and remember.</p>
+          <h3>Content Production</h3>
+          <p>Studio-grade photography, video production, motion graphics, and copywriting. We produce premium visual assets that position your brand at the top of its category.</p>
+        </article>
+        <article class="service-card reveal" style="--d:.12s">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          </span>
+          <h3>B2B Growth &amp; Partnerships</h3>
+          <p>Strategic B2B outreach, cross-brand collaborations, investor-ready decks, and omnichannel growth systems designed to accelerate your commercial pipeline.</p>
         </article>
         <article class="service-card reveal" style="--d:.16s">
+          <span class="service-icon t">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          </span>
+          <h3>Analytics &amp; Reporting</h3>
+          <p>Data-driven performance dashboards, competitor benchmarking, and monthly strategic reviews that keep your brand evolving with the market.</p>
+        </article>
+        <article class="service-card reveal" style="--d:.2s">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          </span>
+          <h3>Paid Media &amp; Ads</h3>
+          <p>Meta Ads, Google Ads, and influencer seeding campaigns designed for maximum ROI. We handle strategy, creative, targeting, and optimisation end-to-end.</p>
+        </article>
+        <article class="service-card reveal" style="--d:.24s">
+          <span class="service-icon t">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          </span>
+          <h3>Website Design &amp; Development</h3>
+          <p>Professional, mobile-first websites and landing pages built for speed, SEO, and conversion — from single-page sites to full e-commerce platforms.</p>
+        </article>
+        <article class="service-card reveal" style="--d:.28s">
           <span class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3l2-3h6l2 3h3a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
           </span>
-          <h3>Production</h3>
-          <p>End-to-end production across builds, vendors, travel, and logistics — in any market, at any scale, without the usual scramble.</p>
+          <h3>Photography &amp; Videography</h3>
+          <p>Studio-grade product shoots, brand photography, lifestyle campaigns, and cinematic video production — all in-house. Professional assets that elevate every channel.</p>
         </article>
-        <article class="service-card reveal" style="--d:.24s">
-          <span class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+        <article class="service-card reveal" style="--d:.32s">
+          <span class="service-icon t">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
           </span>
-          <h3>Growth &amp; Measurement</h3>
-          <p>Post-event isn't the end. We track engagement, sentiment, and pipeline impact, then feed it back into the next activation.</p>
+          <h3>AI-Powered Marketing</h3>
+          <p>We harness Google Gemini and leading AI tools to supercharge your campaigns — from AI-generated content and hyper-personalised ads to predictive analytics at scale.</p>
         </article>
+        <article class="service-card reveal" style="--d:.36s">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          </span>
+          <h3>WhatsApp &amp; SMS Marketing</h3>
+          <p>Direct mobile messaging campaigns that reach customers where they spend the most time — among the highest-converting channels for T&amp;T businesses.</p>
+        </article>
+        <article class="service-card reveal" style="--d:.4s">
+          <span class="service-icon t">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </span>
+          <h3>Reputation Management</h3>
+          <p>Monitor, manage, and actively improve your brand's online reputation across Google Reviews, Facebook, and social media. We respond to reviews and build a digital presence that converts.</p>
+        </article>
+        <article class="service-card reveal" style="--d:.44s">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+          </span>
+          <h3>Podcast Production</h3>
+          <p>End-to-end podcast creation for brands — concept development, recording setup guidance, editing, distribution, and promotional campaigns to grow your audience from episode one.</p>
+        </article>
+        <article class="service-card reveal" style="--d:.48s">
+          <span class="service-icon t">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22 6 12 13 2 6"></polyline></svg>
+          </span>
+          <h3>Email Marketing &amp; Automation</h3>
+          <p>Beautifully designed email campaigns, drip sequences, and CRM automation flows that nurture your leads 24/7 — from welcome series to VIP loyalty programmes.</p>
+        </article>
+        <article class="service-card reveal" style="--d:.52s">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </span>
+          <h3>Influencer Management</h3>
+          <p>Full influencer campaign management — from identification and vetting to content approval and performance tracking. We manage local T&amp;T creators and regional Caribbean influencers.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="packages" id="packages">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Pricing &amp; Plans</p>
+        <h2>Social media packages built for T&amp;T businesses.</h2>
+      </div>
+      <div class="packages-grid">
+        <article class="package-card reveal" style="--d:0s">
+          <span class="package-badge">Starter</span>
+          <p class="package-posts">6 Posts / Month</p>
+          <p class="package-price">$1,000 <span class="package-period">TTD / mo</span></p>
+          <p class="package-desc">Perfect for establishing a consistent local presence.</p>
+          <ul class="package-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Content creation (graphics + copy)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Professional scheduling</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Community engagement</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Monthly performance report</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-sm btn-block">Get Started →</a>
+        </article>
+        <article class="package-card featured reveal" style="--d:.06s">
+          <span class="package-badge">Growth</span>
+          <p class="package-posts">12 Posts / Month</p>
+          <p class="package-price">$1,500 <span class="package-period">TTD / mo</span></p>
+          <p class="package-desc">Growth-focused content with extra engagement boosters.</p>
+          <ul class="package-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>All Starter features +</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Video snippets &amp; Reels</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Bi-weekly engagement boost</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Monthly creative shoot (1hr)</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-sm btn-block">Choose Plan →</a>
+        </article>
+        <article class="package-card reveal" style="--d:.12s">
+          <span class="package-badge">Pro</span>
+          <p class="package-posts">15 Posts / Month</p>
+          <p class="package-price">$2,000 <span class="package-period">TTD / mo</span></p>
+          <p class="package-desc">High-velocity brand building for serious growth.</p>
+          <ul class="package-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>All Growth features +</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Custom illustrations &amp; motion</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Monthly paid ads strategy</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Priority support &amp; strategy calls</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-sm btn-block">Scale Up →</a>
+        </article>
+        <article class="package-card reveal" style="--d:.18s">
+          <span class="package-badge">Enterprise</span>
+          <p class="package-posts">24 Posts / Month</p>
+          <p class="package-price">$3,000 <span class="package-period">TTD / mo</span></p>
+          <p class="package-desc">Full-service brand domination across all channels.</p>
+          <ul class="package-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Daily content + Stories</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Advanced analytics &amp; CRM sync</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Content shoots (2hr/month)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Dedicated account director</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-sm btn-block">Talk to Expert →</a>
+        </article>
+      </div>
+      <div class="addon-strip reveal">
+        <h3 class="serif">Supercharge any package with add-ons</h3>
+        <p>Bolt these on to any plan — mix and match to build your perfect marketing stack.</p>
+        <div class="addon-chips">
+          <span class="addon-chip">Content Shoot · <strong>$800 TTD</strong></span>
+          <span class="addon-chip">Brand Video (60s) · <strong>$1,200 TTD</strong></span>
+          <span class="addon-chip">Ads Management · <strong>$500 TTD/mo</strong></span>
+          <span class="addon-chip">AI Content Boost · <strong>$400 TTD/mo</strong></span>
+          <span class="addon-chip">Landing Page · <strong>$1,500 TTD</strong></span>
+        </div>
       </div>
     </div>
   </section>
@@ -384,20 +578,20 @@ body.nav-open{overflow:hidden;}
   <section class="stats" id="impact">
     <div class="container stats-grid">
       <div class="stat reveal" style="--d:0s">
-        <p class="stat-number"><span data-count="180" data-suffix="+">0</span></p>
-        <p class="stat-label">Experiences produced</p>
+        <p class="stat-number"><span data-count="50" data-suffix="+">0</span></p>
+        <p class="stat-label">Brands transformed</p>
       </div>
       <div class="stat reveal" style="--d:.08s">
-        <p class="stat-number"><span data-count="42">0</span></p>
-        <p class="stat-label">Markets activated</p>
+        <p class="stat-number"><span data-count="210" data-suffix="%">0</span></p>
+        <p class="stat-label">Avg. engagement lift</p>
       </div>
       <div class="stat reveal" style="--d:.16s">
-        <p class="stat-number"><span data-count="96" data-suffix="%">0</span></p>
-        <p class="stat-label">Client return rate</p>
+        <p class="stat-number"><span data-count="98" data-suffix="%">0</span></p>
+        <p class="stat-label">Client retention rate</p>
       </div>
       <div class="stat reveal" style="--d:.24s">
-        <p class="stat-number"><span data-count="11">0</span></p>
-        <p class="stat-label">Years of craft</p>
+        <p class="stat-number"><span data-count="5" data-suffix="★">0</span></p>
+        <p class="stat-label">Average rating</p>
       </div>
     </div>
   </section>
@@ -405,24 +599,24 @@ body.nav-open{overflow:hidden;}
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">How We Work</p>
-        <h2>A simple process for complex experiences.</h2>
+        <h2>A simple process for measurable growth.</h2>
       </div>
       <ol class="timeline">
         <li class="timeline-step">
           <span class="timeline-marker"><span class="timeline-num">01</span><span class="timeline-line"></span></span>
-          <div class="timeline-body"><h3>Discover</h3><p>We immerse ourselves in your brand, audience, and goals before a single idea hits the page.</p></div>
+          <div class="timeline-body"><h3>Discover</h3><p>We immerse ourselves in your brand, audience, and goals with a full audit of your current presence before any strategy is built.</p></div>
         </li>
         <li class="timeline-step">
           <span class="timeline-marker"><span class="timeline-num">02</span><span class="timeline-line"></span></span>
-          <div class="timeline-body"><h3>Design</h3><p>Concepting, spatial planning, and storytelling come together into a single experience blueprint.</p></div>
+          <div class="timeline-body"><h3>Strategise</h3><p>Content pillars, channel plans, and messaging frameworks come together into a single growth blueprint built for your market.</p></div>
         </li>
         <li class="timeline-step">
           <span class="timeline-marker"><span class="timeline-num">03</span><span class="timeline-line"></span></span>
-          <div class="timeline-body"><h3>Produce</h3><p>Our production teams turn the blueprint into reality — on time, on brand, anywhere in the world.</p></div>
+          <div class="timeline-body"><h3>Produce</h3><p>Our content and production teams turn the blueprint into scheduled posts, campaigns, and assets — on time, on brand.</p></div>
         </li>
         <li class="timeline-step">
           <span class="timeline-marker"><span class="timeline-num">04</span></span>
-          <div class="timeline-body"><h3>Measure &amp; Grow</h3><p>We close the loop with data and learnings, and a clear plan for what comes next.</p></div>
+          <div class="timeline-body"><h3>Measure &amp; Grow</h3><p>We close the loop with monthly reporting and strategy reviews, then feed the learnings into what comes next.</p></div>
         </li>
       </ol>
     </div>
@@ -432,44 +626,44 @@ body.nav-open{overflow:hidden;}
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">Selected Work</p>
-        <h2>Experiences that moved the needle.</h2>
+        <h2>Work that speaks for itself.</h2>
       </div>
       <div class="work-grid">
         <article class="work-card reveal" style="--d:0s">
           <div class="work-thumb work-thumb-1"></div>
-          <p class="work-tag">Consumer Tech</p>
-          <h3>Flagship Product Launch</h3>
-          <p>A multi-city launch tour built to turn first impressions into pre-orders.</p>
+          <p class="work-tag">Social Media</p>
+          <h3>Barber Labs — Brand Transformation</h3>
+          <p>A full content strategy and community build that drove a 40% jump in VIP bookings in 90 days.</p>
         </article>
         <article class="work-card reveal" style="--d:.06s">
           <div class="work-thumb work-thumb-2"></div>
-          <p class="work-tag">Beauty &amp; Cosmetics</p>
-          <h3>Global Retail Activation</h3>
-          <p>An in-store experience platform rolled out across 14 markets in nine weeks.</p>
+          <p class="work-tag">Brand Identity</p>
+          <h3>IsleAura &amp; Co — Product Launch</h3>
+          <p>Studio-quality photography, a brand video, and a full social strategy delivered in two weeks.</p>
         </article>
         <article class="work-card reveal" style="--d:.12s">
           <div class="work-thumb work-thumb-3"></div>
-          <p class="work-tag">Lifestyle</p>
-          <h3>Festival Sponsorship Experience</h3>
-          <p>An on-site brand world designed to convert festival attention into community.</p>
+          <p class="work-tag">Video Production</p>
+          <h3>Belle Group — Campaign Video</h3>
+          <p>A cinematic campaign film produced for the Belle Group of Companies across T&amp;T.</p>
         </article>
         <article class="work-card reveal" style="--d:.18s">
           <div class="work-thumb work-thumb-4"></div>
-          <p class="work-tag">Fashion</p>
-          <h3>Pop-Up Concept Store</h3>
-          <p>A travelling retail concept that reinvented itself in every city it visited.</p>
+          <p class="work-tag">Paid Ads</p>
+          <h3>Local Restaurant — Meta Ads Campaign</h3>
+          <p>A targeted Meta Ads campaign that turned local foot traffic into a steady stream of new customers.</p>
         </article>
         <article class="work-card reveal" style="--d:.24s">
           <div class="work-thumb work-thumb-5"></div>
-          <p class="work-tag">B2B Technology</p>
-          <h3>Experiential Trade Show Pavilion</h3>
-          <p>A hosted pavilion experience that turned trade-show foot traffic into qualified pipeline.</p>
+          <p class="work-tag">AI Marketing</p>
+          <h3>Gemini-Powered Content Strategy</h3>
+          <p>An AI-assisted content engine using Google Gemini to scale captions, ad copy, and reporting.</p>
         </article>
         <article class="work-card reveal" style="--d:.3s">
           <div class="work-thumb work-thumb-6"></div>
-          <p class="work-tag">Finance</p>
-          <h3>Hybrid Brand Summit</h3>
-          <p>A connected in-person and digital summit reaching audiences across three continents.</p>
+          <p class="work-tag">Get in touch</p>
+          <h3>Your brand could be next</h3>
+          <p>We have openings for new clients this quarter — let's talk about what growth looks like for you.</p>
         </article>
       </div>
     </div>
@@ -478,28 +672,38 @@ body.nav-open{overflow:hidden;}
   <section class="testimonials" id="insights">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow">What Partners Say</p>
-        <h2>Trusted by teams who need it done right.</h2>
+        <p class="eyebrow">Client Testimonials</p>
+        <h2>What our clients say about us.</h2>
       </div>
       <div class="testimonial-carousel reveal" id="testimonialCarousel">
         <div class="testimonial-slides">
           <blockquote class="testimonial-slide is-active">
-            <p>"OUI is the rare partner who can think in spreadsheets and stagecraft. They protected our brand and our budget."</p>
-            <footer><span class="serif">VP Marketing</span> · Consumer Electronics</footer>
+            <p>"OUI transformed our barbershop's entire digital presence. Within 3 months we went from barely posting to having a full content strategy, a loyal online community, and a 40% jump in VIP bookings. These guys don't just post — they think like business owners."</p>
+            <footer><span class="serif">Barber Labs</span> · Felicity, Chaguanas</footer>
           </blockquote>
           <blockquote class="testimonial-slide">
-            <p>"We've run global tours with three agencies. OUI was the first one that made every market feel consistent."</p>
-            <footer><span class="serif">Global Brand Director</span> · Beauty</footer>
+            <p>"We hired OUI to handle our product launch content and the results exceeded every expectation. Studio-quality photos, a brand video, and a full social strategy — all delivered within two weeks."</p>
+            <footer><span class="serif">IsleAura &amp; Co</span> · Port of Spain</footer>
           </blockquote>
           <blockquote class="testimonial-slide">
-            <p>"They didn't just build the activation — they built the case for why it mattered to the business."</p>
-            <footer><span class="serif">CMO</span> · Financial Services</footer>
+            <p>"What separates OUI from other agencies is that they genuinely understand the Caribbean market. They know our culture, our audience, and what resonates locally — while still applying international-standard strategy."</p>
+            <footer><span class="serif">Belle Group of Companies</span> · Trinidad &amp; Tobago</footer>
+          </blockquote>
+          <blockquote class="testimonial-slide">
+            <p>"Our Instagram went from 800 to over 5,000 followers in four months — and more importantly, those followers converted into paying customers. OUI's content is visually stunning and their strategy is sharp."</p>
+            <footer><span class="serif">Restaurant &amp; Food Brand</span> · San Fernando</footer>
+          </blockquote>
+          <blockquote class="testimonial-slide">
+            <p>"We tried handling social media in-house for years and it never delivered results. OUI took over and within 60 days our engagement tripled. Their monthly reports are detailed, clear, and actually help us understand what's working."</p>
+            <footer><span class="serif">Health &amp; Wellness Studio</span> · Port of Spain</footer>
           </blockquote>
         </div>
         <div class="testimonial-dots" role="tablist" aria-label="Testimonials">
           <button class="testimonial-dot" type="button" aria-current="true" aria-label="Testimonial 1"></button>
           <button class="testimonial-dot" type="button" aria-current="false" aria-label="Testimonial 2"></button>
           <button class="testimonial-dot" type="button" aria-current="false" aria-label="Testimonial 3"></button>
+          <button class="testimonial-dot" type="button" aria-current="false" aria-label="Testimonial 4"></button>
+          <button class="testimonial-dot" type="button" aria-current="false" aria-label="Testimonial 5"></button>
         </div>
       </div>
     </div>
@@ -507,9 +711,9 @@ body.nav-open{overflow:hidden;}
 
   <section class="cta-banner">
     <div class="container cta-inner reveal">
-      <h2>Let's create your next unforgettable experience.</h2>
-      <p>Tell us about your brand, your audience, and what you're trying to move. We'll bring the strategy, the design, and the production team to make it real.</p>
-      <a href="#contact" class="btn btn-primary btn-lg">Start a project</a>
+      <h2>Let's turn your vision into momentum.</h2>
+      <p>Tell us about your brand, your audience, and what success looks like. We'll bring the strategy, the content, and the growth team to make it real.</p>
+      <a href="#contact" class="btn btn-primary btn-lg">Book a free consultation</a>
     </div>
   </section>
 </main>
@@ -518,34 +722,37 @@ body.nav-open{overflow:hidden;}
   <div class="container footer-grid">
     <div class="footer-brand">
       <a href="#top" class="logo">OUI<span class="logo-dot">.</span></a>
-      <p>Global strategy, design, and production for brand experiences that grow the business.</p>
+      <p>Trinidad &amp; Tobago's premier digital marketing agency — social, strategy, content, and growth.</p>
       <div class="footer-social">
-        <a href="#" aria-label="OUI on LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
         <a href="#" aria-label="OUI on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg></a>
+        <a href="#" aria-label="OUI on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+        <a href="#" aria-label="OUI on TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l8-2v11"></path><circle cx="6" cy="18" r="3"></circle><circle cx="14" cy="16" r="3"></circle></svg></a>
+        <a href="#" aria-label="OUI on LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
       </div>
     </div>
     <nav class="footer-nav" aria-label="Company">
       <h4>Company</h4>
       <ul>
-        <li><a href="#capabilities">Capabilities</a></li>
-        <li><a href="#approach">Approach</a></li>
-        <li><a href="#work">Work</a></li>
+        <li><a href="#capabilities">Services</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#work">Case Studies</a></li>
         <li><a href="#insights">Insights</a></li>
       </ul>
     </nav>
-    <nav class="footer-nav" aria-label="Capabilities">
-      <h4>Capabilities</h4>
+    <nav class="footer-nav" aria-label="Services">
+      <h4>Services</h4>
       <ul>
-        <li><a href="#capabilities">Strategy</a></li>
-        <li><a href="#capabilities">Experience Design</a></li>
-        <li><a href="#capabilities">Production</a></li>
-        <li><a href="#capabilities">Growth &amp; Measurement</a></li>
+        <li><a href="#capabilities">Social Media Management</a></li>
+        <li><a href="#capabilities">Brand Strategy</a></li>
+        <li><a href="#capabilities">Content Production</a></li>
+        <li><a href="#capabilities">Paid Media &amp; Ads</a></li>
       </ul>
     </nav>
     <div class="footer-contact">
       <h4>Get in touch</h4>
-      <p><a href="mailto:hello@ouiexperience.com">hello@ouiexperience.com</a></p>
-      <p>New York · London · Singapore</p>
+      <p><a href="tel:+18683316558">(868) 331-6558</a></p>
+      <p><a href="mailto:builtbyoui@gmail.com">builtbyoui@gmail.com</a></p>
+      <p>Trinidad &amp; Tobago · Global Reach</p>
       <form class="newsletter-form" id="newsletterForm">
         <label for="newsletterEmail">Stay in the loop</label>
         <div class="newsletter-row">
