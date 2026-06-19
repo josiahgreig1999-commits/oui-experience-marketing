@@ -135,15 +135,22 @@ body.nav-open{overflow:hidden;}
 /* Hero */
 .hero{min-height:100vh;display:flex;align-items:center;padding:calc(var(--header-h) + 2rem) 0 6rem;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;}
-.orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:0;animation:orbIn 1.4s var(--ease) forwards;transition:transform .7s var(--ease);will-change:transform;}
-.orb-m{width:46vw;height:46vw;max-width:640px;max-height:640px;background:radial-gradient(circle,var(--m3),var(--m) 70%);top:-12%;right:-8%;animation-delay:.1s;}
-.orb-t{width:34vw;height:34vw;max-width:480px;max-height:480px;background:radial-gradient(circle,var(--t3),var(--t) 70%);bottom:-14%;left:-6%;animation-delay:.3s;}
+.orb-float{position:absolute;animation:orbFloat 16s var(--ease) infinite;will-change:transform;}
+.orb-float-m{width:46vw;height:46vw;max-width:640px;max-height:640px;top:-12%;right:-8%;--fx:-3%;--fy:5%;animation-duration:17s;}
+.orb-float-t{width:34vw;height:34vw;max-width:480px;max-height:480px;bottom:-14%;left:-6%;--fx:4%;--fy:-4%;animation-duration:21s;animation-delay:-7s;}
+@keyframes orbFloat{0%,100%{transform:translate(0,0);}50%{transform:translate(var(--fx),var(--fy));}}
+.orb{position:absolute;inset:0;border-radius:50%;filter:blur(60px);opacity:0;animation:orbIn 1.4s var(--ease) forwards;transition:transform .7s var(--ease);will-change:transform;}
+.orb-m{background:radial-gradient(circle,var(--m3),var(--m) 70%);animation-delay:.1s;}
+.orb-t{background:radial-gradient(circle,var(--t3),var(--t) 70%);animation-delay:.3s;}
 @keyframes orbIn{from{opacity:0;transform:scale(.8);}to{opacity:.55;transform:scale(1);}}
 [data-theme="dark"] .orb{opacity:.35;}
 .hero-inner{position:relative;z-index:1;max-width:880px;}
 .hero-title{font-size:clamp(2.5rem,4.6vw + 1rem,5.25rem);margin-bottom:1.5rem;}
 .hero-title .serif-em{font-style:italic;color:var(--m);}
 .hero-sub{font-size:clamp(1.05rem,1.3vw,1.25rem);color:var(--slate);max-width:600px;margin-bottom:2.25rem;}
+.word-mask{display:inline-block;overflow:hidden;vertical-align:top;}
+.word{display:inline-block;transform:translateY(115%);opacity:0;transition:transform .7s var(--ease),opacity .7s var(--ease);}
+.hero-title.is-revealed .word,.hero-sub.is-revealed .word{transform:translateY(0);opacity:1;}
 .hero-actions{display:flex;flex-wrap:wrap;gap:1rem;}
 .scroll-cue{position:absolute;left:50%;bottom:2.5rem;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--slate);z-index:1;}
 .scroll-cue-line{width:1px;height:38px;background:linear-gradient(to bottom,transparent,var(--slate));}
@@ -362,14 +369,14 @@ body.nav-open{overflow:hidden;}
 <main id="main">
   <section class="hero" id="top">
     <div class="hero-bg" id="heroBg" aria-hidden="true">
-      <span class="orb orb-m"></span>
-      <span class="orb orb-t"></span>
+      <span class="orb-float orb-float-m"><span class="orb orb-m"></span></span>
+      <span class="orb-float orb-float-t"><span class="orb orb-t"></span></span>
     </div>
     <div class="container hero-inner">
       <p class="eyebrow reveal">Trinidad &amp; Tobago · Digital Marketing Agency</p>
-      <h1 class="hero-title reveal" style="--d:.08s">Fuel your brand with <em class="serif-em">experience that converts.</em></h1>
-      <p class="hero-sub reveal" style="--d:.16s">We help small and medium businesses grow their brand, engage customers, and achieve measurable results — from strategy and production to full-scale digital growth.</p>
-      <div class="hero-actions reveal" style="--d:.24s">
+      <h1 class="hero-title">Fuel your brand with <em class="serif-em">experience that converts.</em></h1>
+      <p class="hero-sub">We help small and medium businesses grow their brand, engage customers, and achieve measurable results — from strategy and production to full-scale digital growth.</p>
+      <div class="hero-actions reveal" style="--d:.95s">
         <a href="#packages" class="btn btn-primary btn-lg">Explore packages</a>
         <a href="#work" class="btn btn-ghost btn-lg">View case studies</a>
       </div>
@@ -857,6 +864,53 @@ body.nav-open{overflow:hidden;}
     Array.prototype.forEach.call(revealTargets, function (el) { revealObserver.observe(el); });
   } else {
     Array.prototype.forEach.call(revealTargets, function (el) { el.classList.add('is-visible'); });
+  }
+
+  // Hero headline + subtext word-stagger reveal
+  var heroTitleEl = document.querySelector('.hero-title');
+  var heroSubEl = document.querySelector('.hero-sub');
+  if (heroTitleEl && heroSubEl) {
+    if (window.OUI_REDUCE_MOTION) {
+      heroTitleEl.classList.add('is-revealed');
+      heroSubEl.classList.add('is-revealed');
+    } else {
+      var splitWords = function (el, start, step) {
+        var words = [];
+        var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+        var textNodes = [];
+        var node;
+        while ((node = walker.nextNode())) { textNodes.push(node); }
+        textNodes.forEach(function (textNode) {
+          var frag = document.createDocumentFragment();
+          textNode.textContent.split(/(\s+)/).forEach(function (part) {
+            if (part === '') return;
+            if (/^\s+$/.test(part)) {
+              frag.appendChild(document.createTextNode(part));
+              return;
+            }
+            var mask = document.createElement('span');
+            mask.className = 'word-mask';
+            var word = document.createElement('span');
+            word.className = 'word';
+            word.textContent = part;
+            word.style.transitionDelay = (start + words.length * step) + 's';
+            mask.appendChild(word);
+            frag.appendChild(mask);
+            words.push(word);
+          });
+          textNode.parentNode.replaceChild(frag, textNode);
+        });
+        return words;
+      };
+      splitWords(heroTitleEl, 0, 0.045);
+      splitWords(heroSubEl, 0.32, 0.018);
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          heroTitleEl.classList.add('is-revealed');
+          heroSubEl.classList.add('is-revealed');
+        });
+      });
+    }
   }
 
   // Count-up stats
