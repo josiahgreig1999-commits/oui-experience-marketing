@@ -21,7 +21,7 @@
  "priceRange":"$1,000-$3,000 TTD/month",
  "areaServed":["Trinidad and Tobago","Caribbean"]}
 </script>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231B2428'/%3E%3Ctext x='50' y='67' font-family='Georgia,serif' font-size='50' fill='%23FDF8F3' text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Crect x='14' y='14' width='212' height='212' rx='40' fill='%23FFFFFF' stroke='%23A4127B' stroke-width='11'/%3E%3Ccircle cx='176' cy='62' r='30' fill='%231CA6BB'/%3E%3Cpath d='M168 50 L168 74 L190 62 Z' fill='%23FFFFFF'/%3E%3Ctext x='120' y='158' text-anchor='middle' font-family='Brush Script MT,cursive' font-style='italic' font-size='92' fill='%23A4127B'%3Eoui%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
@@ -87,8 +87,9 @@ section{position:relative;}
 .site-header{position:fixed;top:0;left:0;right:0;z-index:900;padding:22px 0;transition:padding var(--dur-base) var(--ease),background var(--dur-base) var(--ease),box-shadow var(--dur-base) var(--ease);}
 .site-header.is-scrolled{padding:12px 0;background:color-mix(in srgb, var(--cream) 88%, transparent);backdrop-filter:blur(14px);box-shadow:var(--shadow);}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;}
-.logo{font-family:var(--font-serif);font-size:1.6rem;font-weight:700;letter-spacing:.02em;}
-.logo-dot{color:var(--m);}
+.logo{display:inline-flex;align-items:center;}
+.logo-mark{height:46px;width:auto;display:block;}
+.footer-brand .logo-mark{height:54px;}
 .nav{display:none;}
 .nav ul{display:flex;gap:2rem;}
 .nav a{position:relative;font-size:.92rem;font-weight:500;color:var(--slate);padding:.35rem 0;transition:color var(--dur-fast) var(--ease);}
@@ -362,7 +363,16 @@ body.nav-open{overflow:hidden;}
 
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
-    <a href="#top" class="logo" aria-label="OUI Experience Marketing — home">OUI<span class="logo-dot">.</span></a>
+    <a href="#top" class="logo" aria-label="OUI Experience Marketing — home">
+      <svg class="logo-mark" viewBox="0 0 240 260" aria-hidden="true">
+        <rect x="14" y="14" width="212" height="232" rx="36" fill="#FFFFFF" stroke="#A4127B" stroke-width="9"></rect>
+        <circle cx="174" cy="60" r="28" fill="#1CA6BB"></circle>
+        <path d="M167 49 L167 71 L188 60 Z" fill="#FFFFFF"></path>
+        <text x="122" y="140" text-anchor="middle" font-family="'Brush Script MT','Lucida Handwriting',cursive" font-style="italic" font-size="82" fill="#A4127B">oui</text>
+        <text x="122" y="196" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#1CA6BB">EXPERIENCE</text>
+        <text x="122" y="224" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#1CA6BB">MARKETING</text>
+      </svg>
+    </a>
     <nav class="nav" aria-label="Primary">
       <ul>
         <li><a href="#capabilities" data-nav>Services</a></li>
@@ -797,7 +807,7 @@ body.nav-open{overflow:hidden;}
           </blockquote>
           <blockquote class="testimonial-slide">
             <p>"We tried handling social media in-house for years and it never delivered results. OUI took over and within 60 days our engagement tripled. Their monthly reports are detailed, clear, and actually help us understand what's working."</p>
-            <footer><span class="serif">Health &amp; Wellness Studio</span> · Port of Spain</footer>
+            <footer><span class="serif">Pulse Wellness Studio</span> · Port of Spain</footer>
           </blockquote>
         </div>
         <div class="testimonial-dots" role="tablist" aria-label="Testimonials">
@@ -807,6 +817,41 @@ body.nav-open{overflow:hidden;}
           <button class="testimonial-dot" type="button" aria-current="false" aria-label="Testimonial 4"></button>
           <button class="testimonial-dot" type="button" aria-current="false" aria-label="Testimonial 5"></button>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Common Questions</p>
+        <h2>Frequently asked questions.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item reveal" style="--d:0s">
+          <summary>How quickly will I see results?</summary>
+          <p>Most clients see meaningful engagement movement within the first 30–60 days, with measurable growth in followers, leads, or bookings by month three. Paid ads and content velocity can accelerate that timeline.</p>
+        </details>
+        <details class="faq-item reveal" style="--d:.04s">
+          <summary>What's included in a monthly package?</summary>
+          <p>Every package includes strategy, content production, scheduling, community management, and a monthly performance report. Higher tiers add video production, paid ads management, and dedicated strategy calls.</p>
+        </details>
+        <details class="faq-item reveal" style="--d:.08s">
+          <summary>Do you work with businesses outside Trinidad &amp; Tobago?</summary>
+          <p>Yes — while we're based in T&amp;T and know the Caribbean market intimately, we work with clients across the region and internationally, all delivered remotely with the same hands-on process.</p>
+        </details>
+        <details class="faq-item reveal" style="--d:.12s">
+          <summary>Can I switch or cancel my package?</summary>
+          <p>Our packages are month-to-month with no long-term lock-in. You can upgrade, downgrade, or add on services as your needs change, and cancel anytime with 30 days' notice.</p>
+        </details>
+        <details class="faq-item reveal" style="--d:.16s">
+          <summary>Who actually creates my content?</summary>
+          <p>A dedicated strategist and production team — not a rotating pool of freelancers. The same people who plan your strategy shoot, edit, and publish your content every month.</p>
+        </details>
+        <details class="faq-item reveal" style="--d:.2s">
+          <summary>How do you measure success?</summary>
+          <p>We track the metrics that matter to your business — followers, engagement, leads, bookings, or revenue — and report on them monthly alongside clear recommendations for what to do next.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -823,7 +868,16 @@ body.nav-open{overflow:hidden;}
 <footer class="site-footer" id="contact">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <a href="#top" class="logo">OUI<span class="logo-dot">.</span></a>
+      <a href="#top" class="logo" aria-label="OUI Experience Marketing — home">
+        <svg class="logo-mark" viewBox="0 0 240 260" aria-hidden="true">
+          <rect x="14" y="14" width="212" height="232" rx="36" fill="#FFFFFF" stroke="#A4127B" stroke-width="9"></rect>
+          <circle cx="174" cy="60" r="28" fill="#1CA6BB"></circle>
+          <path d="M167 49 L167 71 L188 60 Z" fill="#FFFFFF"></path>
+          <text x="122" y="140" text-anchor="middle" font-family="'Brush Script MT','Lucida Handwriting',cursive" font-style="italic" font-size="82" fill="#A4127B">oui</text>
+          <text x="122" y="196" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#1CA6BB">EXPERIENCE</text>
+          <text x="122" y="224" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#1CA6BB">MARKETING</text>
+        </svg>
+      </a>
       <p>Trinidad &amp; Tobago's premier digital marketing agency — social, strategy, content, and growth.</p>
       <div class="footer-social">
         <a href="#" aria-label="OUI on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg></a>
@@ -837,8 +891,10 @@ body.nav-open{overflow:hidden;}
       <ul>
         <li><a href="#capabilities">Services</a></li>
         <li><a href="#packages">Packages</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#work">Case Studies</a></li>
         <li><a href="#insights">Insights</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
     <nav class="footer-nav" aria-label="Services">

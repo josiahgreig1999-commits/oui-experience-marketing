@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="OUI Experience Marketing — Trinidad &amp; Tobago's premier digital marketing agency. Bento grid layout preview.">
 <title>OUI Experience Marketing | Bento Grid Layout Preview</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231B2428'/%3E%3Ctext x='50' y='67' font-family='Georgia,serif' font-size='50' fill='%23FDF8F3' text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Crect x='14' y='14' width='212' height='212' rx='40' fill='%23FFFFFF' stroke='%23A4127B' stroke-width='11'/%3E%3Ccircle cx='176' cy='62' r='30' fill='%231CA6BB'/%3E%3Cpath d='M168 50 L168 74 L190 62 Z' fill='%23FFFFFF'/%3E%3Ctext x='120' y='158' text-anchor='middle' font-family='Brush Script MT,cursive' font-style='italic' font-size='92' fill='%23A4127B'%3Eoui%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
@@ -73,8 +73,9 @@ section{position:relative;}
 .site-header{position:fixed;top:0;left:0;right:0;z-index:900;padding:22px 0;transition:padding var(--dur-base) var(--ease),background var(--dur-base) var(--ease),box-shadow var(--dur-base) var(--ease);}
 .site-header.is-scrolled{padding:12px 0;background:color-mix(in srgb, var(--cream) 88%, transparent);backdrop-filter:blur(14px);box-shadow:var(--shadow);}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;}
-.logo{font-family:var(--font-serif);font-size:1.6rem;font-weight:700;letter-spacing:.02em;}
-.logo-dot{color:var(--m);}
+.logo{display:inline-flex;align-items:center;}
+.logo-mark{height:46px;width:auto;display:block;}
+.footer-brand .logo-mark{height:54px;}
 .nav{display:none;}
 .nav ul{display:flex;gap:2rem;}
 .nav a{position:relative;font-size:.92rem;font-weight:500;color:var(--slate);padding:.35rem 0;transition:color var(--dur-fast) var(--ease);}
@@ -165,6 +166,14 @@ body.nav-open{overflow:hidden;}
 .stat-number{font-family:var(--font-serif);font-size:clamp(2rem,3.6vw,2.75rem);font-weight:700;color:var(--m);}
 .stat-label{font-size:.85rem;color:var(--slate);margin-top:.35rem;}
 
+/* Trusted-by strip */
+.trusted-strip{padding:3.5rem 0 0;}
+.trusted-label{text-align:center;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);margin-bottom:1.85rem;}
+.trusted-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2.25rem 3rem;}
+.trusted-logo{display:inline-flex;align-items:center;gap:.45rem;font-size:1.15rem;color:var(--slate);opacity:.6;transition:opacity var(--dur-base) var(--ease),color var(--dur-base) var(--ease);}
+.trusted-logo svg{width:18px;height:18px;}
+.trusted-logo:hover{opacity:1;color:var(--charcoal);}
+
 /* Capabilities strip */
 .capabilities-strip{padding:2.75rem 0;border-top:1px solid var(--soft);border-bottom:1px solid var(--soft);}
 .tag-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.85rem;}
@@ -215,6 +224,19 @@ body.nav-open{overflow:hidden;}
 .approach-tile h3{font-size:1.25rem;margin-bottom:.6rem;}
 .approach-tile p{color:var(--slate);font-size:.92rem;}
 
+/* About bento tiles */
+.about-copy-tile p{color:var(--slate);font-size:.97rem;margin-bottom:1.1rem;}
+.about-copy-tile p:last-child{margin-bottom:0;}
+.about-art-tile{align-items:center;justify-content:center;padding:1.5rem;}
+.about-art-tile svg{width:100%;max-width:280px;height:auto;}
+.about-value-tile .service-icon{width:44px;height:44px;margin-bottom:1rem;}
+.about-value-tile .service-icon svg{width:22px;height:22px;}
+.about-value-tile h4{font-size:1.05rem;margin-bottom:.4rem;}
+.about-value-tile p{color:var(--slate);font-size:.88rem;}
+.about-cta-tile{justify-content:center;text-align:center;}
+.about-cta-tile h4{font-size:1.1rem;margin-bottom:.5rem;color:var(--cream);}
+.about-cta-tile span{font-size:.92rem;color:var(--t3);font-weight:600;}
+
 /* Work tiles */
 .work-thumb{position:relative;aspect-ratio:4/3;border-radius:18px;margin-bottom:1.25rem;background-size:200% 200%;overflow:hidden;transition:transform var(--dur-slow) var(--ease);}
 .work-tile:hover .work-thumb{transform:scale(1.03);}
@@ -246,6 +268,18 @@ body.nav-open{overflow:hidden;}
 .testimonial-tile.bento-2x1 p.quote{font-size:clamp(1.3rem,2vw,1.7rem);}
 .testimonial-tile.bento-dark footer{color:color-mix(in srgb, var(--cream) 70%, transparent);}
 
+/* FAQ tiles */
+.faq-grid{align-items:start;}
+.faq-tile{padding:0;background:transparent;overflow:visible;}
+.faq-tile:hover{transform:none;box-shadow:none;}
+.faq-item{border:1px solid var(--soft);border-radius:18px;padding:.3rem 1.5rem;background:var(--soft);height:100%;transition:border-color var(--dur-base) var(--ease);}
+.faq-item[open]{border-color:var(--m);}
+.faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 0;cursor:pointer;font-family:var(--font-serif);font-size:1.05rem;list-style:none;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:"";flex-shrink:0;width:9px;height:9px;border-right:2px solid var(--m);border-bottom:2px solid var(--m);transform:rotate(45deg);transition:transform var(--dur-base) var(--ease);}
+.faq-item[open] summary::after{transform:rotate(-135deg);}
+.faq-item p{color:var(--slate);padding:0 0 1.25rem;font-size:.92rem;}
+
 /* CTA tile */
 .cta-tile{padding:3.5rem 2.5rem;text-align:center;align-items:center;}
 .cta-tile h2{font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:.85rem;color:#fff;}
@@ -255,7 +289,6 @@ body.nav-open{overflow:hidden;}
 .site-footer{background:var(--charcoal);color:var(--cream);padding:5rem 0 0;transition:background var(--dur-slow) var(--ease),color var(--dur-slow) var(--ease);}
 .footer-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;padding-bottom:3.5rem;border-bottom:1px solid color-mix(in srgb, var(--cream) 14%, transparent);}
 .footer-grid>*{min-width:0;}
-.footer-brand .logo{color:var(--cream);}
 .footer-brand p{color:color-mix(in srgb, var(--cream) 65%, transparent);max-width:280px;margin:1rem 0 1.5rem;font-size:.95rem;}
 .footer-social{display:flex;gap:.75rem;}
 .footer-social a{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:color-mix(in srgb, var(--cream) 12%, transparent);transition:background var(--dur-fast) var(--ease),transform var(--dur-fast) var(--ease);}
@@ -299,11 +332,21 @@ body.nav-open{overflow:hidden;}
 
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
-    <a href="#top" class="logo" aria-label="OUI Experience Marketing — home">OUI<span class="logo-dot">.</span></a>
+    <a href="#top" class="logo" aria-label="OUI Experience Marketing — home">
+      <svg class="logo-mark" viewBox="0 0 240 260" aria-hidden="true">
+        <rect x="14" y="14" width="212" height="232" rx="36" fill="#FFFFFF" stroke="#A4127B" stroke-width="9"></rect>
+        <circle cx="174" cy="60" r="28" fill="#1CA6BB"></circle>
+        <path d="M167 49 L167 71 L188 60 Z" fill="#FFFFFF"></path>
+        <text x="122" y="140" text-anchor="middle" font-family="'Brush Script MT','Lucida Handwriting',cursive" font-style="italic" font-size="82" fill="#A4127B">oui</text>
+        <text x="122" y="196" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#1CA6BB">EXPERIENCE</text>
+        <text x="122" y="224" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#1CA6BB">MARKETING</text>
+      </svg>
+    </a>
     <nav class="nav" aria-label="Primary">
       <ul>
         <li><a href="#capabilities" data-nav>Services</a></li>
         <li><a href="#packages" data-nav>Packages</a></li>
+        <li><a href="#about" data-nav>About</a></li>
         <li><a href="#work" data-nav>Work</a></li>
         <li><a href="#insights" data-nav>Insights</a></li>
         <li><a href="#contact" data-nav>Contact</a></li>
@@ -327,6 +370,7 @@ body.nav-open{overflow:hidden;}
     <ul>
       <li><a href="#capabilities" data-nav>Services</a></li>
       <li><a href="#packages" data-nav>Packages</a></li>
+      <li><a href="#about" data-nav>About</a></li>
       <li><a href="#work" data-nav>Work</a></li>
       <li><a href="#insights" data-nav>Insights</a></li>
       <li><a href="#contact" data-nav>Contact</a></li>
@@ -374,6 +418,19 @@ body.nav-open{overflow:hidden;}
           <p class="stat-number"><span data-count="5" data-suffix="★">0</span></p>
           <p class="stat-label">Average rating</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trusted-strip" aria-label="Trusted by">
+    <div class="container">
+      <p class="trusted-label reveal">Trusted by brands across Trinidad &amp; Tobago</p>
+      <div class="trusted-logos reveal" style="--d:.1s">
+        <span class="trusted-logo">Barber Labs</span>
+        <span class="trusted-logo">IsleAura &amp; Co</span>
+        <span class="trusted-logo">Belle Group</span>
+        <span class="trusted-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16c1.5-1.5 3-1.5 4.5 0s3 1.5 4.5 0 3-1.5 4.5 0 3 1.5 4.5 0"></path><path d="M2 11c1.5-1.5 3-1.5 4.5 0s3 1.5 4.5 0 3-1.5 4.5 0 3 1.5 4.5 0"></path></svg>Saltwater Kitchen</span>
+        <span class="trusted-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2 12 7 12 9 6 13 18 15 12 22 12"></polyline></svg>Pulse Wellness</span>
       </div>
     </div>
   </section>
@@ -608,6 +665,56 @@ body.nav-open{overflow:hidden;}
     </div>
   </section>
 
+  <section class="bento-section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Who We Are</p>
+        <h2>A Trinidad-born team obsessed with brand growth.</h2>
+      </div>
+      <div class="bento-grid">
+        <article class="bento-card about-copy-tile bento-2x1 reveal" style="--d:0s">
+          <p>OUI Experience Marketing was founded to give Caribbean small and medium businesses the same calibre of strategy, content, and digital craft usually reserved for big-budget brands. We're strategists, designers, and storytellers who've spent years inside local industries — so we know what actually moves your audience.</p>
+          <p>Every engagement starts with your goals, not a template. We stay hands-on from the first audit to the monthly report, treating your growth like it's our own business on the line.</p>
+        </article>
+        <article class="bento-card bento-accent about-art-tile bento-2x1 reveal" style="--d:.06s" aria-hidden="true">
+          <svg viewBox="0 0 380 380" fill="none">
+            <circle cx="190" cy="190" r="168" stroke="rgba(255,255,255,.35)" stroke-width="1.5"></circle>
+            <circle cx="190" cy="190" r="128" stroke="rgba(255,255,255,.35)" stroke-width="1.5"></circle>
+            <circle cx="190" cy="190" r="88" stroke="rgba(255,255,255,.35)" stroke-width="1.5"></circle>
+            <circle cx="120" cy="90" r="4" fill="#fff"></circle>
+            <circle cx="290" cy="140" r="3" fill="#fff"></circle>
+            <circle cx="80" cy="260" r="3" fill="#fff"></circle>
+            <circle cx="300" cy="290" r="4" fill="#fff"></circle>
+            <path d="M190 110c-30 0-54 24-54 54 0 38 54 90 54 90s54-52 54-90c0-30-24-54-54-54z" fill="#fff"></path>
+            <circle cx="190" cy="164" r="20" fill="var(--m)"></circle>
+            <rect x="150" y="290" width="16" height="32" rx="3" fill="rgba(255,255,255,.8)"></rect>
+            <rect x="182" y="270" width="16" height="52" rx="3" fill="#fff"></rect>
+            <rect x="214" y="250" width="16" height="72" rx="3" fill="rgba(255,255,255,.8)"></rect>
+          </svg>
+        </article>
+        <article class="bento-card about-value-tile reveal" style="--d:.1s">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"></path></svg></span>
+          <h4>Craft-led</h4>
+          <p>Senior strategists on every account, not junior hand-offs.</p>
+        </article>
+        <article class="bento-card about-value-tile reveal" style="--d:.14s">
+          <span class="service-icon t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"></path><path d="M7 14l4-4 3 3 5-6"></path></svg></span>
+          <h4>Results-first</h4>
+          <p>Every deliverable is tied back to a measurable growth metric.</p>
+        </article>
+        <article class="bento-card about-value-tile reveal" style="--d:.18s">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span>
+          <h4>Locally rooted</h4>
+          <p>Based in Trinidad &amp; Tobago, building for Caribbean audiences.</p>
+        </article>
+        <a href="#contact" class="bento-card bento-dark about-cta-tile reveal" style="--d:.22s">
+          <h4>Let's talk</h4>
+          <span>Say hello →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section class="bento-section" id="work">
     <div class="container">
       <div class="section-head reveal">
@@ -676,11 +783,58 @@ body.nav-open{overflow:hidden;}
         </article>
         <article class="bento-card testimonial-tile reveal" style="--d:.18s">
           <p class="quote">"Our Instagram went from 800 to over 5,000 followers in four months — and those followers converted into paying customers."</p>
-          <footer><span class="serif">Restaurant &amp; Food Brand</span> · San Fernando</footer>
+          <footer><span class="serif">Saltwater Kitchen</span> · San Fernando</footer>
         </article>
         <article class="bento-card testimonial-tile reveal" style="--d:.24s">
           <p class="quote">"We tried handling social media in-house for years. OUI took over and within 60 days our engagement tripled. Their monthly reports actually help us understand what's working."</p>
-          <footer><span class="serif">Health &amp; Wellness Studio</span> · Port of Spain</footer>
+          <footer><span class="serif">Pulse Wellness Studio</span> · Port of Spain</footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="bento-section" id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Common Questions</p>
+        <h2>Frequently asked questions.</h2>
+      </div>
+      <div class="bento-grid faq-grid">
+        <article class="bento-card faq-tile bento-2x1 reveal" style="--d:0s">
+          <details class="faq-item">
+            <summary>How quickly will I see results?</summary>
+            <p>Most clients see meaningful engagement movement within the first 30–60 days, with measurable growth in followers, leads, or bookings by month three. Paid ads and content velocity can accelerate that timeline.</p>
+          </details>
+        </article>
+        <article class="bento-card faq-tile bento-2x1 reveal" style="--d:.04s">
+          <details class="faq-item">
+            <summary>What's included in a monthly package?</summary>
+            <p>Every package includes strategy, content production, scheduling, community management, and a monthly performance report. Higher tiers add video production, paid ads management, and dedicated strategy calls.</p>
+          </details>
+        </article>
+        <article class="bento-card faq-tile bento-2x1 reveal" style="--d:.08s">
+          <details class="faq-item">
+            <summary>Do you work with businesses outside T&amp;T?</summary>
+            <p>Yes — while we're based in T&amp;T and know the Caribbean market intimately, we work with clients across the region and internationally, all delivered remotely with the same hands-on process.</p>
+          </details>
+        </article>
+        <article class="bento-card faq-tile bento-2x1 reveal" style="--d:.12s">
+          <details class="faq-item">
+            <summary>Can I switch or cancel my package?</summary>
+            <p>Our packages are month-to-month with no long-term lock-in. You can upgrade, downgrade, or add on services as your needs change, and cancel anytime with 30 days' notice.</p>
+          </details>
+        </article>
+        <article class="bento-card faq-tile bento-2x1 reveal" style="--d:.16s">
+          <details class="faq-item">
+            <summary>Who actually creates my content?</summary>
+            <p>A dedicated strategist and production team — not a rotating pool of freelancers. The same people who plan your strategy shoot, edit, and publish your content every month.</p>
+          </details>
+        </article>
+        <article class="bento-card faq-tile bento-2x1 reveal" style="--d:.2s">
+          <details class="faq-item">
+            <summary>How do you measure success?</summary>
+            <p>We track the metrics that matter to your business — followers, engagement, leads, bookings, or revenue — and report on them monthly alongside clear recommendations for what to do next.</p>
+          </details>
         </article>
       </div>
     </div>
@@ -700,7 +854,16 @@ body.nav-open{overflow:hidden;}
 <footer class="site-footer" id="contact">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <a href="#top" class="logo">OUI<span class="logo-dot">.</span></a>
+      <a href="#top" class="logo" aria-label="OUI Experience Marketing — home">
+        <svg class="logo-mark" viewBox="0 0 240 260" aria-hidden="true">
+          <rect x="14" y="14" width="212" height="232" rx="36" fill="#FFFFFF" stroke="#A4127B" stroke-width="9"></rect>
+          <circle cx="174" cy="60" r="28" fill="#1CA6BB"></circle>
+          <path d="M167 49 L167 71 L188 60 Z" fill="#FFFFFF"></path>
+          <text x="122" y="140" text-anchor="middle" font-family="'Brush Script MT','Lucida Handwriting',cursive" font-style="italic" font-size="82" fill="#A4127B">oui</text>
+          <text x="122" y="196" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#1CA6BB">EXPERIENCE</text>
+          <text x="122" y="224" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="22" letter-spacing="2" fill="#1CA6BB">MARKETING</text>
+        </svg>
+      </a>
       <p>Trinidad &amp; Tobago's premier digital marketing agency — social, strategy, content, and growth.</p>
       <div class="footer-social">
         <a href="#" aria-label="OUI on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg></a>
@@ -714,8 +877,10 @@ body.nav-open{overflow:hidden;}
       <ul>
         <li><a href="#capabilities">Services</a></li>
         <li><a href="#packages">Packages</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#work">Case Studies</a></li>
         <li><a href="#insights">Insights</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
     <nav class="footer-nav" aria-label="Services">
