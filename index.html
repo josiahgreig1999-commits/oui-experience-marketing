@@ -3,28 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="OUI Experience Marketing — Trinidad &amp; Tobago's premier digital marketing agency. Social media, brand strategy, AI marketing, paid ads &amp; content production. From $1,000 TTD/mo.">
-<title>OUI Experience Marketing | Trinidad &amp; Tobago's Premier Digital Agency</title>
+<meta name="description" content="Next Orporation Online Business Solutions — Trinidad &amp; Tobago business registration, investor-ready business plans, brand identity, creative media &amp; social media management. Pioneering tomorrow's business solutions today.">
+<meta name="keywords" content="business registration Trinidad and Tobago, business plan writing, brand identity, social media management, company registration, sole trader registration, limited liability company">
+<title>Next Orporation Online Business Solutions | Business Registration, Plans &amp; Branding in Trinidad &amp; Tobago</title>
 <meta property="og:type" content="website">
-<meta property="og:title" content="OUI Experience Marketing | T&amp;T's Premier Digital Agency">
-<meta property="og:description" content="Transform your Caribbean brand with social media, content, AI marketing & paid ads. Starting $1,000 TTD/mo. Based in T&T, serving globally.">
+<meta property="og:title" content="Next Orporation Online Business Solutions">
+<meta property="og:description" content="Business registration, financial forecasting, business plans, brand identity, creative media &amp; social media management for entrepreneurs, SMEs &amp; non-profits in Trinidad &amp; Tobago.">
+<meta property="og:image" content="assets/logo/logo-lockup-navy-tagline.jpg">
 <meta property="og:locale" content="en_TT">
-<meta property="og:site_name" content="OUI Experience Marketing">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OUI Experience Marketing">
-<meta name="twitter:description" content="T&T's premier digital marketing agency.">
+<meta property="og:site_name" content="Next Orporation Online Business Solutions">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Next Orporation Online Business Solutions">
+<meta name="twitter:description" content="Pioneering tomorrow's business solutions today.">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MarketingAgency","name":"OUI Experience Marketing",
- "description":"Trinidad & Tobago's premier digital marketing agency.",
- "telephone":"+1-868-331-6558","email":"builtbyoui@gmail.com",
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Next Orporation Online Business Solutions",
+ "description":"Business registration, financial forecasting, business plans, brand identity, creative media and social media management for entrepreneurs, SMEs and non-profits in Trinidad and Tobago.",
+ "telephone":"+1-868-264-2008","email":"nextorporation@gmail.com",
  "address":{"@type":"PostalAddress","addressCountry":"TT"},
- "priceRange":"$1,000-$3,000 TTD/month",
+ "sameAs":["https://instagram.com/next.orporation"],
  "areaServed":["Trinidad and Tobago","Caribbean"]}
 </script>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231B2428'/%3E%3Ctext x='50' y='67' font-family='Georgia,serif' font-size='50' fill='%23FDF8F3' text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/jpeg" href="assets/logo/logo-mark-navy.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
 <style>
 /* Reset */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
@@ -32,1120 +34,867 @@ img,svg{display:block;max-width:100%;}
 a{color:inherit;text-decoration:none;}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;}
 ul,ol{list-style:none;}
-input{font:inherit;color:inherit;}
+input,textarea{font:inherit;color:inherit;}
 
 /* Tokens */
 :root{
-  --m:#A0166A;--m2:#7D0F53;--m3:#C91E84;
-  --t:#1BA8B0;--t2:#14808A;--t3:#5ECDD4;
-  --cream:#FDF8F3;--charcoal:#1B2428;--slate:#3A4A4F;
-  --soft:#EAE5E0;--white:#FFFFFF;
-  --shadow:0 4px 24px rgba(0,0,0,0.07);--shadow2:0 16px 48px rgba(0,0,0,0.12);
-  --font-serif:'Cormorant Garamond',serif;
-  --font-sans:'DM Sans',sans-serif;
+  --charcoal:#2b2e30;--terracotta:#b77a37;--terracotta-light:#d49a55;
+  --walnut:#7c5327;--espresso:#412d17;
+  --navy:#10171f;--navy2:#1a2530;
+  --cream:#FBF6EE;--cream2:#F3EBDB;
+  --ink:#221a12;--muted:#6b6258;--white:#FFFFFF;
+  --shadow:0 4px 24px rgba(43,46,48,0.08);--shadow2:0 20px 56px rgba(16,23,31,0.18);
+  --font-head:'Montserrat',sans-serif;
+  --font-accent:'Cormorant Garamond',serif;
+  --font-body:'Montserrat',sans-serif;
   --ease:cubic-bezier(.16,1,.3,1);
   --dur-fast:180ms;--dur-base:320ms;--dur-slow:650ms;
-  --header-h:84px;
+  --header-h:80px;
   --maxw:1240px;
+
+  --bg:var(--cream);--bg2:var(--cream2);--surface:var(--white);
+  --text:var(--ink);--text-muted:var(--muted);
+  --border:rgba(43,46,48,0.12);--header-bg:rgba(251,246,238,0.85);
 }
 [data-theme="dark"]{
-  --cream:#1B2428;--charcoal:#EAE5E0;--slate:#A8B3B8;
-  --soft:#2C3F45;--white:#11181C;
-  --shadow:0 4px 24px rgba(0,0,0,0.4);--shadow2:0 16px 48px rgba(0,0,0,0.6);
+  --bg:var(--navy);--bg2:var(--navy2);--surface:#16202b;
+  --text:#F3EBDB;--text-muted:#A9A398;
+  --border:rgba(243,235,219,0.1);--header-bg:rgba(16,23,31,0.85);
+  --shadow:0 4px 24px rgba(0,0,0,0.3);--shadow2:0 20px 56px rgba(0,0,0,0.45);
 }
 
-/* Base */
-html{scroll-behavior:smooth;font-size:16px;}
-body{font-family:var(--font-sans);background:var(--cream);color:var(--charcoal);line-height:1.6;overflow-x:hidden;transition:background var(--dur-slow) var(--ease),color var(--dur-slow) var(--ease);}
-.serif{font-family:var(--font-serif);}
-h1,h2,h3,h4{font-family:var(--font-serif);font-weight:600;line-height:1.1;letter-spacing:-.01em;}
-.container{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+body{
+  font-family:var(--font-body);background:var(--bg);color:var(--text);
+  line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;
+  transition:background var(--dur-base) var(--ease),color var(--dur-base) var(--ease);
+  overflow-x:hidden;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
 section{position:relative;}
-::selection{background:var(--m);color:var(--white);}
+h1,h2,h3,h4{font-family:var(--font-head);font-weight:700;line-height:1.15;letter-spacing:-0.01em;}
+.eyebrow{font-family:var(--font-head);font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--terracotta);}
+.accent{font-family:var(--font-accent);font-style:italic;color:var(--terracotta);font-weight:600;}
+p{color:var(--text-muted);}
 
-/* Accessibility */
-.skip-link{position:absolute;left:-999px;top:0;background:var(--charcoal);color:var(--cream);padding:.75rem 1.25rem;z-index:1000;border-radius:0 0 8px 0;}
+/* Skip link */
+.skip-link{position:absolute;left:-999px;top:0;background:var(--terracotta);color:#fff;padding:10px 18px;z-index:200;border-radius:0 0 8px 0;font-weight:600;}
 .skip-link:focus{left:0;}
-:focus-visible{outline:2px solid var(--t);outline-offset:3px;border-radius:2px;}
+
+:focus-visible{outline:2px solid var(--terracotta);outline-offset:3px;border-radius:4px;}
 
 /* Buttons */
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.7rem;border-radius:999px;font-size:.95rem;font-weight:600;cursor:pointer;transition:transform var(--dur-fast) var(--ease),box-shadow var(--dur-base) var(--ease),background var(--dur-base) var(--ease),color var(--dur-base) var(--ease);white-space:nowrap;}
-.btn:hover{transform:translateY(-2px);}
-.btn:active{transform:translateY(0);}
-.btn-primary{background:var(--m);color:#fff;box-shadow:var(--shadow);}
-.btn-primary:hover{background:var(--m3);box-shadow:var(--shadow2);}
-.btn-ghost{background:transparent;color:var(--charcoal);border:1.5px solid currentColor;}
-.btn-ghost:hover{background:var(--charcoal);color:var(--cream);}
-.btn-sm{padding:.6rem 1.25rem;font-size:.85rem;}
-.btn-lg{padding:1.1rem 2.2rem;font-size:1.05rem;}
-.btn-block{width:100%;justify-content:center;}
-
-/* Scroll progress */
-.scroll-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--m),var(--t));z-index:1000;transition:width 80ms linear;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:15px;cursor:pointer;transition:transform var(--dur-fast) var(--ease),box-shadow var(--dur-fast) var(--ease),background var(--dur-fast) var(--ease);white-space:nowrap;}
+.btn-primary{background:var(--terracotta);color:#fff;box-shadow:0 8px 24px rgba(183,122,55,0.32);}
+.btn-primary:hover{background:var(--terracotta-light);transform:translateY(-2px);box-shadow:0 12px 32px rgba(183,122,55,0.4);}
+.btn-ghost{border:1.5px solid var(--border);color:var(--text);}
+.btn-ghost:hover{border-color:var(--terracotta);color:var(--terracotta);transform:translateY(-2px);}
+.btn-light{background:var(--white);color:var(--charcoal);}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,0.18);}
 
 /* Header */
-.site-header{position:fixed;top:0;left:0;right:0;z-index:900;padding:22px 0;transition:padding var(--dur-base) var(--ease),background var(--dur-base) var(--ease),box-shadow var(--dur-base) var(--ease);}
-.site-header.is-scrolled{padding:12px 0;background:color-mix(in srgb, var(--cream) 88%, transparent);backdrop-filter:blur(14px);box-shadow:var(--shadow);}
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;}
-.logo{font-family:var(--font-serif);font-size:1.6rem;font-weight:700;letter-spacing:.02em;}
-.logo-dot{color:var(--m);}
-.nav{display:none;}
-.nav ul{display:flex;gap:2rem;}
-.nav a{position:relative;font-size:.92rem;font-weight:500;color:var(--slate);padding:.35rem 0;transition:color var(--dur-fast) var(--ease);}
-.nav a::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--m);transition:width var(--dur-base) var(--ease);}
-.nav a:hover,.nav a.is-active{color:var(--charcoal);}
-.nav a:hover::after,.nav a.is-active::after{width:100%;}
-.header-actions{display:flex;align-items:center;gap:.75rem;}
-.theme-toggle{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;color:var(--charcoal);transition:background var(--dur-fast) var(--ease),transform var(--dur-fast) var(--ease);}
-.theme-toggle:hover{background:var(--soft);transform:rotate(12deg);}
-.theme-toggle svg{width:20px;height:20px;}
-.icon-moon{display:none;}
-[data-theme="dark"] .icon-sun{display:none;}
-[data-theme="dark"] .icon-moon{display:block;}
-.header-actions .btn-primary{display:none;}
-.menu-toggle{display:flex;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;}
-.menu-toggle span{display:block;width:22px;height:2px;background:var(--charcoal);border-radius:2px;transition:transform var(--dur-base) var(--ease),opacity var(--dur-base) var(--ease);margin:0 auto;}
-.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
-.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+header.site{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(16px);background:var(--header-bg);border-bottom:1px solid transparent;transition:border-color var(--dur-base) var(--ease),background var(--dur-base) var(--ease);}
+header.site.scrolled{border-bottom-color:var(--border);box-shadow:var(--shadow);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:var(--header-h);}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:-0.01em;}
+.brand img{width:42px;height:42px;border-radius:50%;object-fit:cover;}
+.brand span{display:flex;flex-direction:column;line-height:1.1;}
+.brand small{font-size:10px;font-weight:600;letter-spacing:0.08em;color:var(--text-muted);text-transform:uppercase;}
+nav.primary{display:flex;align-items:center;gap:30px;}
+nav.primary a{font-size:14.5px;font-weight:600;color:var(--text-muted);position:relative;padding:6px 0;transition:color var(--dur-fast) var(--ease);}
+nav.primary a:hover,nav.primary a[aria-current="true"]{color:var(--text);}
+nav.primary a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--terracotta);transition:width var(--dur-base) var(--ease);}
+nav.primary a:hover::after,nav.primary a[aria-current="true"]::after{width:100%;}
+.nav-actions{display:flex;align-items:center;gap:12px;}
+.theme-toggle{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;transition:border-color var(--dur-fast) var(--ease),transform var(--dur-fast) var(--ease);}
+.theme-toggle:hover{border-color:var(--terracotta);transform:rotate(20deg);}
+.theme-toggle svg{width:18px;height:18px;}
+.icon-sun{display:none;}
+[data-theme="dark"] .icon-moon{display:none;}
+[data-theme="dark"] .icon-sun{display:block;}
+.menu-toggle{display:none;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--border);align-items:center;justify-content:center;}
+.menu-toggle svg{width:18px;height:18px;}
 
 /* Mobile nav */
-.mobile-nav{position:fixed;inset:0;z-index:850;background:var(--cream);display:flex;flex-direction:column;justify-content:center;gap:2.5rem;padding:0 28px;opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity var(--dur-base) var(--ease),transform var(--dur-base) var(--ease),visibility var(--dur-base);}
-.mobile-nav[data-state="open"]{opacity:1;visibility:visible;transform:translateY(0);}
-.mobile-nav ul{display:flex;flex-direction:column;gap:1.5rem;}
-.mobile-nav a{font-family:var(--font-serif);font-size:2.2rem;font-weight:600;}
-body.nav-open{overflow:hidden;}
+.mobile-nav{position:fixed;inset:var(--header-h) 0 0 0;background:var(--bg);z-index:99;display:flex;flex-direction:column;padding:32px 24px;gap:6px;transform:translateY(-12px);opacity:0;pointer-events:none;transition:opacity var(--dur-base) var(--ease),transform var(--dur-base) var(--ease);}
+.mobile-nav.open{opacity:1;transform:translateY(0);pointer-events:auto;}
+.mobile-nav a{font-size:20px;font-weight:700;padding:14px 4px;border-bottom:1px solid var(--border);}
+.mobile-nav .btn{margin-top:20px;justify-content:center;}
 
-@media (min-width:1024px){
-  .nav{display:block;}
-  .header-actions .btn-primary{display:inline-flex;}
-  .menu-toggle{display:none;}
-  .mobile-nav{display:none;}
+@media (max-width:880px){
+  nav.primary{display:none;}
+  .menu-toggle{display:flex;}
 }
 
-/* Reveal-on-scroll */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s);}
-.reveal.is-visible{opacity:1;transform:translateY(0);}
-
-/* Eyebrow / section head */
-.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--m);margin-bottom:.85rem;}
-.section-head{max-width:640px;margin:0 auto 3.5rem;text-align:center;}
-.section-head h2{font-size:clamp(1.9rem,3.2vw,2.75rem);}
+/* Scroll progress */
+.scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--terracotta),var(--walnut));z-index:101;width:0%;transition:width 80ms linear;}
 
 /* Hero */
-.hero{min-height:100vh;display:flex;align-items:center;padding:calc(var(--header-h) + 2rem) 0 6rem;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;}
-.orb-float{position:absolute;animation:orbFloat 16s var(--ease) infinite;will-change:transform;}
-.orb-float-m{width:46vw;height:46vw;max-width:640px;max-height:640px;top:-12%;right:-8%;--fx:-3%;--fy:5%;animation-duration:17s;}
-.orb-float-t{width:34vw;height:34vw;max-width:480px;max-height:480px;bottom:-14%;left:-6%;--fx:4%;--fy:-4%;animation-duration:21s;animation-delay:-7s;}
-@keyframes orbFloat{0%,100%{transform:translate(0,0);}50%{transform:translate(var(--fx),var(--fy));}}
-.orb{position:absolute;inset:0;border-radius:50%;filter:blur(60px);opacity:0;animation:orbIn 1.4s var(--ease) forwards;transition:transform .7s var(--ease);will-change:transform;}
-.orb-m{background:radial-gradient(circle,var(--m3),var(--m) 70%);animation-delay:.1s;}
-.orb-t{background:radial-gradient(circle,var(--t3),var(--t) 70%);animation-delay:.3s;}
-@keyframes orbIn{from{opacity:0;transform:scale(.8);}to{opacity:.55;transform:scale(1);}}
-[data-theme="dark"] .orb{opacity:.35;}
-.hero-inner{position:relative;z-index:1;max-width:880px;}
-.hero-title{font-size:clamp(2.5rem,4.6vw + 1rem,5.25rem);margin-bottom:1.5rem;}
-.hero-title .serif-em{font-style:italic;color:var(--m);}
-.hero-sub{font-size:clamp(1.05rem,1.3vw,1.25rem);color:var(--slate);max-width:600px;margin-bottom:2.25rem;}
-.word-mask{display:inline-block;overflow:hidden;vertical-align:top;}
-.word{display:inline-block;transform:translateY(115%);opacity:0;transition:transform .7s var(--ease),opacity .7s var(--ease);}
-.hero-title.is-revealed .word,.hero-sub.is-revealed .word{transform:translateY(0);opacity:1;}
-.hero-actions{display:flex;flex-wrap:wrap;gap:1rem;}
-.scroll-cue{position:absolute;left:50%;bottom:2.5rem;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--slate);z-index:1;}
-.scroll-cue-line{width:1px;height:38px;background:linear-gradient(to bottom,transparent,var(--slate));}
-.scroll-cue svg{width:18px;height:18px;animation:cueBounce 1.4s ease-in-out 1s 3;}
-@keyframes cueBounce{0%,100%{transform:translateY(0);opacity:.6;}50%{transform:translateY(6px);opacity:1;}}
+.hero{padding:calc(var(--header-h) + 64px) 0 100px;overflow:hidden;background:linear-gradient(180deg,var(--bg),var(--bg2));}
+.hero-bg-orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:0.35;z-index:0;pointer-events:none;}
+.orb-1{width:420px;height:420px;background:var(--terracotta);top:-120px;right:-100px;animation:float1 18s ease-in-out infinite;}
+.orb-2{width:300px;height:300px;background:var(--walnut);bottom:-80px;left:-80px;animation:float2 22s ease-in-out infinite;}
+@keyframes float1{0%,100%{transform:translate(0,0);}50%{transform:translate(-40px,50px);}}
+@keyframes float2{0%,100%{transform:translate(0,0);}50%{transform:translate(40px,-40px);}}
+@media (prefers-reduced-motion:reduce){.hero-bg-orb{animation:none;}}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-size:13px;font-weight:600;box-shadow:var(--shadow);margin-bottom:24px;}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--terracotta);}
+h1.hero-title{font-size:clamp(34px,5.2vw,58px);margin-bottom:22px;}
+.word-mask{display:inline-block;overflow:hidden;vertical-align:bottom;}
+.word-mask .word{display:inline-block;transform:translateY(110%);transition:transform 760ms var(--ease);}
+.word-mask.is-visible .word{transform:translateY(0);}
+@media (prefers-reduced-motion:reduce){.word-mask .word{transform:none;}}
+.hero-sub{font-size:18px;max-width:480px;margin-bottom:34px;}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px;}
+.hero-meta{display:flex;gap:28px;flex-wrap:wrap;}
+.hero-meta .item{display:flex;flex-direction:column;}
+.hero-meta strong{font-size:24px;font-family:var(--font-head);font-weight:800;}
+.hero-meta span{font-size:12.5px;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;}
+.hero-visual{position:relative;}
+.hero-visual-card{border-radius:24px;overflow:hidden;box-shadow:var(--shadow2);transform:rotate(1.5deg);transition:transform var(--dur-slow) var(--ease);}
+.hero-visual-card:hover{transform:rotate(0deg) scale(1.01);}
+.hero-visual-card img{width:100%;height:auto;display:block;}
+.hero-visual-tag{position:absolute;bottom:-18px;left:-18px;background:var(--surface);padding:14px 20px;border-radius:16px;box-shadow:var(--shadow2);display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;}
+.hero-visual-tag .ico{width:34px;height:34px;border-radius:50%;background:var(--terracotta);display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;}
+.hero-visual-tag .ico svg{width:16px;height:16px;}
+.scroll-cue{position:absolute;bottom:-70px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);}
+.scroll-cue .line{width:1px;height:30px;background:linear-gradient(180deg,var(--terracotta),transparent);animation:scrolldown 2s ease-in-out infinite;}
+@keyframes scrolldown{0%{opacity:0;}50%{opacity:1;}100%{opacity:0;}}
+@media (max-width:980px){.hero-inner{grid-template-columns:1fr;}.hero-visual{order:-1;max-width:420px;margin:0 auto 20px;}.scroll-cue{display:none;}}
 
-/* Capabilities strip */
-.capabilities-strip{padding:2.75rem 0;border-top:1px solid var(--soft);border-bottom:1px solid var(--soft);}
-.tag-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.85rem;}
-.tag{font-size:.92rem;font-weight:600;color:var(--slate);}
-.tag-dot{color:var(--m);}
+/* Reveal utility */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 700ms var(--ease),transform 700ms var(--ease);}
+.reveal.is-visible{opacity:1;transform:translateY(0);}
+.reveal-stagger > *{opacity:0;transform:translateY(24px);transition:opacity 600ms var(--ease),transform 600ms var(--ease);}
+.reveal-stagger.is-visible > *{opacity:1;transform:translateY(0);}
+.reveal-stagger.is-visible > *:nth-child(1){transition-delay:0ms;}
+.reveal-stagger.is-visible > *:nth-child(2){transition-delay:80ms;}
+.reveal-stagger.is-visible > *:nth-child(3){transition-delay:160ms;}
+.reveal-stagger.is-visible > *:nth-child(4){transition-delay:240ms;}
+.reveal-stagger.is-visible > *:nth-child(5){transition-delay:320ms;}
+.reveal-stagger.is-visible > *:nth-child(6){transition-delay:400ms;}
+.reveal-stagger.is-visible > *:nth-child(7){transition-delay:480ms;}
+.reveal-stagger.is-visible > *:nth-child(8){transition-delay:560ms;}
+@media (prefers-reduced-motion:reduce){.reveal,.reveal-stagger > *{opacity:1!important;transform:none!important;transition:none!important;}}
 
-/* Trusted-by strip */
-.trusted-strip{padding:3.5rem 0 0;}
-.trusted-label{text-align:center;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);margin-bottom:1.85rem;}
-.trusted-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2.25rem 3rem;}
-.trusted-logo{display:inline-flex;align-items:center;gap:.45rem;font-size:1.15rem;color:var(--slate);opacity:.6;transition:opacity var(--dur-base) var(--ease),color var(--dur-base) var(--ease);}
-.trusted-logo svg{width:18px;height:18px;}
-.trusted-logo:hover{opacity:1;color:var(--charcoal);}
+/* Section heading */
+.section-head{max-width:640px;margin-bottom:56px;}
+.section-head h2{font-size:clamp(28px,3.6vw,42px);margin-top:10px;}
+.section-pad{padding:96px 0;}
+
+/* Trust strip */
+.trust-strip{padding:28px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2);}
+.trust-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;}
+.trust-item{display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:700;color:var(--text-muted);}
+.trust-item svg{width:18px;height:18px;color:var(--terracotta);flex-shrink:0;}
 
 /* Services */
-.services{padding:7rem 0;}
-.service-grid{display:grid;grid-template-columns:1fr;gap:1.75rem;}
-.service-card{background:var(--soft);border-radius:24px;padding:2.25rem;transition:transform var(--dur-base) var(--ease),box-shadow var(--dur-base) var(--ease),background var(--dur-base) var(--ease);}
-.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow2);background:var(--white);}
-.service-icon{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:16px;background:var(--cream);color:var(--m);margin-bottom:1.5rem;transition:background var(--dur-base) var(--ease),color var(--dur-base) var(--ease),transform var(--dur-base) var(--ease);}
-.service-icon svg{width:26px;height:26px;}
-.service-card:hover .service-icon{background:var(--m);color:#fff;transform:scale(1.08) rotate(-4deg);}
-.service-icon.t{color:var(--t);}
-.service-card:hover .service-icon.t{background:var(--t);}
-.service-card h3{font-size:1.35rem;margin-bottom:.65rem;}
-.service-card p{color:var(--slate);font-size:.97rem;}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.service-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:30px 26px;transition:transform var(--dur-base) var(--ease),box-shadow var(--dur-base) var(--ease),border-color var(--dur-base) var(--ease);}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow2);border-color:var(--terracotta);}
+.service-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--terracotta),var(--walnut));display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+.service-icon svg{width:26px;height:26px;color:#fff;}
+.service-card h3{font-size:18px;margin-bottom:8px;}
+.service-card p{font-size:14.5px;}
+@media (max-width:980px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:580px){.services-grid{grid-template-columns:1fr;}}
 
-/* Stats */
-.stats{background:var(--charcoal);color:var(--cream);padding:5rem 0;transition:background var(--dur-slow) var(--ease),color var(--dur-slow) var(--ease);}
-.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;text-align:center;}
-.stat-number{font-family:var(--font-serif);font-size:clamp(2.5rem,5vw,3.75rem);font-weight:700;color:var(--t3);}
-.stat-label{font-size:.9rem;color:color-mix(in srgb, var(--cream) 70%, transparent);margin-top:.35rem;}
+/* Why */
+.why-section{background:var(--charcoal);color:#fff;}
+[data-theme="dark"] .why-section{background:var(--navy2);}
+.why-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.why-section .eyebrow{color:var(--terracotta-light);}
+.why-section h2{color:#fff;}
+.why-list{display:flex;flex-direction:column;gap:22px;margin-top:28px;}
+.why-list li{display:flex;gap:16px;align-items:flex-start;}
+.why-list .num{flex-shrink:0;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--terracotta);color:var(--terracotta-light);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;}
+.why-list h4{color:#fff;font-size:16px;margin-bottom:4px;}
+.why-list p{color:rgba(255,255,255,0.65);font-size:14.5px;}
+.stat-card-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.stat-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:18px;padding:26px;}
+.stat-card strong{display:block;font-size:38px;font-family:var(--font-head);font-weight:800;color:var(--terracotta-light);margin-bottom:6px;}
+.stat-card span{font-size:13px;color:rgba(255,255,255,0.6);font-weight:600;}
+@media (max-width:880px){.why-wrap{grid-template-columns:1fr;}}
 
-@media (min-width:640px){
-  .service-grid{grid-template-columns:repeat(2,1fr);}
-}
-@media (min-width:1024px){
-  .service-grid{grid-template-columns:repeat(4,1fr);}
-  .stats-grid{grid-template-columns:repeat(4,1fr);}
-}
+/* Process */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative;}
+.process-step{position:relative;padding:30px 22px;border-radius:18px;background:var(--surface);border:1px solid var(--border);}
+.process-step .step-num{font-family:var(--font-head);font-size:42px;font-weight:800;color:var(--terracotta);opacity:0.5;margin-bottom:14px;}
+.process-step h3{font-size:17px;margin-bottom:8px;}
+.process-step p{font-size:14px;}
+@media (max-width:980px){.process-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:580px){.process-grid{grid-template-columns:1fr;}}
 
 /* Packages */
-.packages{padding:7rem 0;}
-.packages-grid{display:grid;grid-template-columns:1fr;gap:1.75rem;}
-.package-card{position:relative;background:var(--soft);border-radius:24px;padding:2.25rem 2rem;display:flex;flex-direction:column;transition:transform var(--dur-base) var(--ease),box-shadow var(--dur-base) var(--ease);}
+.packages-section{background:var(--bg2);}
+.packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch;}
+.package-card{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:36px 30px;display:flex;flex-direction:column;transition:transform var(--dur-base) var(--ease),box-shadow var(--dur-base) var(--ease);}
 .package-card:hover{transform:translateY(-6px);box-shadow:var(--shadow2);}
-.package-card.featured{background:var(--charcoal);color:var(--cream);}
-.package-badge{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--m);background:color-mix(in srgb, var(--m) 12%, transparent);padding:.4rem .9rem;border-radius:999px;margin-bottom:1.25rem;align-self:flex-start;}
-.package-card.featured .package-badge{color:var(--t3);background:color-mix(in srgb, var(--t3) 18%, transparent);}
-.package-posts{font-size:.85rem;color:var(--slate);margin-bottom:.4rem;}
-.package-card.featured .package-posts{color:color-mix(in srgb, var(--cream) 70%, transparent);}
-.package-price{font-family:var(--font-serif);font-size:2.1rem;font-weight:700;margin-bottom:.6rem;}
-.package-period{font-size:.95rem;font-weight:400;color:var(--slate);}
-.package-card.featured .package-period{color:color-mix(in srgb, var(--cream) 60%, transparent);}
-.package-desc{font-size:.92rem;color:var(--slate);margin-bottom:1.5rem;}
-.package-card.featured .package-desc{color:color-mix(in srgb, var(--cream) 75%, transparent);}
-.package-features{display:flex;flex-direction:column;gap:.7rem;margin-bottom:2rem;flex:1;}
-.package-features li{display:flex;align-items:flex-start;gap:.6rem;font-size:.9rem;}
-.package-features svg{flex-shrink:0;width:16px;height:16px;margin-top:.15rem;color:var(--t);}
-.package-card.featured .package-features svg{color:var(--t3);}
-.addon-strip{margin-top:3.5rem;text-align:center;}
-.addon-strip h3{font-size:1.1rem;margin-bottom:.4rem;}
-.addon-strip p{color:var(--slate);font-size:.9rem;}
-.addon-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-top:1.5rem;}
-.addon-chip{display:flex;align-items:center;gap:.5rem;background:var(--soft);border-radius:999px;padding:.55rem 1.1rem;font-size:.85rem;}
-.addon-chip strong{color:var(--m);font-weight:700;}
-@media (min-width:640px){
-  .packages-grid{grid-template-columns:repeat(2,1fr);}
-}
-@media (min-width:1024px){
-  .packages-grid{grid-template-columns:repeat(4,1fr);}
-  .about-grid{grid-template-columns:1.05fr .95fr;}
-}
+.package-card.featured{background:linear-gradient(160deg,var(--charcoal),var(--espresso));color:#fff;position:relative;}
+.package-card.featured::before{content:'Most Popular';position:absolute;top:-12px;left:30px;background:var(--terracotta);color:#fff;font-size:11.5px;font-weight:700;padding:5px 14px;border-radius:999px;letter-spacing:0.04em;}
+.package-card.featured h3,.package-card.featured .price{color:#fff;}
+.package-card.featured p,.package-card.featured li{color:rgba(255,255,255,0.72);}
+.package-card.featured .pk-feat svg{color:var(--terracotta-light);}
+.package-card h3{font-size:20px;margin-bottom:6px;}
+.package-card .price{font-family:var(--font-head);font-size:34px;font-weight:800;margin:14px 0 4px;}
+.package-card .price small{font-size:14px;font-weight:600;color:var(--text-muted);}
+.package-card .pk-desc{font-size:14px;margin-bottom:24px;min-height:42px;}
+.pk-feat{display:flex;flex-direction:column;gap:13px;margin-bottom:28px;flex:1;}
+.pk-feat li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--text);}
+.pk-feat svg{width:18px;height:18px;color:var(--terracotta);flex-shrink:0;margin-top:1px;}
+.package-card .btn{justify-content:center;width:100%;}
+@media (max-width:980px){.packages-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto;}}
 
-/* Approach / Timeline */
-.approach{padding:7rem 0;}
-.timeline{max-width:720px;margin:0 auto;}
-.timeline-step{display:flex;gap:1.75rem;opacity:0;transform:translateX(-18px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
-.timeline-step.is-visible{opacity:1;transform:translateX(0);}
-.timeline-marker{display:flex;flex-direction:column;align-items:center;flex-shrink:0;}
-.timeline-num{display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:var(--m);color:#fff;font-family:var(--font-serif);font-weight:700;font-size:1.05rem;}
-.timeline-line{width:2px;flex:1;background:var(--soft);margin:.5rem 0;transform:scaleY(0);transform-origin:top;transition:transform .8s var(--ease) .15s;}
-.timeline-step.is-visible .timeline-line{transform:scaleY(1);}
-.timeline-body{padding-bottom:3rem;}
-.timeline-body h3{font-size:1.4rem;margin-bottom:.5rem;}
-.timeline-body p{color:var(--slate);max-width:480px;}
-.timeline-step:last-child .timeline-body{padding-bottom:0;}
+/* Work / portfolio */
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.work-card{border-radius:20px;overflow:hidden;background:var(--surface);border:1px solid var(--border);transition:transform var(--dur-base) var(--ease),box-shadow var(--dur-base) var(--ease);}
+.work-card:hover{transform:translateY(-6px);box-shadow:var(--shadow2);}
+.work-card .img-wrap{aspect-ratio:4/5;overflow:hidden;background:var(--bg2);}
+.work-card img{width:100%;height:100%;object-fit:cover;transition:transform 600ms var(--ease);}
+.work-card:hover img{transform:scale(1.05);}
+.work-card-body{padding:20px 22px;}
+.work-card-body span{font-size:12px;font-weight:700;color:var(--terracotta);text-transform:uppercase;letter-spacing:0.05em;}
+.work-card-body h3{font-size:17px;margin:6px 0 4px;}
+.work-card-body p{font-size:13.5px;}
+@media (max-width:980px){.work-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto;}}
 
-/* About */
-.about{padding:7rem 0;background:var(--cream);}
-.about-grid{display:grid;grid-template-columns:1fr;gap:3rem;align-items:center;}
-.about-copy p{color:var(--slate);font-size:1.02rem;margin-bottom:1.5rem;max-width:540px;}
-.about-values{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.75rem;margin-top:2rem;}
-.about-value .service-icon{width:44px;height:44px;margin-bottom:1rem;}
-.about-value .service-icon svg{width:22px;height:22px;}
-.about-value h4{font-size:1.05rem;margin-bottom:.4rem;}
-.about-value p{color:var(--slate);font-size:.88rem;}
-.about-art{display:flex;align-items:center;justify-content:center;padding:2rem;}
-.about-art svg{width:100%;max-width:380px;height:auto;}
-
-/* Work */
-.work{padding:7rem 0;}
-.work-grid{display:grid;grid-template-columns:1fr;gap:2rem;}
-.work-card{border-radius:24px;overflow:hidden;}
-.work-thumb{position:relative;aspect-ratio:4/3;border-radius:20px;margin-bottom:1.25rem;background-size:200% 200%;overflow:hidden;transition:transform var(--dur-slow) var(--ease),border-radius var(--dur-slow) var(--ease);}
-.work-card:hover .work-thumb{transform:scale(1.03);border-radius:14px;}
-.work-thumb::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.16) 1.5px,transparent 1.5px);background-size:22px 22px;opacity:.5;}
-.work-thumb-icon{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);transition:transform var(--dur-slow) var(--ease),color var(--dur-slow) var(--ease);}
-.work-thumb-icon svg{width:34%;height:34%;}
-.work-card:hover .work-thumb-icon{color:rgba(255,255,255,.6);transform:scale(1.08);}
-.work-thumb-1{background-image:linear-gradient(135deg,var(--m),var(--t));}
-.work-thumb-2{background-image:linear-gradient(135deg,var(--m3),var(--m2));}
-.work-thumb-3{background-image:linear-gradient(135deg,var(--t3),var(--m));}
-.work-thumb-4{background-image:linear-gradient(135deg,var(--t2),var(--t3));}
-.work-thumb-5{background-image:linear-gradient(135deg,var(--m2),var(--t2));}
-.work-thumb-6{background-image:linear-gradient(135deg,var(--t),var(--m3));}
-.work-tag{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--t2);margin-bottom:.4rem;}
-.work-card h3{font-size:1.3rem;margin-bottom:.5rem;}
-.work-card p{color:var(--slate);font-size:.95rem;}
-
-/* Testimonials */
-.testimonials{padding:7rem 0;}
-.testimonial-carousel{max-width:720px;margin:0 auto;text-align:center;}
-.testimonial-slides{position:relative;min-height:11rem;}
-.testimonial-slide{position:absolute;inset:0;opacity:0;transform:translateY(10px);transition:opacity .5s var(--ease),transform .5s var(--ease);pointer-events:none;}
-.testimonial-slide.is-active{opacity:1;transform:translateY(0);position:relative;pointer-events:auto;}
-.testimonial-slide p{font-family:var(--font-serif);font-size:clamp(1.3rem,2.2vw,1.75rem);line-height:1.4;margin-bottom:1.25rem;}
-.testimonial-slide footer{color:var(--slate);font-size:.92rem;}
-.testimonial-dots{display:flex;justify-content:center;gap:.6rem;margin-top:2rem;}
-.testimonial-dot{width:9px;height:9px;border-radius:50%;background:var(--soft);transition:background var(--dur-base) var(--ease),transform var(--dur-base) var(--ease);}
-.testimonial-dot[aria-current="true"]{background:var(--m);transform:scale(1.3);}
-
-/* FAQ */
-.faq{padding:7rem 0;}
-.faq-list{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:.9rem;}
-.faq-item{border:1px solid var(--soft);border-radius:18px;padding:.3rem 1.5rem;background:var(--white);transition:border-color var(--dur-base) var(--ease);}
-.faq-item[open]{border-color:var(--m);}
-.faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem 0;cursor:pointer;font-family:var(--font-serif);font-size:1.1rem;list-style:none;}
-.faq-item summary::-webkit-details-marker{display:none;}
-.faq-item summary::after{content:"";flex-shrink:0;width:9px;height:9px;border-right:2px solid var(--m);border-bottom:2px solid var(--m);transform:rotate(45deg);transition:transform var(--dur-base) var(--ease);}
-.faq-item[open] summary::after{transform:rotate(-135deg);}
-.faq-item p{color:var(--slate);padding:0 0 1.5rem;max-width:560px;}
+/* Who we help / personas */
+.persona-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.persona-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px;display:flex;gap:20px;}
+.persona-avatar{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--terracotta),var(--walnut));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;flex-shrink:0;}
+.persona-card h3{font-size:17px;margin-bottom:2px;}
+.persona-card .role{font-size:13px;color:var(--terracotta);font-weight:700;margin-bottom:10px;display:block;}
+.persona-card p{font-size:14px;}
+@media (max-width:780px){.persona-grid{grid-template-columns:1fr;}}
 
 /* CTA banner */
-.cta-banner{padding:6rem 0;background:linear-gradient(135deg,var(--soft),var(--cream));}
-.cta-inner{max-width:680px;margin:0 auto;text-align:center;}
-.cta-inner h2{font-size:clamp(2rem,3.4vw,2.85rem);margin-bottom:1rem;}
-.cta-inner p{color:var(--slate);margin-bottom:2rem;font-size:1.05rem;}
+.cta-banner{background:linear-gradient(135deg,var(--terracotta),var(--walnut));border-radius:28px;padding:64px 50px;text-align:center;position:relative;overflow:hidden;}
+.cta-banner h2{color:#fff;font-size:clamp(26px,3.4vw,38px);margin-bottom:14px;}
+.cta-banner p{color:rgba(255,255,255,0.85);max-width:520px;margin:0 auto 30px;font-size:16px;}
+.cta-banner .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:14px;max-width:760px;}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:6px 24px;}
+.faq-item summary{list-style:none;padding:18px 0;font-weight:700;font-size:16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary .chev{flex-shrink:0;width:20px;height:20px;transition:transform var(--dur-base) var(--ease);}
+.faq-item[open] summary .chev{transform:rotate(180deg);}
+.faq-item p{padding-bottom:18px;font-size:14.5px;}
+
+/* Contact */
+.contact-wrap{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;}
+.contact-info-card{background:var(--charcoal);color:#fff;border-radius:24px;padding:40px 34px;}
+[data-theme="dark"] .contact-info-card{background:var(--navy2);}
+.contact-info-card h3{color:#fff;font-size:22px;margin-bottom:18px;}
+.contact-info-card p{color:rgba(255,255,255,0.65);font-size:14.5px;margin-bottom:26px;}
+.contact-line{display:flex;align-items:center;gap:14px;margin-bottom:18px;}
+.contact-line .ico{width:40px;height:40px;border-radius:50%;background:rgba(183,122,55,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.contact-line .ico svg{width:18px;height:18px;color:var(--terracotta-light);}
+.contact-line a,.contact-line span{font-size:14.5px;font-weight:600;color:#fff;}
+.contact-form{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:40px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
+.form-group{display:flex;flex-direction:column;gap:7px;}
+.form-group.full{grid-column:1/-1;}
+.form-group label{font-size:13px;font-weight:700;color:var(--text-muted);}
+.form-group input,.form-group select,.form-group textarea{padding:13px 16px;border-radius:12px;border:1.5px solid var(--border);background:var(--bg);color:var(--text);font-size:14.5px;transition:border-color var(--dur-fast) var(--ease);}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--terracotta);outline:none;}
+.form-group textarea{resize:vertical;min-height:110px;}
+#formStatus{font-size:13.5px;font-weight:600;margin-top:10px;min-height:18px;}
+#formStatus.ok{color:#3a8a5c;}
+@media (max-width:980px){.contact-wrap{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}}
 
 /* Footer */
-.site-footer{background:var(--charcoal);color:var(--cream);padding:5rem 0 0;transition:background var(--dur-slow) var(--ease),color var(--dur-slow) var(--ease);}
-.footer-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;padding-bottom:3.5rem;border-bottom:1px solid color-mix(in srgb, var(--cream) 14%, transparent);}
-.footer-grid>*{min-width:0;}
-.footer-brand .logo{color:var(--cream);}
-.footer-brand p{color:color-mix(in srgb, var(--cream) 65%, transparent);max-width:280px;margin:1rem 0 1.5rem;font-size:.95rem;}
-.footer-social{display:flex;gap:.75rem;}
-.footer-social a{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:color-mix(in srgb, var(--cream) 12%, transparent);transition:background var(--dur-fast) var(--ease),transform var(--dur-fast) var(--ease);}
-.footer-social a:hover{background:var(--m);transform:translateY(-2px);}
-.footer-social svg{width:17px;height:17px;}
-.footer-nav h4,.footer-contact h4{font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:color-mix(in srgb, var(--cream) 55%, transparent);margin-bottom:1.1rem;}
-.footer-nav ul{display:flex;flex-direction:column;gap:.65rem;}
-.footer-nav a{color:color-mix(in srgb, var(--cream) 85%, transparent);font-size:.95rem;transition:color var(--dur-fast) var(--ease);}
-.footer-nav a:hover{color:var(--t3);}
-.footer-contact p{font-size:.95rem;margin-bottom:.5rem;color:color-mix(in srgb, var(--cream) 85%, transparent);}
-.footer-contact a{transition:color var(--dur-fast) var(--ease);}
-.footer-contact a:hover{color:var(--t3);}
-.newsletter-form{margin-top:1.25rem;}
-.newsletter-form label{display:block;font-size:.85rem;margin-bottom:.6rem;color:color-mix(in srgb, var(--cream) 85%, transparent);}
-.newsletter-row{display:flex;gap:.5rem;}
-.newsletter-row input{flex:1;min-width:0;padding:.75rem 1rem;border-radius:999px;border:1px solid color-mix(in srgb, var(--cream) 25%, transparent);background:color-mix(in srgb, var(--cream) 8%, transparent);color:var(--cream);}
-.newsletter-row input::placeholder{color:color-mix(in srgb, var(--cream) 45%, transparent);}
-.newsletter-row input:focus-visible{outline:2px solid var(--t3);}
-.form-note{font-size:.85rem;color:var(--t3);margin-top:.6rem;min-height:1.2em;}
-.footer-bottom{display:flex;flex-direction:column;gap:.75rem;padding:1.75rem 0 2.25rem;font-size:.85rem;color:color-mix(in srgb, var(--cream) 55%, transparent);}
-
-@media (min-width:640px){
-  .footer-bottom{flex-direction:row;justify-content:space-between;}
-}
-@media (min-width:768px){
-  .work-grid{grid-template-columns:repeat(2,1fr);}
-}
-@media (min-width:1024px){
-  .footer-grid{grid-template-columns:2fr 1fr 1fr 1.4fr;}
-}
+footer.site{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:70px 0 28px;}
+[data-theme="dark"] footer.site{background:#0b1117;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px;}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+.footer-brand img{width:40px;height:40px;border-radius:50%;object-fit:cover;}
+.footer-brand strong{color:#fff;font-size:16px;}
+.footer-col h4{color:#fff;font-size:14px;margin-bottom:18px;letter-spacing:0.03em;text-transform:uppercase;}
+.footer-col ul{display:flex;flex-direction:column;gap:11px;}
+.footer-col a{font-size:14px;transition:color var(--dur-fast) var(--ease);}
+.footer-col a:hover{color:var(--terracotta-light);}
+.footer-social{display:flex;gap:12px;margin-top:18px;}
+.footer-social a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;transition:border-color var(--dur-fast) var(--ease),background var(--dur-fast) var(--ease);}
+.footer-social a:hover{border-color:var(--terracotta);background:rgba(183,122,55,0.15);}
+.footer-social svg{width:16px;height:16px;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;}
+@media (max-width:880px){.footer-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:560px){.footer-grid{grid-template-columns:1fr;}}
 
 /* Back to top */
-.back-to-top{position:fixed;right:1.5rem;bottom:1.5rem;width:46px;height:46px;border-radius:50%;background:var(--charcoal);color:var(--cream);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow2);opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity var(--dur-base) var(--ease),transform var(--dur-base) var(--ease),visibility var(--dur-base);z-index:500;}
-.back-to-top.is-visible{opacity:1;visibility:visible;transform:translateY(0);}
+.back-to-top{position:fixed;bottom:28px;right:28px;width:48px;height:48px;border-radius:50%;background:var(--terracotta);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow2);opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity var(--dur-base) var(--ease),transform var(--dur-base) var(--ease);z-index:90;}
+.back-to-top.visible{opacity:1;transform:translateY(0);pointer-events:auto;}
 .back-to-top svg{width:20px;height:20px;}
-.back-to-top:hover{transform:translateY(-3px);}
 
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce){
-  *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
-  .reveal,.timeline-step{opacity:1;transform:none;}
-  .orb{animation:none;opacity:.45;}
-}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
 </style>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+<a href="#main" class="skip-link">Skip to main content</a>
 <div class="scroll-progress" id="scrollProgress"></div>
 
-<header class="site-header" id="siteHeader">
-  <div class="container header-inner">
-    <a href="#top" class="logo" aria-label="OUI Experience Marketing — home">OUI<span class="logo-dot">.</span></a>
-    <nav class="nav" aria-label="Primary">
-      <ul>
-        <li><a href="#capabilities" data-nav>Services</a></li>
-        <li><a href="#packages" data-nav>Packages</a></li>
-        <li><a href="#about" data-nav>About</a></li>
-        <li><a href="#work" data-nav>Work</a></li>
-        <li><a href="#insights" data-nav>Insights</a></li>
-        <li><a href="#contact" data-nav>Contact</a></li>
-      </ul>
+<header class="site" id="siteHeader">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">
+      <img src="assets/logo/logo-mark-navy.jpg" alt="Next Orporation logo mark">
+      <span>Next Orporation<small>Online Business Solutions</small></span>
+    </a>
+    <nav class="primary" aria-label="Primary">
+      <a href="#services" data-nav="services">Services</a>
+      <a href="#process" data-nav="process">Process</a>
+      <a href="#packages" data-nav="packages">Packages</a>
+      <a href="#work" data-nav="work">Our Work</a>
+      <a href="#faq" data-nav="faq">FAQ</a>
+      <a href="#contact" data-nav="contact">Contact</a>
     </nav>
-    <div class="header-actions">
-      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
       </button>
-      <a href="#contact" class="btn btn-primary btn-sm">Start a project</a>
-      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
-        <span></span><span></span><span></span>
+      <a href="#contact" class="btn btn-primary" style="display:none" id="headerCta">Book a Consult</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
 </header>
 
-<div class="mobile-nav" id="mobileNav" data-state="closed">
-  <nav aria-label="Mobile">
-    <ul>
-      <li><a href="#capabilities" data-nav>Services</a></li>
-      <li><a href="#packages" data-nav>Packages</a></li>
-      <li><a href="#about" data-nav>About</a></li>
-      <li><a href="#work" data-nav>Work</a></li>
-      <li><a href="#insights" data-nav>Insights</a></li>
-      <li><a href="#contact" data-nav>Contact</a></li>
-    </ul>
-  </nav>
-  <a href="#contact" class="btn btn-primary btn-block">Start a project</a>
-</div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+  <a href="#services">Services</a>
+  <a href="#process">Process</a>
+  <a href="#packages">Packages</a>
+  <a href="#work">Our Work</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="btn btn-primary">Book a Consult</a>
+</nav>
 
 <main id="main">
-  <section class="hero" id="top">
-    <div class="hero-bg" id="heroBg" aria-hidden="true">
-      <span class="orb-float orb-float-m"><span class="orb orb-m"></span></span>
-      <span class="orb-float orb-float-t"><span class="orb orb-t"></span></span>
-    </div>
-    <div class="container hero-inner">
-      <p class="eyebrow reveal">Trinidad &amp; Tobago · Digital Marketing Agency</p>
-      <h1 class="hero-title">Fuel your brand with <em class="serif-em">experience that converts.</em></h1>
-      <p class="hero-sub">We help small and medium businesses grow their brand, engage customers, and achieve measurable results — from strategy and production to full-scale digital growth.</p>
-      <div class="hero-actions reveal" style="--d:.95s">
-        <a href="#packages" class="btn btn-primary btn-lg">Explore packages</a>
-        <a href="#work" class="btn btn-ghost btn-lg">View case studies</a>
-      </div>
-    </div>
-    <a href="#capabilities" class="scroll-cue" aria-label="Scroll to learn more">
-      <span class="scroll-cue-line"></span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-    </a>
-  </section>
 
-  <section class="trusted-strip" aria-label="Trusted by">
-    <div class="container">
-      <p class="trusted-label reveal">Trusted by brands across Trinidad &amp; Tobago</p>
-      <div class="trusted-logos reveal" style="--d:.1s">
-        <span class="trusted-logo">Barber Labs</span>
-        <span class="trusted-logo">IsleAura &amp; Co</span>
-        <span class="trusted-logo">Belle Group</span>
-        <span class="trusted-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16c1.5-1.5 3-1.5 4.5 0s3 1.5 4.5 0 3-1.5 4.5 0 3 1.5 4.5 0"></path><path d="M2 11c1.5-1.5 3-1.5 4.5 0s3 1.5 4.5 0 3-1.5 4.5 0 3 1.5 4.5 0"></path></svg>Saltwater Kitchen</span>
-        <span class="trusted-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2 12 7 12 9 6 13 18 15 12 22 12"></polyline></svg>Pulse Wellness</span>
+<section class="hero" id="top">
+  <div class="hero-bg-orb orb-1" aria-hidden="true"></div>
+  <div class="hero-bg-orb orb-2" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <div class="hero-badge"><span class="dot"></span> Trinidad &amp; Tobago &middot; Business Solutions</div>
+      <h1 class="hero-title" id="heroTitle">Pioneering Tomorrow&rsquo;s Business Solutions <span class="accent">Today.</span></h1>
+      <p class="hero-sub">We help entrepreneurs, SMEs and non-profits register, plan, brand and market their businesses — from company registration to financial forecasting, brand identity, creative media and social media management.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Book a Free Consult</a>
+        <a href="#services" class="btn btn-ghost">Explore Services</a>
+      </div>
+      <div class="hero-meta">
+        <div class="item"><strong data-count="40" data-suffix="+">0</strong><span>Clients Served</span></div>
+        <div class="item"><strong data-count="6" data-suffix="">0</strong><span>Core Services</span></div>
+        <div class="item"><strong data-count="300" data-prefix="$">0</strong><span>TTD Starting Plan</span></div>
       </div>
     </div>
-  </section>
+    <div class="hero-visual">
+      <div class="hero-visual-card">
+        <img src="assets/logo/logo-lockup-navy-tagline.jpg" alt="Next Orporation full brand lockup with tagline">
+      </div>
+      <div class="hero-visual-tag">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
+        Registered &amp; Compliant
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+</section>
 
-  <section class="capabilities-strip" aria-label="Capabilities overview">
-    <div class="container tag-row">
-      <span class="tag reveal" style="--d:0s">Social Media Management</span>
-      <span class="tag-dot" aria-hidden="true">·</span>
-      <span class="tag reveal" style="--d:.05s">Brand Strategy</span>
-      <span class="tag-dot" aria-hidden="true">·</span>
-      <span class="tag reveal" style="--d:.1s">Content Production</span>
-      <span class="tag-dot" aria-hidden="true">·</span>
-      <span class="tag reveal" style="--d:.15s">Paid Media &amp; Ads</span>
-      <span class="tag-dot" aria-hidden="true">·</span>
-      <span class="tag reveal" style="--d:.2s">AI-Powered Marketing</span>
-      <span class="tag-dot" aria-hidden="true">·</span>
-      <span class="tag reveal" style="--d:.25s">Website Design</span>
-    </div>
-  </section>
+<section class="trust-strip">
+  <div class="wrap trust-inner">
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg> Trusted by 40+ T&amp;T businesses</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v2M16 4v2"/></svg> Companies Registry filings</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l18-9-9 18-2-7-7-2z"/></svg> Investor-ready business plans</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> Fast turnaround</div>
+  </div>
+</section>
 
-  <section class="services" id="capabilities">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">What We Do</p>
-        <h2>Comprehensive marketing solutions for every stage of growth.</h2>
+<section class="section-pad" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>One partner, every stage of your business journey</h2>
+    </div>
+    <div class="services-grid reveal-stagger">
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 14h6"/></svg></div>
+        <h3>Business Registration</h3>
+        <p>Sole trader and limited liability company registration with the Companies Registry — done right, start to finish.</p>
       </div>
-      <div class="service-grid">
-        <article class="service-card reveal" style="--d:0s">
-          <span class="service-icon t">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-          </span>
-          <h3>Social Media Management</h3>
-          <p>Full-cycle social management across Instagram, Facebook, TikTok, and LinkedIn. We craft, schedule, and optimise content that drives genuine engagement and community growth.</p>
-        </article>
-        <article class="service-card reveal" style="--d:.04s">
-          <span class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-          </span>
-          <h3>Brand Strategy &amp; Identity</h3>
-          <p>From brand audits and competitive analysis to visual identity systems and messaging frameworks — we build brands that are culturally resonant and commercially powerful.</p>
-        </article>
-        <article class="service-card reveal" style="--d:.08s">
-          <span class="service-icon t">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
-          </span>
-          <h3>Content Production</h3>
-          <p>Studio-grade photography, video production, motion graphics, and copywriting. We produce premium visual assets that position your brand at the top of its category.</p>
-        </article>
-        <article class="service-card reveal" style="--d:.12s">
-          <span class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-          </span>
-          <h3>B2B Growth &amp; Partnerships</h3>
-          <p>Strategic B2B outreach, cross-brand collaborations, investor-ready decks, and omnichannel growth systems designed to accelerate your commercial pipeline.</p>
-        </article>
-        <article class="service-card reveal" style="--d:.16s">
-          <span class="service-icon t">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-          </span>
-          <h3>Analytics &amp; Reporting</h3>
-          <p>Data-driven performance dashboards, competitor benchmarking, and monthly strategic reviews that keep your brand evolving with the market.</p>
-        </article>
-        <article class="service-card reveal" style="--d:.2s">
-          <span class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-          </span>
-          <h3>Paid Media &amp; Ads</h3>
-          <p>Meta Ads, Google Ads, and influencer seeding campaigns designed for maximum ROI. We handle strategy, creative, targeting, and optimisation end-to-end.</p>
-        </article>
-        <article class="service-card reveal" style="--d:.24s">
-          <span class="service-icon t">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-          </span>
-          <h3>Website Design &amp; Development</h3>
-          <p>Professional, mobile-first websites and landing pages built for speed, SEO, and conversion — from single-page sites to full e-commerce platforms.</p>
-        </article>
-        <article class="service-card reveal" style="--d:.28s">
-          <span class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3l2-3h6l2 3h3a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-          </span>
-          <h3>Photography &amp; Videography</h3>
-          <p>Studio-grade product shoots, brand photography, lifestyle campaigns, and cinematic video production — all in-house. Professional assets that elevate every channel.</p>
-        </article>
-        <article class="service-card reveal" style="--d:.32s">
-          <span class="service-icon t">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
-          </span>
-          <h3>AI-Powered Marketing</h3>
-          <p>We harness Google Gemini and leading AI tools to supercharge your campaigns — from AI-generated content and hyper-personalised ads to predictive analytics at scale.</p>
-        </article>
-        <article class="service-card reveal" style="--d:.36s">
-          <span class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-          </span>
-          <h3>WhatsApp &amp; SMS Marketing</h3>
-          <p>Direct mobile messaging campaigns that reach customers where they spend the most time — among the highest-converting channels for T&amp;T businesses.</p>
-        </article>
-        <article class="service-card reveal" style="--d:.4s">
-          <span class="service-icon t">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-          </span>
-          <h3>Reputation Management</h3>
-          <p>Monitor, manage, and actively improve your brand's online reputation across Google Reviews, Facebook, and social media. We respond to reviews and build a digital presence that converts.</p>
-        </article>
-        <article class="service-card reveal" style="--d:.44s">
-          <span class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
-          </span>
-          <h3>Podcast Production</h3>
-          <p>End-to-end podcast creation for brands — concept development, recording setup guidance, editing, distribution, and promotional campaigns to grow your audience from episode one.</p>
-        </article>
-        <article class="service-card reveal" style="--d:.48s">
-          <span class="service-icon t">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22 6 12 13 2 6"></polyline></svg>
-          </span>
-          <h3>Email Marketing &amp; Automation</h3>
-          <p>Beautifully designed email campaigns, drip sequences, and CRM automation flows that nurture your leads 24/7 — from welcome series to VIP loyalty programmes.</p>
-        </article>
-        <article class="service-card reveal" style="--d:.52s">
-          <span class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          </span>
-          <h3>Influencer Management</h3>
-          <p>Full influencer campaign management — from identification and vetting to content approval and performance tracking. We manage local T&amp;T creators and regional Caribbean influencers.</p>
-        </article>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
+        <h3>Financial Forecasting</h3>
+        <p>Realistic revenue, cost and cash-flow projections that hold up to scrutiny from lenders and investors.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 19V5a2 2 0 012-2h9l5 5v11a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M14 3v5h5"/></svg></div>
+        <h3>Business Plans</h3>
+        <p>Lean and investor-ready business plans that turn your idea into a clear, fundable roadmap.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
+        <h3>Brand Identity</h3>
+        <p>Logos, colour systems and brand guidelines that make your business instantly recognisable.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="14" height="14" rx="2"/><path d="M17 9l4-2v10l-4-2"/></svg></div>
+        <h3>Creative Media</h3>
+        <p>Photo and video production that shows your business at its best across every platform.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+        <h3>Social Media Management</h3>
+        <p>Content calendars, posting and community management that keep your brand active and engaged.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h3>Resumes &amp; Career Docs</h3>
+        <p>Resumes, CVs and cover letters that put your best professional self forward.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></div>
+        <h3>Consulting &amp; Workshops</h3>
+        <p>One-on-one consulting and group workshops to sharpen the way you plan and run your business.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="packages" id="packages">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Pricing &amp; Plans</p>
-        <h2>Social media packages built for T&amp;T businesses.</h2>
-      </div>
-      <div class="packages-grid">
-        <article class="package-card reveal" style="--d:0s">
-          <span class="package-badge">Starter</span>
-          <p class="package-posts">6 Posts / Month</p>
-          <p class="package-price">$1,000 <span class="package-period">TTD / mo</span></p>
-          <p class="package-desc">Perfect for establishing a consistent local presence.</p>
-          <ul class="package-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Content creation (graphics + copy)</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Professional scheduling</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Community engagement</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Monthly performance report</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary btn-sm btn-block">Get Started →</a>
-        </article>
-        <article class="package-card featured reveal" style="--d:.06s">
-          <span class="package-badge">Growth</span>
-          <p class="package-posts">12 Posts / Month</p>
-          <p class="package-price">$1,500 <span class="package-period">TTD / mo</span></p>
-          <p class="package-desc">Growth-focused content with extra engagement boosters.</p>
-          <ul class="package-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>All Starter features +</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Video snippets &amp; Reels</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Bi-weekly engagement boost</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Monthly creative shoot (1hr)</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary btn-sm btn-block">Choose Plan →</a>
-        </article>
-        <article class="package-card reveal" style="--d:.12s">
-          <span class="package-badge">Pro</span>
-          <p class="package-posts">15 Posts / Month</p>
-          <p class="package-price">$2,000 <span class="package-period">TTD / mo</span></p>
-          <p class="package-desc">High-velocity brand building for serious growth.</p>
-          <ul class="package-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>All Growth features +</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Custom illustrations &amp; motion</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Monthly paid ads strategy</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Priority support &amp; strategy calls</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary btn-sm btn-block">Scale Up →</a>
-        </article>
-        <article class="package-card reveal" style="--d:.18s">
-          <span class="package-badge">Enterprise</span>
-          <p class="package-posts">24 Posts / Month</p>
-          <p class="package-price">$3,000 <span class="package-period">TTD / mo</span></p>
-          <p class="package-desc">Full-service brand domination across all channels.</p>
-          <ul class="package-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Daily content + Stories</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Advanced analytics &amp; CRM sync</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Content shoots (2hr/month)</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Dedicated account director</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary btn-sm btn-block">Talk to Expert →</a>
-        </article>
-      </div>
-      <div class="addon-strip reveal">
-        <h3 class="serif">Supercharge any package with add-ons</h3>
-        <p>Bolt these on to any plan — mix and match to build your perfect marketing stack.</p>
-        <div class="addon-chips">
-          <span class="addon-chip">Content Shoot · <strong>$800 TTD</strong></span>
-          <span class="addon-chip">Brand Video (60s) · <strong>$1,200 TTD</strong></span>
-          <span class="addon-chip">Ads Management · <strong>$500 TTD/mo</strong></span>
-          <span class="addon-chip">AI Content Boost · <strong>$400 TTD/mo</strong></span>
-          <span class="addon-chip">Landing Page · <strong>$1,500 TTD</strong></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="stats" id="impact">
-    <div class="container stats-grid">
-      <div class="stat reveal" style="--d:0s">
-        <p class="stat-number"><span data-count="50" data-suffix="+">0</span></p>
-        <p class="stat-label">Brands transformed</p>
-      </div>
-      <div class="stat reveal" style="--d:.08s">
-        <p class="stat-number"><span data-count="210" data-suffix="%">0</span></p>
-        <p class="stat-label">Avg. engagement lift</p>
-      </div>
-      <div class="stat reveal" style="--d:.16s">
-        <p class="stat-number"><span data-count="98" data-suffix="%">0</span></p>
-        <p class="stat-label">Client retention rate</p>
-      </div>
-      <div class="stat reveal" style="--d:.24s">
-        <p class="stat-number"><span data-count="5" data-suffix="★">0</span></p>
-        <p class="stat-label">Average rating</p>
-      </div>
-    </div>
-  </section>
-  <section class="approach" id="approach">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">How We Work</p>
-        <h2>A simple process for measurable growth.</h2>
-      </div>
-      <ol class="timeline">
-        <li class="timeline-step">
-          <span class="timeline-marker"><span class="timeline-num">01</span><span class="timeline-line"></span></span>
-          <div class="timeline-body"><h3>Discover</h3><p>We immerse ourselves in your brand, audience, and goals with a full audit of your current presence before any strategy is built.</p></div>
-        </li>
-        <li class="timeline-step">
-          <span class="timeline-marker"><span class="timeline-num">02</span><span class="timeline-line"></span></span>
-          <div class="timeline-body"><h3>Strategise</h3><p>Content pillars, channel plans, and messaging frameworks come together into a single growth blueprint built for your market.</p></div>
-        </li>
-        <li class="timeline-step">
-          <span class="timeline-marker"><span class="timeline-num">03</span><span class="timeline-line"></span></span>
-          <div class="timeline-body"><h3>Produce</h3><p>Our content and production teams turn the blueprint into scheduled posts, campaigns, and assets — on time, on brand.</p></div>
-        </li>
-        <li class="timeline-step">
-          <span class="timeline-marker"><span class="timeline-num">04</span></span>
-          <div class="timeline-body"><h3>Measure &amp; Grow</h3><p>We close the loop with monthly reporting and strategy reviews, then feed the learnings into what comes next.</p></div>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <div class="container about-grid">
-      <div class="about-copy">
-        <p class="eyebrow reveal">Who We Are</p>
-        <h2 class="reveal" style="--d:.04s">A Trinidad-born team obsessed with brand growth.</h2>
-        <p class="reveal" style="--d:.08s">OUI Experience Marketing was founded to give Caribbean small and medium businesses the same calibre of strategy, content, and digital craft usually reserved for big-budget brands. We're strategists, designers, and storytellers who've spent years inside local industries — so we know what actually moves your audience.</p>
-        <p class="reveal" style="--d:.12s">Every engagement starts with your goals, not a template. We stay hands-on from the first audit to the monthly report, treating your growth like it's our own business on the line.</p>
-        <div class="about-values">
-          <div class="about-value reveal" style="--d:.16s">
-            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"></path></svg></span>
-            <h4>Craft-led</h4>
-            <p>Senior strategists on every account, not junior hand-offs.</p>
-          </div>
-          <div class="about-value reveal" style="--d:.2s">
-            <span class="service-icon t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"></path><path d="M7 14l4-4 3 3 5-6"></path></svg></span>
-            <h4>Results-first</h4>
-            <p>Every deliverable is tied back to a measurable growth metric.</p>
-          </div>
-          <div class="about-value reveal" style="--d:.24s">
-            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span>
-            <h4>Locally rooted</h4>
-            <p>Based in Trinidad &amp; Tobago, building for Caribbean audiences.</p>
-          </div>
-        </div>
-      </div>
-      <div class="about-art reveal" style="--d:.1s" aria-hidden="true">
-        <svg viewBox="0 0 380 380" fill="none">
-          <circle cx="190" cy="190" r="168" stroke="#E8DFC8" stroke-width="1.5"></circle>
-          <circle cx="190" cy="190" r="128" stroke="#E8DFC8" stroke-width="1.5"></circle>
-          <circle cx="190" cy="190" r="88" stroke="#E8DFC8" stroke-width="1.5"></circle>
-          <circle cx="120" cy="90" r="4" fill="#D4824A"></circle>
-          <circle cx="290" cy="140" r="3" fill="#2F4F4F"></circle>
-          <circle cx="80" cy="260" r="3" fill="#2F4F4F"></circle>
-          <circle cx="300" cy="290" r="4" fill="#D4824A"></circle>
-          <path d="M190 110c-30 0-54 24-54 54 0 38 54 90 54 90s54-52 54-90c0-30-24-54-54-54z" fill="#2F2A24"></path>
-          <circle cx="190" cy="164" r="20" fill="#FAF6EC"></circle>
-          <rect x="150" y="290" width="16" height="32" rx="3" fill="#D4824A"></rect>
-          <rect x="182" y="270" width="16" height="52" rx="3" fill="#2F4F4F"></rect>
-          <rect x="214" y="250" width="16" height="72" rx="3" fill="#D4824A"></rect>
-        </svg>
-      </div>
-    </div>
-  </section>
-
-  <section class="work" id="work">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Selected Work</p>
-        <h2>Work that speaks for itself.</h2>
-      </div>
-      <div class="work-grid">
-        <article class="work-card reveal" style="--d:0s">
-          <div class="work-thumb work-thumb-1"><span class="work-thumb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></span></div>
-          <p class="work-tag">Social Media</p>
-          <h3>Barber Labs — Brand Transformation</h3>
-          <p>A full content strategy and community build that drove a 40% jump in VIP bookings in 90 days.</p>
-        </article>
-        <article class="work-card reveal" style="--d:.06s">
-          <div class="work-thumb work-thumb-2"><span class="work-thumb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></span></div>
-          <p class="work-tag">Brand Identity</p>
-          <h3>IsleAura &amp; Co — Product Launch</h3>
-          <p>Studio-quality photography, a brand video, and a full social strategy delivered in two weeks.</p>
-        </article>
-        <article class="work-card reveal" style="--d:.12s">
-          <div class="work-thumb work-thumb-3"><span class="work-thumb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg></span></div>
-          <p class="work-tag">Video Production</p>
-          <h3>Belle Group — Campaign Video</h3>
-          <p>A cinematic campaign film produced for the Belle Group of Companies across T&amp;T.</p>
-        </article>
-        <article class="work-card reveal" style="--d:.18s">
-          <div class="work-thumb work-thumb-4"><span class="work-thumb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span></div>
-          <p class="work-tag">Paid Ads</p>
-          <h3>Local Restaurant — Meta Ads Campaign</h3>
-          <p>A targeted Meta Ads campaign that turned local foot traffic into a steady stream of new customers.</p>
-        </article>
-        <article class="work-card reveal" style="--d:.24s">
-          <div class="work-thumb work-thumb-5"><span class="work-thumb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></span></div>
-          <p class="work-tag">AI Marketing</p>
-          <h3>Gemini-Powered Content Strategy</h3>
-          <p>An AI-assisted content engine using Google Gemini to scale captions, ad copy, and reporting.</p>
-        </article>
-        <article class="work-card reveal" style="--d:.3s">
-          <div class="work-thumb work-thumb-6"><span class="work-thumb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span></div>
-          <p class="work-tag">Get in touch</p>
-          <h3>Your brand could be next</h3>
-          <p>We have openings for new clients this quarter — let's talk about what growth looks like for you.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonials" id="insights">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Client Testimonials</p>
-        <h2>What our clients say about us.</h2>
-      </div>
-      <div class="testimonial-carousel reveal" id="testimonialCarousel">
-        <div class="testimonial-slides">
-          <blockquote class="testimonial-slide is-active">
-            <p>"OUI transformed our barbershop's entire digital presence. Within 3 months we went from barely posting to having a full content strategy, a loyal online community, and a 40% jump in VIP bookings. These guys don't just post — they think like business owners."</p>
-            <footer><span class="serif">Barber Labs</span> · Felicity, Chaguanas</footer>
-          </blockquote>
-          <blockquote class="testimonial-slide">
-            <p>"We hired OUI to handle our product launch content and the results exceeded every expectation. Studio-quality photos, a brand video, and a full social strategy — all delivered within two weeks."</p>
-            <footer><span class="serif">IsleAura &amp; Co</span> · Port of Spain</footer>
-          </blockquote>
-          <blockquote class="testimonial-slide">
-            <p>"What separates OUI from other agencies is that they genuinely understand the Caribbean market. They know our culture, our audience, and what resonates locally — while still applying international-standard strategy."</p>
-            <footer><span class="serif">Belle Group of Companies</span> · Trinidad &amp; Tobago</footer>
-          </blockquote>
-          <blockquote class="testimonial-slide">
-            <p>"Our Instagram went from 800 to over 5,000 followers in four months — and more importantly, those followers converted into paying customers. OUI's content is visually stunning and their strategy is sharp."</p>
-            <footer><span class="serif">Saltwater Kitchen</span> · San Fernando</footer>
-          </blockquote>
-          <blockquote class="testimonial-slide">
-            <p>"We tried handling social media in-house for years and it never delivered results. OUI took over and within 60 days our engagement tripled. Their monthly reports are detailed, clear, and actually help us understand what's working."</p>
-            <footer><span class="serif">Health &amp; Wellness Studio</span> · Port of Spain</footer>
-          </blockquote>
-        </div>
-        <div class="testimonial-dots" role="tablist" aria-label="Testimonials">
-          <button class="testimonial-dot" type="button" aria-current="true" aria-label="Testimonial 1"></button>
-          <button class="testimonial-dot" type="button" aria-current="false" aria-label="Testimonial 2"></button>
-          <button class="testimonial-dot" type="button" aria-current="false" aria-label="Testimonial 3"></button>
-          <button class="testimonial-dot" type="button" aria-current="false" aria-label="Testimonial 4"></button>
-          <button class="testimonial-dot" type="button" aria-current="false" aria-label="Testimonial 5"></button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-banner">
-    <div class="container cta-inner reveal">
-      <h2>Let's turn your vision into momentum.</h2>
-      <p>Tell us about your brand, your audience, and what success looks like. We'll bring the strategy, the content, and the growth team to make it real.</p>
-      <a href="#contact" class="btn btn-primary btn-lg">Book a free consultation</a>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer" id="contact">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <a href="#top" class="logo">OUI<span class="logo-dot">.</span></a>
-      <p>Trinidad &amp; Tobago's premier digital marketing agency — social, strategy, content, and growth.</p>
-      <div class="footer-social">
-        <a href="#" aria-label="OUI on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg></a>
-        <a href="#" aria-label="OUI on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
-        <a href="#" aria-label="OUI on TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l8-2v11"></path><circle cx="6" cy="18" r="3"></circle><circle cx="14" cy="16" r="3"></circle></svg></a>
-        <a href="#" aria-label="OUI on LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
-      </div>
-    </div>
-    <nav class="footer-nav" aria-label="Company">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="#capabilities">Services</a></li>
-        <li><a href="#packages">Packages</a></li>
-        <li><a href="#work">Case Studies</a></li>
-        <li><a href="#insights">Insights</a></li>
+<section class="why-section section-pad" id="why">
+  <div class="wrap why-wrap">
+    <div class="reveal">
+      <span class="eyebrow">Why Next Orporation</span>
+      <h2>Built for entrepreneurs who need it done properly, the first time</h2>
+      <ul class="why-list">
+        <li><span class="num">1</span><div><h4>Local expertise</h4><p>We know the Trinidad &amp; Tobago Companies Registry process inside out, so your registration moves without delays.</p></div></li>
+        <li><span class="num">2</span><div><h4>One partner, full journey</h4><p>Registration, planning, branding and marketing under one roof — no juggling multiple vendors.</p></div></li>
+        <li><span class="num">3</span><div><h4>Investor-ready output</h4><p>Plans and forecasts built to a standard that holds up with banks, investors and grant bodies.</p></div></li>
+        <li><span class="num">4</span><div><h4>Honest, fixed pricing</h4><p>Clear TTD pricing from the outset — no surprise fees once the work begins.</p></div></li>
+        <li><span class="num">5</span><div><h4>Built for non-profits too</h4><p>We support NGOs and community organisations with the same care as for-profit clients.</p></div></li>
       </ul>
-    </nav>
-    <nav class="footer-nav" aria-label="Services">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="#capabilities">Social Media Management</a></li>
-        <li><a href="#capabilities">Brand Strategy</a></li>
-        <li><a href="#capabilities">Content Production</a></li>
-        <li><a href="#capabilities">Paid Media &amp; Ads</a></li>
-      </ul>
-    </nav>
-    <div class="footer-contact">
-      <h4>Get in touch</h4>
-      <p><a href="tel:+18683316558">(868) 331-6558</a></p>
-      <p><a href="mailto:builtbyoui@gmail.com">builtbyoui@gmail.com</a></p>
-      <p>Trinidad &amp; Tobago · Global Reach</p>
-      <form class="newsletter-form" id="newsletterForm">
-        <label for="newsletterEmail">Stay in the loop</label>
-        <div class="newsletter-row">
-          <input type="email" id="newsletterEmail" name="email" placeholder="you@company.com" required>
-          <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+    </div>
+    <div class="stat-card-grid reveal-stagger">
+      <div class="stat-card"><strong data-count="40" data-suffix="+">0</strong><span>Clients Served</span></div>
+      <div class="stat-card"><strong data-count="562" data-prefix="$">0</strong><span>TTD Sole Trader Registration</span></div>
+      <div class="stat-card"><strong data-count="1125" data-prefix="$">0</strong><span>TTD LLC Registration</span></div>
+      <div class="stat-card"><strong data-count="300" data-prefix="$">0</strong><span>TTD Business Plan From</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">How It Works</span>
+      <h2>A clear, four-step path from idea to operating business</h2>
+    </div>
+    <div class="process-grid reveal-stagger">
+      <div class="process-step"><div class="step-num">01</div><h3>Consult</h3><p>We learn about your business, your goals and which services you actually need.</p></div>
+      <div class="process-step"><div class="step-num">02</div><h3>Plan &amp; Register</h3><p>We prepare your registration filing and/or business plan and financial forecast.</p></div>
+      <div class="process-step"><div class="step-num">03</div><h3>Brand &amp; Create</h3><p>We build your brand identity and produce the creative media you need to launch.</p></div>
+      <div class="process-step"><div class="step-num">04</div><h3>Grow</h3><p>We manage your social media and provide ongoing consulting as your business grows.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="packages-section section-pad" id="packages">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Packages</span>
+      <h2>Straightforward pricing in Trinidad &amp; Tobago dollars</h2>
+    </div>
+    <div class="packages-grid reveal-stagger">
+      <div class="package-card">
+        <h3>Sole Trader Registration</h3>
+        <div class="price">$562.50<small> TTD</small></div>
+        <p class="pk-desc">Register your business name as a sole trader with the Companies Registry.</p>
+        <ul class="pk-feat">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Business name search</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Registration filing</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Certificate collection</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Guidance on next steps</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Get Started</a>
+      </div>
+      <div class="package-card featured">
+        <h3>LLC Registration + Business Plan</h3>
+        <div class="price">$1,125<small> TTD+</small></div>
+        <p class="pk-desc">Full limited liability company registration paired with a lean business plan.</p>
+        <ul class="pk-feat">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> LLC incorporation filing</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Articles of incorporation</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Lean business plan (from $300 TTD)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Financial forecast overview</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Get Started</a>
+      </div>
+      <div class="package-card">
+        <h3>Growth Bundle</h3>
+        <div class="price">Custom<small> Quote</small></div>
+        <p class="pk-desc">Registration, branding, creative media and social media management combined.</p>
+        <ul class="pk-feat">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Business registration</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Brand identity package</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Creative media production</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Monthly social media management</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Request a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Work</span>
+      <h2>Real brand assets and deliverables we've produced</h2>
+    </div>
+    <div class="work-grid reveal-stagger">
+      <div class="work-card">
+        <div class="img-wrap"><img src="assets/logo/sample-work-registration-flyer.jpg" alt="Business registration promotional flyer designed by Next Orporation"></div>
+        <div class="work-card-body"><span>Creative Media</span><h3>Business Registration Flyer</h3><p>Promotional flyer used to market our own registration services across social media.</p></div>
+      </div>
+      <div class="work-card">
+        <div class="img-wrap"><img src="assets/logo/logo-lockup-cream.jpg" alt="Next Orporation 3D rose-gold logo mark on cream background"></div>
+        <div class="work-card-body"><span>Brand Identity</span><h3>3D Rose-Gold Logo Mark</h3><p>Our signature copper "N" + arrow mark, designed to signal momentum and growth.</p></div>
+      </div>
+      <div class="work-card">
+        <div class="img-wrap"><img src="assets/logo/logo-lockup-navy-tagline.jpg" alt="Next Orporation full brand lockup with tagline on navy background"></div>
+        <div class="work-card-body"><span>Brand Identity</span><h3>Full Brand Lockup</h3><p>Logo, wordmark and tagline combined into a single cohesive brand asset.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="who-we-help">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Who We Help</span>
+      <h2>Built around the people who actually start businesses here</h2>
+    </div>
+    <div class="persona-grid reveal-stagger">
+      <div class="persona-card">
+        <div class="persona-avatar">RJ</div>
+        <div>
+          <h3>Ryan Joseph</h3>
+          <span class="role">The First-Time Entrepreneur</span>
+          <p>Has a solid business idea and the drive to make it work, but needs guidance on registration, structuring and getting a plan together that a bank or investor will take seriously.</p>
         </div>
-        <p class="form-note" role="status"></p>
+      </div>
+      <div class="persona-card">
+        <div class="persona-avatar">ST</div>
+        <div>
+          <h3>Sasha Thompson</h3>
+          <span class="role">The Growing SME Owner</span>
+          <p>Already running a business and ready to formalise and scale it — looking for brand identity, consistent social media presence and a clearer financial picture to support growth.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="wrap">
+    <div class="cta-banner reveal">
+      <h2>Ready to register, plan or grow your business?</h2>
+      <p>Book a free consult and tell us where you are in your journey — we'll map out exactly what you need.</p>
+      <div class="btns">
+        <a href="#contact" class="btn btn-light">Book a Free Consult</a>
+        <a href="https://instagram.com/next.orporation" class="btn btn-ghost" style="border-color:rgba(255,255,255,0.5);color:#fff;" target="_blank" rel="noopener">Follow on Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common questions, answered plainly</h2>
+    </div>
+    <div class="faq-list reveal-stagger">
+      <details class="faq-item">
+        <summary>How long does business registration take?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <p>Timelines depend on the Companies Registry's processing queue, but once your documents are ready we file promptly and keep you updated at every step.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What's the difference between sole trader and LLC registration?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <p>A sole trader registration is simpler and cheaper, suited to individuals operating under a business name. An LLC creates a separate legal entity with liability protection, better suited to growing businesses and partnerships.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you work with non-profits and NGOs?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <p>Yes. We support non-profits and community organisations with planning, branding and social media in addition to for-profit entrepreneurs and SMEs.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I order just one service, like a logo or business plan?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <p>Absolutely. Every service can be booked individually, or combined into a bundle if you need several at once.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I get started?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <p>Fill out the contact form below, message us on Instagram, or call/email us directly — we'll set up a free consult to map out what you need.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Let's build your next move</h2>
+    </div>
+    <div class="contact-wrap reveal">
+      <div class="contact-info-card">
+        <h3>Talk to us directly</h3>
+        <p>Based in Trinidad &amp; Tobago, working with entrepreneurs, SMEs and non-profits across the islands.</p>
+        <div class="contact-line"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span><a href="tel:+18682642008">1 (868) 264-2008</a></div>
+        <div class="contact-line"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></span><a href="mailto:nextorporation@gmail.com">nextorporation@gmail.com</a></div>
+        <div class="contact-line"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></span><a href="https://instagram.com/next.orporation" target="_blank" rel="noopener">@next.orporation</a></div>
+        <div class="contact-line"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Trinidad &amp; Tobago</span></div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group"><label for="fName">Full Name</label><input id="fName" name="name" type="text" required autocomplete="name"></div>
+          <div class="form-group"><label for="fEmail">Email</label><input id="fEmail" name="email" type="email" required autocomplete="email"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="fPhone">Phone</label><input id="fPhone" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="form-group"><label for="fService">Service Interested In</label>
+            <select id="fService" name="service">
+              <option>Business Registration</option>
+              <option>Business Plan &amp; Forecasting</option>
+              <option>Brand Identity</option>
+              <option>Creative Media</option>
+              <option>Social Media Management</option>
+              <option>Consulting / Workshop</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full"><label for="fMessage">Tell us about your business</label><textarea id="fMessage" name="message" required></textarea></div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="formSubmit" style="width:100%;justify-content:center;">Send Message</button>
+        <p id="formStatus" role="status"></p>
       </form>
     </div>
   </div>
-  <div class="container footer-bottom">
-    <p>© <span id="year"></span> OUI Experience Marketing. All rights reserved.</p>
-    <p class="footer-legal">Privacy Policy · Terms of Service</p>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="assets/logo/logo-mark-white.jpg" alt="Next Orporation logo mark"><strong>Next Orporation</strong></div>
+        <p>Pioneering tomorrow's business solutions today — registration, planning, branding and marketing for entrepreneurs, SMEs and non-profits in Trinidad &amp; Tobago.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/next.orporation" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="mailto:nextorporation@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></a>
+          <a href="tel:+18682642008" aria-label="Phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="#services">Business Registration</a></li>
+        <li><a href="#services">Business Plans</a></li>
+        <li><a href="#services">Brand Identity</a></li>
+        <li><a href="#services">Creative Media</a></li>
+        <li><a href="#services">Social Media Management</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="#process">Our Process</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#work">Our Work</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="tel:+18682642008">1 (868) 264-2008</a></li>
+        <li><a href="mailto:nextorporation@gmail.com">nextorporation@gmail.com</a></li>
+        <li><a href="https://instagram.com/next.orporation" target="_blank" rel="noopener">@next.orporation</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="footerYear"></span> Next Orporation Online Business Solutions. All rights reserved.</span>
+      <span>Trinidad &amp; Tobago</span>
+    </div>
   </div>
 </footer>
 
-<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
 
 <script>
-(function () {
-  'use strict';
-  var root = document.documentElement;
-  var header = document.getElementById('siteHeader');
-  var menuToggle = document.getElementById('menuToggle');
-  var mobileNav = document.getElementById('mobileNav');
-  var themeToggle = document.getElementById('themeToggle');
-  var scrollProgress = document.getElementById('scrollProgress');
-  var reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+(function(){
+  "use strict";
+  var prefersReduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  var THEME_KEY = 'oui-theme';
-  function applyTheme(theme) {
-    if (theme === 'dark') {
-      root.setAttribute('data-theme', 'dark');
-      themeToggle.setAttribute('aria-pressed', 'true');
-      themeToggle.setAttribute('aria-label', 'Switch to light theme');
-    } else {
-      root.removeAttribute('data-theme');
-      themeToggle.setAttribute('aria-pressed', 'false');
-      themeToggle.setAttribute('aria-label', 'Switch to dark theme');
-    }
-  }
-  var storedTheme = localStorage.getItem(THEME_KEY);
-  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  applyTheme(storedTheme || (prefersDark ? 'dark' : 'light'));
-  themeToggle.addEventListener('click', function () {
-    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    applyTheme(next);
-    localStorage.setItem(THEME_KEY, next);
+  /* Theme toggle */
+  var THEME_KEY='next-orp-theme';
+  var themeToggle=document.getElementById('themeToggle');
+  var stored=localStorage.getItem(THEME_KEY);
+  if(stored==='dark'){document.documentElement.setAttribute('data-theme','dark');themeToggle.setAttribute('aria-pressed','true');}
+  themeToggle.addEventListener('click',function(){
+    var isDark=document.documentElement.getAttribute('data-theme')==='dark';
+    if(isDark){document.documentElement.removeAttribute('data-theme');localStorage.setItem(THEME_KEY,'light');themeToggle.setAttribute('aria-pressed','false');}
+    else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem(THEME_KEY,'dark');themeToggle.setAttribute('aria-pressed','true');}
   });
 
-  function setMenu(open) {
-    menuToggle.setAttribute('aria-expanded', String(open));
-    menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    mobileNav.dataset.state = open ? 'open' : 'closed';
-    document.body.classList.toggle('nav-open', open);
-  }
-  menuToggle.addEventListener('click', function () {
-    setMenu(mobileNav.dataset.state !== 'open');
+  /* Mobile menu */
+  var menuToggle=document.getElementById('menuToggle');
+  var mobileNav=document.getElementById('mobileNav');
+  function closeMenu(){mobileNav.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');}
+  menuToggle.addEventListener('click',function(){
+    var open=mobileNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded',open?'true':'false');
   });
-  Array.prototype.forEach.call(mobileNav.querySelectorAll('a'), function (link) {
-    link.addEventListener('click', function () { setMenu(false); });
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && mobileNav.dataset.state === 'open') setMenu(false);
-  });
+  mobileNav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});
 
-  var scheduled = false;
-  function onScroll() {
-    if (scheduled) return;
-    scheduled = true;
-    requestAnimationFrame(function () {
-      header.classList.toggle('is-scrolled', window.scrollY > 24);
-      var doc = document.documentElement;
-      var max = doc.scrollHeight - doc.clientHeight;
-      var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
-      scrollProgress.style.width = pct + '%';
-      scheduled = false;
-    });
+  /* Header scroll state + progress + back-to-top */
+  var header=document.getElementById('siteHeader');
+  var progress=document.getElementById('scrollProgress');
+  var backToTop=document.getElementById('backToTop');
+  var headerCta=document.getElementById('headerCta');
+  var ticking=false;
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    header.classList.toggle('scrolled',y>10);
+    headerCta.style.display=y>10?'inline-flex':'none';
+    backToTop.classList.toggle('visible',y>500);
+    var docH=document.documentElement.scrollHeight-window.innerHeight;
+    progress.style.width=(docH>0?(y/docH)*100:0)+'%';
+    onSpy(y);
+    ticking=false;
   }
-  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('scroll',function(){
+    if(!ticking){requestAnimationFrame(onScroll);ticking=true;}
+  });
+  backToTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:prefersReduced?'auto':'smooth'});});
   onScroll();
 
-  window.OUI_REDUCE_MOTION = reduceMotionQuery.matches;
-
-  // Reveal-on-scroll (+ timeline draw-in)
-  var revealTargets = document.querySelectorAll('.reveal, .timeline-step');
-  if ('IntersectionObserver' in window) {
-    var revealObserver = new IntersectionObserver(function (entries, obs) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-    Array.prototype.forEach.call(revealTargets, function (el) { revealObserver.observe(el); });
-  } else {
-    Array.prototype.forEach.call(revealTargets, function (el) { el.classList.add('is-visible'); });
+  /* Scrollspy */
+  var navLinks=document.querySelectorAll('nav.primary a[data-nav]');
+  var navSections=Array.prototype.map.call(navLinks,function(a){
+    return {el:document.getElementById(a.getAttribute('data-nav')),link:a};
+  }).filter(function(s){return s.el;});
+  function onSpy(y){
+    var current=null;
+    navSections.forEach(function(s){
+      if(y+140>=s.el.offsetTop){current=s;}
+    });
+    navLinks.forEach(function(a){a.removeAttribute('aria-current');});
+    if(current){current.link.setAttribute('aria-current','true');}
   }
 
-  // Hero headline + subtext word-stagger reveal
-  var heroTitleEl = document.querySelector('.hero-title');
-  var heroSubEl = document.querySelector('.hero-sub');
-  if (heroTitleEl && heroSubEl) {
-    if (window.OUI_REDUCE_MOTION) {
-      heroTitleEl.classList.add('is-revealed');
-      heroSubEl.classList.add('is-revealed');
-    } else {
-      var splitWords = function (el, start, step) {
-        var words = [];
-        var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
-        var textNodes = [];
-        var node;
-        while ((node = walker.nextNode())) { textNodes.push(node); }
-        textNodes.forEach(function (textNode) {
-          var frag = document.createDocumentFragment();
-          textNode.textContent.split(/(\s+)/).forEach(function (part) {
-            if (part === '') return;
-            if (/^\s+$/.test(part)) {
-              frag.appendChild(document.createTextNode(part));
-              return;
-            }
-            var mask = document.createElement('span');
-            mask.className = 'word-mask';
-            var word = document.createElement('span');
-            word.className = 'word';
-            word.textContent = part;
-            word.style.transitionDelay = (start + words.length * step) + 's';
-            mask.appendChild(word);
-            frag.appendChild(mask);
-            words.push(word);
-          });
-          textNode.parentNode.replaceChild(frag, textNode);
-        });
-        return words;
-      };
-      splitWords(heroTitleEl, 0, 0.045);
-      splitWords(heroSubEl, 0.32, 0.018);
-      requestAnimationFrame(function () {
-        requestAnimationFrame(function () {
-          heroTitleEl.classList.add('is-revealed');
-          heroSubEl.classList.add('is-revealed');
-        });
+  /* Hero word stagger */
+  function splitWords(el){
+    var walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null,false);
+    var nodes=[];var n;
+    while(n=walker.nextNode()){nodes.push(n);}
+    nodes.forEach(function(node){
+      var text=node.nodeValue;
+      if(!text.trim()){return;}
+      var frag=document.createDocumentFragment();
+      var parts=text.split(/(\s+)/);
+      parts.forEach(function(part){
+        if(part.trim()===''){frag.appendChild(document.createTextNode(part));return;}
+        var mask=document.createElement('span');
+        mask.className='word-mask';
+        var word=document.createElement('span');
+        word.className='word';
+        word.textContent=part;
+        mask.appendChild(word);
+        frag.appendChild(mask);
       });
-    }
+      node.parentNode.replaceChild(frag,node);
+    });
+  }
+  var heroTitle=document.getElementById('heroTitle');
+  if(heroTitle){
+    splitWords(heroTitle);
+    requestAnimationFrame(function(){
+      heroTitle.querySelectorAll('.word-mask').forEach(function(m,i){
+        setTimeout(function(){m.classList.add('is-visible');},40*i);
+      });
+    });
   }
 
-  // Count-up stats
-  var statNumbers = document.querySelectorAll('[data-count]');
-  function animateCount(el) {
-    var target = parseInt(el.getAttribute('data-count'), 10) || 0;
-    var suffix = el.getAttribute('data-suffix') || '';
-    if (window.OUI_REDUCE_MOTION) {
-      el.textContent = target + suffix;
-      return;
-    }
-    var start = null;
-    var duration = 1600;
-    function step(timestamp) {
-      if (start === null) start = timestamp;
-      var progress = Math.min((timestamp - start) / duration, 1);
-      var eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(eased * target) + suffix;
-      if (progress < 1) requestAnimationFrame(step);
+  /* IntersectionObserver reveal */
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){entry.target.classList.add('is-visible');io.unobserve(entry.target);}
+    });
+  },{threshold:0.15,rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('.reveal,.reveal-stagger').forEach(function(el){io.observe(el);});
+
+  /* Count-up stats */
+  function easeOutCubic(t){return 1-Math.pow(1-t,3);}
+  function animateCount(el){
+    var target=parseFloat(el.getAttribute('data-count'));
+    var prefix=el.getAttribute('data-prefix')||'';
+    var suffix=el.getAttribute('data-suffix')||'';
+    if(prefersReduced){el.textContent=prefix+target.toLocaleString()+suffix;return;}
+    var start=null;var dur=1400;
+    function step(ts){
+      if(!start){start=ts;}
+      var p=Math.min((ts-start)/dur,1);
+      var val=Math.round(easeOutCubic(p)*target);
+      el.textContent=prefix+val.toLocaleString()+suffix;
+      if(p<1){requestAnimationFrame(step);}
     }
     requestAnimationFrame(step);
   }
-  var statsSection = document.getElementById('impact');
-  if (statsSection && statNumbers.length) {
-    if ('IntersectionObserver' in window) {
-      var statsObserver = new IntersectionObserver(function (entries, obs) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            Array.prototype.forEach.call(statNumbers, animateCount);
-            obs.disconnect();
-          }
-        });
-      }, { threshold: 0.4 });
-      statsObserver.observe(statsSection);
-    } else {
-      Array.prototype.forEach.call(statNumbers, animateCount);
-    }
-  }
-
-  // Scrollspy
-  var navLinks = document.querySelectorAll('[data-nav]');
-  var navSections = Array.prototype.map.call(navLinks, function (link) {
-    return document.querySelector(link.getAttribute('href'));
-  }).filter(Boolean);
-  function setActiveNav(id) {
-    Array.prototype.forEach.call(navLinks, function (link) {
-      link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+  var countEls=document.querySelectorAll('[data-count]');
+  var countIo=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){animateCount(entry.target);countIo.unobserve(entry.target);}
     });
-  }
-  if ('IntersectionObserver' in window && navSections.length) {
-    var spy = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) setActiveNav(entry.target.id);
-      });
-    }, { rootMargin: '-45% 0px -45% 0px' });
-    navSections.forEach(function (sec) { spy.observe(sec); });
-  }
+  },{threshold:0.4});
+  countEls.forEach(function(el){countIo.observe(el);});
 
-  // Testimonial carousel
-  var carousel = document.getElementById('testimonialCarousel');
-  if (carousel) {
-    var slides = carousel.querySelectorAll('.testimonial-slide');
-    var dots = carousel.querySelectorAll('.testimonial-dot');
-    var current = 0;
-    var autoplayTimer = null;
-    function goToSlide(index) {
-      current = (index + slides.length) % slides.length;
-      Array.prototype.forEach.call(slides, function (slide, i) {
-        slide.classList.toggle('is-active', i === current);
-      });
-      Array.prototype.forEach.call(dots, function (dot, i) {
-        dot.setAttribute('aria-current', String(i === current));
-      });
-    }
-    function stopAutoplay() {
-      if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
-    }
-    function startAutoplay() {
-      if (window.OUI_REDUCE_MOTION) return;
-      stopAutoplay();
-      autoplayTimer = setInterval(function () { goToSlide(current + 1); }, 6000);
-    }
-    Array.prototype.forEach.call(dots, function (dot, i) {
-      dot.addEventListener('click', function () { goToSlide(i); startAutoplay(); });
-    });
-    carousel.addEventListener('mouseenter', stopAutoplay);
-    carousel.addEventListener('mouseleave', startAutoplay);
-    carousel.addEventListener('focusin', stopAutoplay);
-    carousel.addEventListener('focusout', startAutoplay);
-    startAutoplay();
-  }
-
-  // Hero parallax (pointer-driven, not autonomous)
-  var heroSection = document.querySelector('.hero');
-  var heroBg = document.getElementById('heroBg');
-  if (heroSection && heroBg && window.matchMedia('(pointer: fine)').matches) {
-    var orbs = heroBg.querySelectorAll('.orb');
-    var parallaxScheduled = false;
-    var px = 0, py = 0;
-    heroSection.addEventListener('mousemove', function (e) {
-      if (window.OUI_REDUCE_MOTION) return;
-      var rect = heroSection.getBoundingClientRect();
-      px = (e.clientX - rect.left) / rect.width - 0.5;
-      py = (e.clientY - rect.top) / rect.height - 0.5;
-      if (parallaxScheduled) return;
-      parallaxScheduled = true;
-      requestAnimationFrame(function () {
-        Array.prototype.forEach.call(orbs, function (orb, i) {
-          var depth = i === 0 ? 18 : 28;
-          orb.style.transform = 'translate(' + (px * depth) + 'px,' + (py * depth) + 'px)';
-        });
-        parallaxScheduled = false;
+  /* Pointer parallax on hero orbs */
+  if(window.matchMedia('(pointer: fine)').matches && !prefersReduced){
+    var orbs=document.querySelectorAll('.hero-bg-orb');
+    document.querySelector('.hero').addEventListener('mousemove',function(e){
+      var x=(e.clientX/window.innerWidth-0.5)*20;
+      var y=(e.clientY/window.innerHeight-0.5)*20;
+      orbs.forEach(function(orb,i){
+        var mult=i===0?1:-1;
+        orb.style.transform='translate('+(x*mult)+'px,'+(y*mult)+'px)';
       });
     });
-    heroSection.addEventListener('mouseleave', function () {
-      Array.prototype.forEach.call(orbs, function (orb) { orb.style.transform = ''; });
-    });
   }
 
-  // Back to top
-  var backToTop = document.getElementById('backToTop');
-  if (backToTop) {
-    window.addEventListener('scroll', function () {
-      backToTop.classList.toggle('is-visible', window.scrollY > 600);
-    }, { passive: true });
-    backToTop.addEventListener('click', function () {
-      window.scrollTo({ top: 0, behavior: window.OUI_REDUCE_MOTION ? 'auto' : 'smooth' });
-    });
-  }
-
-  // Newsletter form (client-side only confirmation)
-  var newsletterForm = document.getElementById('newsletterForm');
-  if (newsletterForm) {
-    newsletterForm.addEventListener('submit', function (e) {
+  /* Contact form (client-side simulation) */
+  var form=document.getElementById('contactForm');
+  var formStatus=document.getElementById('formStatus');
+  var formSubmit=document.getElementById('formSubmit');
+  if(form){
+    form.addEventListener('submit',function(e){
       e.preventDefault();
-      var note = newsletterForm.querySelector('.form-note');
-      if (note) note.textContent = "Thanks — you're on the list.";
-      newsletterForm.reset();
+      formSubmit.disabled=true;
+      formSubmit.textContent='Sending...';
+      setTimeout(function(){
+        formStatus.textContent='Thanks! We\'ve received your message and will be in touch shortly.';
+        formStatus.classList.add('ok');
+        formSubmit.disabled=false;
+        formSubmit.textContent='Send Message';
+        form.reset();
+      },900);
     });
   }
 
-  // Footer year
-  var yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+  /* Footer year */
+  document.getElementById('footerYear').textContent=new Date().getFullYear();
 })();
 </script>
 </body>
