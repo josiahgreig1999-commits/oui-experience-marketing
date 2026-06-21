@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OUI Experience Marketing — Marketing that earns the yes</title>
+<meta name="description" content="OUI Experience Marketing — Trinidad & Tobago's digital marketing studio. Brand strategy, social, AI marketing, paid media and content for Caribbean brands the world pays attention to. From $1,000 TTD/mo.">
+<meta name="theme-color" content="#0A0E12">
+<meta property="og:title" content="OUI Experience Marketing">
+<meta property="og:description" content="Marketing that earns the yes. Caribbean brands, world-class attention.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Crect x='14' y='14' width='212' height='212' rx='40' fill='%23FFFFFF' stroke='%23A4127B' stroke-width='11'/%3E%3Ccircle cx='176' cy='62' r='30' fill='%231CA6BB'/%3E%3Cpath d='M168 50 L168 74 L190 62 Z' fill='%23FFFFFF'/%3E%3Ctext x='120' y='158' text-anchor='middle' font-family='Brush Script MT,cursive' font-style='italic' font-size='92' fill='%23A4127B'%3Eoui%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ════════════════════════════════════════════════════════════
+   OUI EXPERIENCE — "EXPERIENCE SPECTRUM"
+   Dark, quiet, spacious. One signature: the magenta→violet→teal
+   gradient, used sparingly. Everything else stays disciplined.
+   ════════════════════════════════════════════════════════════ */
+
+:root{
+  --bg:#0A0E12;
+  --bg-2:#0C1218;
+  --surface:#121A21;
+  --surface-2:#18222B;
+  --line:rgba(255,255,255,.07);
+  --line-2:rgba(255,255,255,.13);
+  --text:#EEF2F5;
+  --dim:#97A4AF;
+  --faint:#5C6873;
+
+  --magenta:#E0408F;
+  --violet:#A85CD6;
+  --teal:#2ED9C3;
+  --grad:linear-gradient(100deg,#E0408F 0%,#A85CD6 48%,#2ED9C3 100%);
+  --grad-soft:linear-gradient(100deg,rgba(224,64,143,.16),rgba(46,217,195,.16));
+
+  --display:'Instrument Serif',Georgia,'Times New Roman',serif;
+  --sans:'Manrope',system-ui,-apple-system,sans-serif;
+  --mono:'Space Grotesk',ui-monospace,monospace;
+
+  --r:18px;
+  --r-lg:26px;
+  --maxw:1180px;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --ease-soft:cubic-bezier(.4,0,.2,1);
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  font-family:var(--sans);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  font-weight:400;
+  letter-spacing:-.005em;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:rgba(224,64,143,.35);color:#fff;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+
+/* ── Ambient aurora (the only ambient effect; very restrained) ── */
+.aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.aurora::before,.aurora::after{
+  content:'';position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;
+}
+.aurora::before{
+  width:60vw;height:60vw;top:-22vw;right:-14vw;
+  background:radial-gradient(circle,rgba(224,64,143,.22),transparent 62%);
+  animation:drift1 26s var(--ease-soft) infinite alternate;
+}
+.aurora::after{
+  width:52vw;height:52vw;bottom:-18vw;left:-12vw;
+  background:radial-gradient(circle,rgba(46,217,195,.18),transparent 62%);
+  animation:drift2 32s var(--ease-soft) infinite alternate;
+}
+@keyframes drift1{to{transform:translate(-6vw,5vw) scale(1.12);}}
+@keyframes drift2{to{transform:translate(5vw,-4vw) scale(1.1);}}
+
+/* faint dot grid behind the hero only */
+.grid-veil{
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:34px 34px;
+  -webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 35%,#000 30%,transparent 78%);
+          mask-image:radial-gradient(ellipse 80% 70% at 50% 35%,#000 30%,transparent 78%);
+}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:2;}
+
+/* ── Shared type helpers ── */
+.eyebrow{
+  font-family:var(--mono);font-size:.72rem;font-weight:500;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--dim);
+  display:inline-flex;align-items:center;gap:.7rem;
+}
+.eyebrow::before{content:'';width:26px;height:1px;background:var(--grad);}
+.grad-text{
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:var(--magenta);
+}
+.serif{font-family:var(--display);font-weight:400;letter-spacing:0;}
+.section{padding:clamp(5rem,11vw,9rem) 0;position:relative;z-index:2;}
+.section-head{max-width:660px;margin-bottom:clamp(2.6rem,5vw,4rem);}
+.section-title{
+  font-family:var(--display);font-weight:400;
+  font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.05;
+  letter-spacing:-.01em;margin:1.1rem 0 1.1rem;
+}
+.section-sub{color:var(--dim);font-size:1.05rem;max-width:52ch;}
+
+/* ── Buttons ── */
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-family:var(--sans);font-weight:600;font-size:.92rem;letter-spacing:0;
+  padding:.92rem 1.6rem;border-radius:50px;cursor:pointer;border:1px solid transparent;
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .3s var(--ease),border-color .3s var(--ease),color .3s var(--ease);
+  position:relative;white-space:nowrap;
+}
+.btn:active{transform:scale(.97);}
+.btn-primary{
+  color:#0A0E12;background:var(--grad);background-size:160% 160%;
+  box-shadow:0 8px 30px -8px rgba(224,64,143,.5);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px -8px rgba(224,64,143,.6);background-position:100% 0;}
+.btn-ghost{color:var(--text);border-color:var(--line-2);background:rgba(255,255,255,.02);}
+.btn-ghost:hover{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.05);transform:translateY(-2px);}
+.btn-arrow{transition:transform .35s var(--ease);}
+.btn:hover .btn-arrow{transform:translateX(4px);}
+
+/* ════════════ NAV ════════════ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  transition:background .4s var(--ease),border-color .4s var(--ease),backdrop-filter .4s;
+  border-bottom:1px solid transparent;
+}
+.nav.scrolled{background:rgba(10,14,18,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom-color:var(--line);}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:1.05rem 28px;display:flex;align-items:center;justify-content:space-between;}
+.brand{display:flex;align-items:baseline;gap:.5rem;font-family:var(--display);font-size:1.7rem;line-height:1;letter-spacing:.01em;}
+.brand .dot{width:7px;height:7px;border-radius:50%;background:var(--grad);display:inline-block;transform:translateY(-2px);}
+.brand small{font-family:var(--mono);font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);align-self:center;margin-left:.2rem;}
+.nav-links{display:none;align-items:center;gap:2.2rem;}
+.nav-links a{font-size:.9rem;color:var(--dim);transition:color .25s;position:relative;}
+.nav-links a:hover{color:var(--text);}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;height:1px;width:0;background:var(--grad);transition:width .3s var(--ease);}
+.nav-links a:hover::after{width:100%;}
+.nav-cta{display:none;}
+@media(min-width:920px){.nav-links{display:flex;}.nav-cta{display:inline-flex;}.burger{display:none;}}
+.burger{background:none;border:1px solid var(--line-2);border-radius:10px;width:42px;height:42px;display:grid;place-items:center;align-content:center;gap:5px;cursor:pointer;}
+.burger span{display:block;width:18px;height:1.5px;background:var(--text);transition:.3s var(--ease);}
+.burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.burger.open span:nth-child(2){opacity:0;}
+.burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.mobile-menu{position:fixed;inset:0;z-index:99;background:rgba(10,14,18,.97);backdrop-filter:blur(20px);display:flex;flex-direction:column;justify-content:center;gap:1.5rem;padding:2rem;opacity:0;pointer-events:none;transition:opacity .4s var(--ease);}
+.mobile-menu.open{opacity:1;pointer-events:auto;}
+.mobile-menu a{font-family:var(--display);font-size:2.2rem;color:var(--dim);transition:color .25s;}
+.mobile-menu a:hover{color:var(--text);}
+
+/* ════════════ HERO ════════════ */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:9rem 0 5rem;overflow:hidden;}
+.hero-inner{max-width:880px;}
+.hero h1{
+  font-family:var(--display);font-weight:400;
+  font-size:clamp(3rem,9vw,6.6rem);line-height:.98;letter-spacing:-.015em;
+  margin:1.6rem 0;
+}
+.hero h1 em{font-style:italic;}
+.hero p.lead{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--dim);max-width:46ch;margin-bottom:2.4rem;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;}
+.hero-note{font-size:.85rem;color:var(--faint);display:flex;align-items:center;gap:.5rem;}
+.hero-note .live{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 0 rgba(46,217,195,.6);animation:ping 2.4s var(--ease-soft) infinite;}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(46,217,195,.5);}70%,100%{box-shadow:0 0 0 9px rgba(46,217,195,0);}}
+
+/* stats rail */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem 2.4rem;margin-top:clamp(3rem,6vw,4.6rem);padding-top:2.2rem;border-top:1px solid var(--line);max-width:680px;}
+@media(min-width:680px){.stats{grid-template-columns:repeat(4,1fr);}}
+.stat .num{font-family:var(--display);font-size:clamp(2.1rem,4vw,2.9rem);line-height:1;}
+.stat .lbl{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-top:.6rem;}
+
+/* ════════════ MARQUEE STRIP ════════════ */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.4rem 0;overflow:hidden;position:relative;z-index:2;}
+.strip-track{display:flex;gap:3.5rem;width:max-content;animation:slide 34s linear infinite;}
+.strip-track span{font-family:var(--mono);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);white-space:nowrap;display:flex;align-items:center;gap:3.5rem;}
+.strip-track span::after{content:'';width:5px;height:5px;border-radius:50%;background:var(--line-2);}
+@keyframes slide{to{transform:translateX(-50%);}}
+
+/* ════════════ SERVICES ════════════ */
+.svc-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;}
+@media(min-width:640px){.svc-grid{grid-template-columns:1fr 1fr;}}
+@media(min-width:980px){.svc-grid{grid-template-columns:1fr 1fr 1fr;}}
+.svc{background:var(--bg);padding:2.4rem 2rem 2.6rem;position:relative;transition:background .4s var(--ease);overflow:hidden;}
+.svc::before{content:'';position:absolute;inset:0;background:var(--grad-soft);opacity:0;transition:opacity .45s var(--ease);}
+.svc:hover{background:var(--surface);}
+.svc:hover::before{opacity:1;}
+.svc>*{position:relative;}
+.svc .idx{font-family:var(--mono);font-size:.72rem;color:var(--faint);letter-spacing:.1em;}
+.svc h3{font-family:var(--display);font-size:1.55rem;font-weight:400;margin:1.5rem 0 .7rem;letter-spacing:-.01em;}
+.svc p{font-size:.92rem;color:var(--dim);line-height:1.6;}
+.svc .arc{margin-top:1.6rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);opacity:0;transform:translateY(6px);transition:.4s var(--ease);}
+.svc:hover .arc{opacity:1;transform:none;}
+
+/* ════════════ APPROACH (process) ════════════ */
+.steps{display:grid;grid-template-columns:1fr;gap:0;}
+.step{display:grid;grid-template-columns:auto 1fr;gap:1.6rem;padding:2.2rem 0;border-top:1px solid var(--line);align-items:start;}
+.step:last-child{border-bottom:1px solid var(--line);}
+.step .sn{font-family:var(--display);font-size:1.6rem;color:var(--faint);min-width:2.5rem;}
+.step h3{font-family:var(--display);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:400;letter-spacing:-.01em;}
+.step p{color:var(--dim);font-size:.98rem;margin-top:.5rem;max-width:60ch;}
+@media(min-width:760px){.step{grid-template-columns:auto 0.9fr 1.1fr;gap:2.5rem;align-items:baseline;}.step p{margin-top:0;}}
+
+/* ════════════ RESULTS ════════════ */
+.results{display:grid;grid-template-columns:1fr;gap:1.4rem;}
+@media(min-width:760px){.results{grid-template-columns:repeat(3,1fr);}}
+.result{border:1px solid var(--line);border-radius:var(--r);padding:2rem;background:var(--bg-2);position:relative;overflow:hidden;transition:transform .4s var(--ease),border-color .4s var(--ease);}
+.result:hover{transform:translateY(-4px);border-color:var(--line-2);}
+.result .big{font-family:var(--display);font-size:clamp(2.6rem,5vw,3.4rem);line-height:1;}
+.result .meta{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin:1rem 0 .8rem;}
+.result p{font-size:.92rem;color:var(--dim);}
+
+/* ════════════ PRICING ════════════ */
+.pricing{display:grid;grid-template-columns:1fr;gap:1.4rem;align-items:stretch;}
+@media(min-width:860px){.pricing{grid-template-columns:repeat(3,1fr);}}
+.plan{border:1px solid var(--line);border-radius:var(--r-lg);padding:2.4rem 2rem;background:var(--surface);display:flex;flex-direction:column;transition:transform .4s var(--ease),border-color .4s var(--ease);position:relative;}
+.plan:hover{transform:translateY(-5px);border-color:var(--line-2);}
+.plan.feat{background:var(--bg);border:1px solid transparent;background-clip:padding-box;}
+.plan.feat::before{content:'';position:absolute;inset:0;border-radius:var(--r-lg);padding:1px;background:var(--grad);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;}
+.plan-tag{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);}
+.plan.feat .plan-tag{color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text;}
+.plan h3{font-family:var(--display);font-size:1.7rem;font-weight:400;margin:.4rem 0 1.3rem;}
+.plan .price{font-family:var(--display);font-size:3rem;line-height:1;}
+.plan .price small{font-family:var(--sans);font-size:.92rem;color:var(--dim);font-weight:400;}
+.plan .pdesc{font-size:.9rem;color:var(--dim);margin:1rem 0 1.6rem;}
+.plan ul{list-style:none;display:flex;flex-direction:column;gap:.85rem;flex:1;margin-bottom:1.8rem;}
+.plan li{display:flex;gap:.7rem;font-size:.9rem;color:var(--text);align-items:flex-start;}
+.plan li svg{flex-shrink:0;margin-top:3px;}
+.plan .btn{justify-content:center;width:100%;}
+
+/* ════════════ FAQ ════════════ */
+.faq{border-top:1px solid var(--line);}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-q{width:100%;text-align:left;background:none;border:none;color:var(--text);font-family:var(--sans);font-size:1.12rem;font-weight:500;padding:1.7rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:2rem;letter-spacing:-.01em;}
+.faq-q .pm{flex-shrink:0;width:22px;height:22px;position:relative;}
+.faq-q .pm::before,.faq-q .pm::after{content:'';position:absolute;background:var(--dim);transition:.35s var(--ease);}
+.faq-q .pm::before{top:50%;left:0;width:100%;height:1.5px;transform:translateY(-50%);}
+.faq-q .pm::after{left:50%;top:0;height:100%;width:1.5px;transform:translateX(-50%);}
+.faq-item.open .pm::after{transform:translateX(-50%) scaleY(0);}
+.faq-item.open .pm::before{background:var(--magenta);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease);}
+.faq-a p{color:var(--dim);font-size:.98rem;padding:0 0 1.7rem;max-width:70ch;}
+
+/* ════════════ CONTACT ════════════ */
+.contact{display:grid;grid-template-columns:1fr;gap:3rem;}
+@media(min-width:880px){.contact{grid-template-columns:1fr 1fr;gap:4rem;}}
+.contact-list{display:flex;flex-direction:column;gap:1.4rem;margin-top:2rem;}
+.contact-row{display:flex;align-items:center;gap:1rem;color:var(--dim);font-size:1rem;transition:color .25s;}
+.contact-row:hover{color:var(--text);}
+.contact-row .ico{width:42px;height:42px;border-radius:12px;border:1px solid var(--line-2);display:grid;place-items:center;flex-shrink:0;}
+.field{margin-bottom:1.1rem;}
+.field label{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:.55rem;}
+.field input,.field textarea{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:.85rem 1rem;color:var(--text);font-family:var(--sans);font-size:.95rem;transition:border-color .3s,background .3s;outline:none;}
+.field input:focus,.field textarea:focus{border-color:rgba(168,92,214,.6);background:var(--surface-2);}
+.field textarea{resize:vertical;min-height:120px;}
+.form-ok{display:none;padding:1rem 1.2rem;border-radius:12px;background:var(--grad-soft);border:1px solid var(--line-2);font-size:.92rem;color:var(--text);margin-top:.5rem;}
+.form-ok.show{display:block;}
+
+/* ════════════ CLOSING CTA ════════════ */
+.closer{text-align:center;padding:clamp(5rem,12vw,9rem) 0;position:relative;}
+.closer h2{font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,7vw,5rem);line-height:1;letter-spacing:-.015em;margin-bottom:1.6rem;}
+.closer p{color:var(--dim);max-width:48ch;margin:0 auto 2.4rem;}
+
+/* ════════════ FOOTER ════════════ */
+.footer{border-top:1px solid var(--line);padding:4rem 0 2.5rem;position:relative;z-index:2;}
+.footer-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;margin-bottom:3rem;}
+.footer-brand{max-width:300px;}
+.footer-brand p{color:var(--faint);font-size:.9rem;margin-top:1rem;}
+.footer-cols{display:flex;flex-wrap:wrap;gap:3rem;}
+.footer-col h4{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:1.1rem;}
+.footer-col a{display:block;color:var(--dim);font-size:.92rem;margin-bottom:.7rem;transition:color .25s;}
+.footer-col a:hover{color:var(--text);}
+.footer-bot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-top:2rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--faint);}
+.socials{display:flex;gap:.7rem;}
+.socials a{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);display:grid;place-items:center;color:var(--dim);transition:.3s var(--ease);}
+.socials a:hover{border-color:var(--line-2);color:var(--text);transform:translateY(-2px);}
+
+/* ════════════ MOTION (reveal + entrance) ════════════ */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+.reveal.in{opacity:1;transform:none;}
+.hero .reveal{transition-duration:.9s;}
+
+/* ════════════ ACCESSIBILITY ════════════ */
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:6px;}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0!important;scroll-behavior:auto!important;}
+  .reveal{opacity:1!important;transform:none!important;}
+}
+</style>
+</head>
+<body>
+
+<div class="aurora" aria-hidden="true"></div>
+
+<!-- ─────────── NAV ─────────── -->
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a href="#top" class="brand" aria-label="OUI Experience Marketing — home">
+      oui<span class="dot"></span><small>Experience</small>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="#work">Work</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary nav-cta">Start a project</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services">Services</a>
+  <a href="#approach">Approach</a>
+  <a href="#work">Work</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact" class="grad-text">Start a project →</a>
+</div>
+
+<main id="top">
+
+<!-- ─────────── HERO ─────────── -->
+<section class="hero">
+  <div class="grid-veil" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow reveal">OUI — French for <span style="color:var(--text)">yes</span></span>
+    <h1 class="reveal">Marketing that<br>earns the <em class="grad-text">yes.</em></h1>
+    <p class="lead reveal">OUI Experience Marketing builds Caribbean brands the world pays attention to — strategy, content, AI and paid media, under one roof in Trinidad &amp; Tobago.</p>
+    <div class="hero-actions reveal">
+      <a href="#contact" class="btn btn-primary">Book a strategy call <span class="btn-arrow">→</span></a>
+      <a href="#work" class="btn btn-ghost">See the work</a>
+      <span class="hero-note"><span class="live"></span> Booking Q3 projects now</span>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><div class="num" data-count="150" data-suffix="+">0</div><div class="lbl">Campaigns delivered</div></div>
+      <div class="stat"><div class="num" data-count="98" data-suffix="%">0</div><div class="lbl">Client retention</div></div>
+      <div class="stat"><div class="num">5.0</div><div class="lbl">Average rating</div></div>
+      <div class="stat"><div class="num">24/7</div><div class="lbl">Strategic support</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── STRIP ─────────── -->
+<div class="strip" aria-hidden="true">
+  <div class="strip-track">
+    <span>Brand Strategy<span></span></span><span>Social Media<span></span></span><span>AI Marketing<span></span></span><span>Paid Media<span></span></span><span>Content Production<span></span></span><span>Web &amp; Experience<span></span></span>
+    <span>Brand Strategy<span></span></span><span>Social Media<span></span></span><span>AI Marketing<span></span></span><span>Paid Media<span></span></span><span>Content Production<span></span></span><span>Web &amp; Experience<span></span></span>
+  </div>
+</div>
+
+<!-- ─────────── SERVICES ─────────── -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What we do</span>
+      <h2 class="section-title">Everything a modern brand needs, kept under one roof.</h2>
+      <p class="section-sub">No scattered freelancers, no hand-offs. One studio that thinks in strategy and ships in pixels.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal"><span class="idx">01</span><h3>Brand Strategy</h3><p>Positioning, voice and visual identity that make you the obvious choice in a crowded feed.</p><span class="arc">Learn more →</span></article>
+      <article class="svc reveal"><span class="idx">02</span><h3>Social Media</h3><p>Always-on management, community and content calendars that keep your brand in the conversation.</p><span class="arc">Learn more →</span></article>
+      <article class="svc reveal"><span class="idx">03</span><h3>AI Marketing</h3><p>Gemini-powered workflows for faster ideation, smarter targeting and content at the speed of culture.</p><span class="arc">Learn more →</span></article>
+      <article class="svc reveal"><span class="idx">04</span><h3>Paid Media</h3><p>Meta, Google and TikTok campaigns engineered around return — not vanity impressions.</p><span class="arc">Learn more →</span></article>
+      <article class="svc reveal"><span class="idx">05</span><h3>Content Production</h3><p>Photo, video and design produced on-island, built to stop the scroll and earn the share.</p><span class="arc">Learn more →</span></article>
+      <article class="svc reveal"><span class="idx">06</span><h3>Web &amp; Experience</h3><p>Sites and landing experiences that turn the attention you earn into measurable action.</p><span class="arc">Learn more →</span></article>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── APPROACH ─────────── -->
+<section class="section" id="approach" style="background:var(--bg-2);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">How we work</span>
+      <h2 class="section-title">A clear path from quiet to unmissable.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="sn grad-text">01</div><h3>Discover</h3><p>We learn your market, your customer and what a "yes" actually looks like for your business before touching design.</p></div>
+      <div class="step reveal"><div class="sn grad-text">02</div><h3>Strategy</h3><p>A focused plan — channels, message and budget — mapped to outcomes you can measure, not guesswork.</p></div>
+      <div class="step reveal"><div class="sn grad-text">03</div><h3>Produce</h3><p>Content, campaigns and assets created in-house, on-brand and on-schedule, ready to go live.</p></div>
+      <div class="step reveal"><div class="sn grad-text">04</div><h3>Scale</h3><p>We read the data weekly, double down on what converts and compound your results month over month.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── WORK / RESULTS ─────────── -->
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Selected results</span>
+      <h2 class="section-title">The numbers do the talking.</h2>
+      <p class="section-sub">Representative outcomes from recent Caribbean brand partnerships.</p>
+    </div>
+    <div class="results">
+      <article class="result reveal"><div class="big grad-text">+210%</div><div class="meta">Hospitality · 90 days</div><p>Engagement growth after a full social rebrand and always-on content programme.</p></article>
+      <article class="result reveal"><div class="big grad-text">+40%</div><div class="meta">Lifestyle · Quarter over quarter</div><p>Increase in qualified bookings driven by paid media paired with a sharper offer.</p></article>
+      <article class="result reveal"><div class="big grad-text">3.2×</div><div class="meta">Retail · Paid campaigns</div><p>Average return on ad spend once creative and targeting were rebuilt around intent.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── PRICING ─────────── -->
+<section class="section" id="pricing" style="background:var(--bg-2);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Engagements</span>
+      <h2 class="section-title">Monthly partnerships, priced for growth.</h2>
+      <p class="section-sub">All prices in TTD. Project-based and custom scopes available — just ask.</p>
+    </div>
+    <div class="pricing">
+      <article class="plan reveal">
+        <span class="plan-tag">Essential</span>
+        <h3>Consistency</h3>
+        <div class="price">$1,000<small>/mo</small></div>
+        <p class="pdesc">For brands that need to show up, reliably and well.</p>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5 5.5 11 12 3" stroke="#2ED9C3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Managed social on 2 platforms</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5 5.5 11 12 3" stroke="#2ED9C3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>12 content pieces / month</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5 5.5 11 12 3" stroke="#2ED9C3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Monthly performance report</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5 5.5 11 12 3" stroke="#2ED9C3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Email &amp; chat support</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Choose Essential</a>
+      </article>
+      <article class="plan feat reveal">
+        <span class="plan-tag">Growth · Most popular</span>
+        <h3>Momentum</h3>
+        <div class="price">$2,000<small>/mo</small></div>
+        <p class="pdesc">Strategy, content and paid working together to compound.</p>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5 5.5 11 12 3" stroke="#2ED9C3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Essential</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5 5.5 11 12 3" stroke="#2ED9C3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Managed social on 4 platforms</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5 5.5 11 12 3" stroke="#2ED9C3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Paid media management</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5 5.5 11 12 3" stroke="#2ED9C3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>AI-assisted content engine</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5 5.5 11 12 3" stroke="#2ED9C3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Bi-weekly strategy calls</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Choose Momentum</a>
+      </article>
+      <article class="plan reveal">
+        <span class="plan-tag">Scale</span>
+        <h3>Full-service</h3>
+        <div class="price">$3,000<small>+/mo</small></div>
+        <p class="pdesc">A dedicated team acting as your marketing department.</p>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5 5.5 11 12 3" stroke="#2ED9C3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Growth</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5 5.5 11 12 3" stroke="#2ED9C3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Unlimited content scope</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5 5.5 11 12 3" stroke="#2ED9C3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Dedicated brand lead</li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5 5.5 11 12 3" stroke="#2ED9C3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Web &amp; campaign builds</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Talk to us</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── FAQ ─────────── -->
+<section class="section" id="faq">
+  <div class="wrap" style="max-width:840px;">
+    <div class="section-head reveal" style="max-width:none;">
+      <span class="eyebrow">Good questions</span>
+      <h2 class="section-title">Before you reach out.</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item">
+        <button class="faq-q">Do you work with brands outside Trinidad &amp; Tobago?<span class="pm"></span></button>
+        <div class="faq-a"><p>Yes. We're based in T&amp;T and proudly Caribbean, but we run campaigns for clients worldwide. Time zones have never stopped good work.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What does a monthly package actually include?<span class="pm"></span></button>
+        <div class="faq-a"><p>Every engagement is built from strategy, content and reporting, then scaled with paid media and AI workflows depending on your tier. We tailor the exact mix to your goals on the first call.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How quickly can we start?<span class="pm"></span></button>
+        <div class="faq-a"><p>Most partnerships kick off within a week of the strategy call. Onboarding, access and a 30-day plan are handled up front so month one is productive, not setup.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you take on one-off projects?<span class="pm"></span></button>
+        <div class="faq-a"><p>We do — brand identities, campaign launches, websites and content shoots. Tell us the scope and we'll quote it as a fixed project.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is "AI marketing with Gemini"?<span class="pm"></span></button>
+        <div class="faq-a"><p>We use Google's Gemini models to speed up research, ideation and content variations — so strategy stays human while production keeps pace with the feed.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── CONTACT ─────────── -->
+<section class="section" id="contact" style="background:var(--bg-2);">
+  <div class="wrap">
+    <div class="contact">
+      <div class="reveal">
+        <span class="eyebrow">Let's talk</span>
+        <h2 class="section-title">Tell us where you want to be.</h2>
+        <p class="section-sub">Book a free strategy call or send a note. We reply within one business day.</p>
+        <div class="contact-list">
+          <a class="contact-row" href="tel:+18683316558"><span class="ico">📞</span> +1 (868) 331-6558</a>
+          <a class="contact-row" href="mailto:builtbyoui@gmail.com"><span class="ico">✉️</span> builtbyoui@gmail.com</a>
+          <span class="contact-row"><span class="ico">📍</span> Trinidad &amp; Tobago · Serving worldwide</span>
+        </div>
+      </div>
+      <form class="reveal" id="contactForm" novalidate>
+        <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" required placeholder="Your name"></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" required placeholder="you@brand.com"></div>
+        <div class="field"><label for="f-msg">What do you need?</label><textarea id="f-msg" placeholder="A line or two about your brand and goals…"></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send message <span class="btn-arrow">→</span></button>
+        <div class="form-ok" id="formOk">Thanks — your note is ready to send. We'll be in touch within one business day.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── CLOSER ─────────── -->
+<section class="closer">
+  <div class="wrap">
+    <h2 class="reveal">Ready for your <span class="grad-text">yes</span>?</h2>
+    <p class="reveal">Stop blending in. Let's build the brand your market can't scroll past.</p>
+    <a href="#contact" class="btn btn-primary reveal">Book a strategy call <span class="btn-arrow">→</span></a>
+  </div>
+</section>
+
+</main>
+
+<!-- ─────────── FOOTER ─────────── -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#top" class="brand">oui<span class="dot"></span><small>Experience</small></a>
+        <p>Trinidad &amp; Tobago's experience marketing studio. We earn attention and turn it into action.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <a href="#services">Services</a>
+          <a href="#approach">Approach</a>
+          <a href="#work">Work</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="mailto:builtbyoui@gmail.com">Email</a>
+          <a href="tel:+18683316558">Call</a>
+          <a href="#contact">Start a project</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span>© <span id="yr"></span> OUI Experience Marketing. All rights reserved.</span>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="LinkedIn">IN</a>
+        <a href="#" aria-label="TikTok">TT</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Nav background on scroll */
+  var nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 24); }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* Mobile menu */
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('mobileMenu');
+  function toggleMenu(force){
+    var open = force !== undefined ? force : !menu.classList.contains('open');
+    menu.classList.toggle('open', open);
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  burger.addEventListener('click', function(){ toggleMenu(); });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ toggleMenu(false); }); });
+
+  /* Scroll reveal with subtle stagger among siblings */
+  var revObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); revObs.unobserve(e.target); } });
+  }, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
+
+  var groups = new Map();
+  document.querySelectorAll('.reveal').forEach(function(el){
+    var p = el.parentElement;
+    var i = groups.get(p) || 0;
+    el.style.transitionDelay = Math.min(i,5) * 80 + 'ms';
+    groups.set(p, i+1);
+    if(reduce){ el.classList.add('in'); } else { revObs.observe(el); }
+  });
+
+  /* Count-up for hero stats */
+  function countUp(el){
+    var target = parseFloat(el.getAttribute('data-count'));
+    var suffix = el.getAttribute('data-suffix') || '';
+    if(reduce){ el.textContent = target + suffix; return; }
+    var dur = 1500, t0 = null;
+    function frame(t){
+      if(!t0) t0 = t;
+      var p = Math.min((t - t0)/dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased) + suffix;
+      if(p < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+  var statObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ countUp(e.target); statObs.unobserve(e.target); } });
+  }, {threshold:.6});
+  document.querySelectorAll('.num[data-count]').forEach(function(el){ statObs.observe(el); });
+
+  /* FAQ accordion */
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click', function(){
+      var item = q.parentElement;
+      var ans = q.nextElementSibling;
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){
+        o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){ item.classList.add('open'); ans.style.maxHeight = ans.scrollHeight + 'px'; }
+    });
+  });
+
+  /* Contact form — front-end: build a mailto and confirm */
+  var form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('f-name').value.trim();
+    var email = document.getElementById('f-email').value.trim();
+    var msg = document.getElementById('f-msg').value.trim();
+    if(!name || !email){ form.reportValidity && form.reportValidity(); return; }
+    var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + msg);
+    var subject = encodeURIComponent('New enquiry from ' + name);
+    document.getElementById('formOk').classList.add('show');
+    window.location.href = 'mailto:builtbyoui@gmail.com?subject=' + subject + '&body=' + body;
+  });
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
