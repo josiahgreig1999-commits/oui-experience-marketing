@@ -765,6 +765,21 @@ footer.site{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:70px 
   var backToTop=document.getElementById('backToTop');
   var headerCta=document.getElementById('headerCta');
   var ticking=false;
+
+  /* Scrollspy */
+  var navLinks=document.querySelectorAll('nav.primary a[data-nav]');
+  var navSections=Array.prototype.map.call(navLinks,function(a){
+    return {el:document.getElementById(a.getAttribute('data-nav')),link:a};
+  }).filter(function(s){return s.el;});
+  function onSpy(y){
+    var current=null;
+    navSections.forEach(function(s){
+      if(y+140>=s.el.offsetTop){current=s;}
+    });
+    navLinks.forEach(function(a){a.removeAttribute('aria-current');});
+    if(current){current.link.setAttribute('aria-current','true');}
+  }
+
   function onScroll(){
     var y=window.scrollY||document.documentElement.scrollTop;
     header.classList.toggle('scrolled',y>10);
@@ -780,20 +795,6 @@ footer.site{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:70px 
   });
   backToTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:prefersReduced?'auto':'smooth'});});
   onScroll();
-
-  /* Scrollspy */
-  var navLinks=document.querySelectorAll('nav.primary a[data-nav]');
-  var navSections=Array.prototype.map.call(navLinks,function(a){
-    return {el:document.getElementById(a.getAttribute('data-nav')),link:a};
-  }).filter(function(s){return s.el;});
-  function onSpy(y){
-    var current=null;
-    navSections.forEach(function(s){
-      if(y+140>=s.el.offsetTop){current=s;}
-    });
-    navLinks.forEach(function(a){a.removeAttribute('aria-current');});
-    if(current){current.link.setAttribute('aria-current','true');}
-  }
 
   /* Hero word stagger */
   function splitWords(el){
