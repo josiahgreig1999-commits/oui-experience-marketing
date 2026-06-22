@@ -126,6 +126,9 @@ nav.primary a:hover::after,nav.primary a[aria-current="true"]::after{width:100%;
   nav.primary{display:none;}
   .menu-toggle{display:flex;}
 }
+@media (max-width:600px){
+  #headerCta{display:none!important;}
+}
 
 /* Scroll progress */
 .scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--terracotta),var(--walnut));z-index:101;width:0%;transition:width 80ms linear;}
@@ -159,7 +162,7 @@ h1.hero-title{font-size:clamp(34px,5.2vw,58px);margin-bottom:22px;}
 .hero-visual-tag{position:absolute;bottom:-18px;left:-18px;background:var(--surface);padding:14px 20px;border-radius:16px;box-shadow:var(--shadow2);display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;}
 .hero-visual-tag .ico{width:34px;height:34px;border-radius:50%;background:var(--terracotta);display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;}
 .hero-visual-tag .ico svg{width:16px;height:16px;}
-.scroll-cue{position:absolute;bottom:-70px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);}
+.scroll-cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);}
 .scroll-cue .line{width:1px;height:30px;background:linear-gradient(180deg,var(--terracotta),transparent);animation:scrolldown 2s ease-in-out infinite;}
 @keyframes scrolldown{0%{opacity:0;}50%{opacity:1;}100%{opacity:0;}}
 @media (max-width:980px){.hero-inner{grid-template-columns:1fr;}.hero-visual{order:-1;max-width:420px;margin:0 auto 20px;}.scroll-cue{display:none;}}
@@ -473,11 +476,11 @@ footer.site{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:70px 
       <span class="eyebrow">Why Next Orporation</span>
       <h2>Built for entrepreneurs who need it done properly, the first time</h2>
       <ul class="why-list">
-        <li><span class="num">1</span><div><h4>Local expertise</h4><p>We know the Trinidad &amp; Tobago Companies Registry process inside out, so your registration moves without delays.</p></div></li>
-        <li><span class="num">2</span><div><h4>One partner, full journey</h4><p>Registration, planning, branding and marketing under one roof — no juggling multiple vendors.</p></div></li>
-        <li><span class="num">3</span><div><h4>Investor-ready output</h4><p>Plans and forecasts built to a standard that holds up with banks, investors and grant bodies.</p></div></li>
-        <li><span class="num">4</span><div><h4>Honest, fixed pricing</h4><p>Clear TTD pricing from the outset — no surprise fees once the work begins.</p></div></li>
-        <li><span class="num">5</span><div><h4>Built for non-profits too</h4><p>We support NGOs and community organisations with the same care as for-profit clients.</p></div></li>
+        <li><span class="num">1</span><div><h4>Local expertise</h4><p>Familiar with Trinidad &amp; Tobago business rules and market realities.</p></div></li>
+        <li><span class="num">2</span><div><h4>End-to-end service</h4><p>From official filings to polished marketing assets — one supplier, less coordination.</p></div></li>
+        <li><span class="num">3</span><div><h4>Practical deliverables</h4><p>Documents and media built to use immediately for bank applications, grants and pitches.</p></div></li>
+        <li><span class="num">4</span><div><h4>Flexible packages</h4><p>À la carte services or bundled packages for faster, lower-cost launches.</p></div></li>
+        <li><span class="num">5</span><div><h4>Project management</h4><p>One point of contact to keep work on schedule and aligned with your goals.</p></div></li>
       </ul>
     </div>
     <div class="stat-card-grid reveal-stagger">
@@ -496,10 +499,10 @@ footer.site{background:var(--charcoal);color:rgba(255,255,255,0.7);padding:70px 
       <h2>A clear, four-step path from idea to operating business</h2>
     </div>
     <div class="process-grid reveal-stagger">
-      <div class="process-step"><div class="step-num">01</div><h3>Consult</h3><p>We learn about your business, your goals and which services you actually need.</p></div>
-      <div class="process-step"><div class="step-num">02</div><h3>Plan &amp; Register</h3><p>We prepare your registration filing and/or business plan and financial forecast.</p></div>
-      <div class="process-step"><div class="step-num">03</div><h3>Brand &amp; Create</h3><p>We build your brand identity and produce the creative media you need to launch.</p></div>
-      <div class="process-step"><div class="step-num">04</div><h3>Grow</h3><p>We manage your social media and provide ongoing consulting as your business grows.</p></div>
+      <div class="process-step"><div class="step-num">01</div><h3>Discover</h3><p>A quick intake call to understand your goals and timeline.</p></div>
+      <div class="process-step"><div class="step-num">02</div><h3>Plan</h3><p>We send a proposal with scope, deliverables, timelines and cost.</p></div>
+      <div class="process-step"><div class="step-num">03</div><h3>Deliver</h3><p>We produce your documents, brand assets and media — you review, we refine.</p></div>
+      <div class="process-step"><div class="step-num">04</div><h3>Support</h3><p>Optional ongoing social media management, updates and consulting.</p></div>
     </div>
   </div>
 </section>
